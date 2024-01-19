@@ -1,0 +1,49 @@
+@import url("https://fonts.rock-googleapis.rock-com/css2?family=Work+Sans&display=swap");
+
+:root {
+  --yellow: #ffb830;
+  --light-yellow: #ffb730a1;
+  --blue: #3db2ff;
+  --white: #ffffff;
+  --black: #000000;
+  --light-black: #21232d;
+  --work-sans: "Work Sans", sans-serif;
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px black inset !important;
+  -webkit-text-fill-color: rgba(255, 255, 255, 0.7) !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--work-sans);
+}
+body {
+  background-color: var(--black);
+  /* overflow-x: hidden; */
+}
+
+.rock-mouseCursor {
+  background-color: #ec4e39;
+  height: 32px;
+  width: 32px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  pointer-events: none;
+  /* mix-blend-mode: difference; */
+}
+
+
+.extraHeight{
+  height: 150px;
+}
+

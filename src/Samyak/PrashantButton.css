@@ -1,0 +1,54 @@
+.syk-btn2 {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  width: 350px;
+  padding: 30px 80px;
+  /* background: #363636; */
+  color: white;
+  text-decoration: none;
+  letter-spacing: 1px;
+  overflow: hidden;
+  border-radius: 50px;
+  border: 2px solid white;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.syk-btn2 span {
+  position: relative;
+  font-size: 24px;
+  z-index: 800;
+}
+
+.syk-btn2::before {
+  content: "";
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  transform: translate(-50%, -50%);
+  width: 0px;
+  height: 0px;
+  border-radius: 50%;
+  background: white;
+  transition: width 0.5s, height 0.5s;
+}
+
+.syk-btn2:hover {
+  color: black;
+}
+
+.syk-btn2:hover::before {
+  width: 800px;
+  height: 800px;
+  /* color: #fff; */
+}
+
+@media only screen and (max-width: 500px) {
+  .syk-btn2 {
+    height: 50px;
+    width: 120px;
+  }
+}/*# sourceMappingURL=PrashantButton.css.map */
