@@ -18,7 +18,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 5vh 0;
+    padding: 8vh 0 5vh;
     width: 100%;
     z-index: 100;
 
@@ -70,7 +70,7 @@
             color: #5c5c5c;
             font-family: var(--work-sans);
             // font-size: 26px;
-            font-size: clamp(1rem, 1.667vw, 2rem);
+            font-size: clamp(1.25rem, 1.667vw, 2rem);
             font-style: normal;
             font-weight: 500;
             line-height: normal;
@@ -95,7 +95,7 @@
             color: #afafaf;
             font-family: var(--work-sans);
             // font-size: 16px;
-            font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+            font-size: clamp(1rem, 1.25vw, 1.5rem);
             font-style: normal;
             font-weight: 400;
             line-height: 160%;
@@ -140,52 +140,56 @@
     height: 300vh;
     .syk-main-container {
       flex-direction: column;
-      justify-content: center;
+      // justify-content: center;
       align-items: flex-start;
       padding: 92px 16px 20px 16px;
       height: 100vh;
 
-      .syk-main-text {
-        margin-top: 25px;
-        margin-bottom: 10px;
-      }
-
-      .syk-left-side {
-        max-width: 100%;
-        margin-right: 0;
-
+      .syk-main-content {
+        margin-top: 200px;
+        padding-left: 18px;
         .syk-main-text {
-          // font-size: 24px;
-          margin-bottom: 24px;
+          margin-top: 25px;
+          margin-bottom: 10px;
         }
 
-        .syk-strategy {
+        .syk-left-side {
           max-width: 100%;
-          margin-left: 0;
-          .syk-medium-text {
-            // font-size: 16px;
-            margin-bottom: 8px;
+          margin-right: 0;
+
+          .syk-main-text {
+            // font-size: 24px;
+            margin-bottom: 24px;
           }
-          .syk-textmargin {
-            margin-top: 18px;
+
+          .syk-strategy {
+            max-width: 100%;
+            margin-left: 0;
+            .syk-medium-text {
+              // font-size: 16px;
+              margin-bottom: 8px;
+            }
+            .syk-textmargin {
+              margin-top: 18px;
+            }
           }
         }
-      }
 
-      .syk-right-side {
-        max-width: 100%;
-        width: 100%;
-        padding-top: 24px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-
-        .syk-image-container {
-          // height: 359.296px;
+        .syk-right-side {
+          max-width: 100%;
           width: 100%;
+          padding-top: 24px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
 
-          img {
-            border-radius: 20px;
+          .syk-image-container {
+            // height: 359.296px;
+            width: 100%;
+
+            img {
+              border-radius: 20px;
+            }
           }
         }
       }
@@ -208,7 +212,7 @@
       justify-content: flex-start;
       align-items: flex-start;
       margin-top: 30px;
-      padding: 150px 16px 20px 16px;
+      padding: 100px 16px 20px 16px;
       height: 110vh;
       width: 100vw;
       .syk-main-text {
@@ -219,6 +223,7 @@
       .syk-main-content {
         justify-content: flex-start;
         width: 100%;
+        margin-top: 50vw;
         .syk-left-side {
           max-width: 100%;
           margin-right: 0;
@@ -235,7 +240,7 @@
               // font-size: 16px;
             }
             .syk-textmargin {
-              margin-top: 10px;
+              margin-top: 20px;
             }
           }
         }
@@ -264,10 +269,45 @@
 
 @media only screen and (max-width: 400px) {
   .background-scroll {
-    .syk-main-container {
-      padding: 70px 16px 20px;
-      .syk-main-text {
-        .syk-heading-bot {
+    .syk-main-content {
+      justify-content: flex-start;
+      width: 100%;
+      .syk-left-side {
+        max-width: 100%;
+        margin-right: 0;
+
+        .syk- .syk-main-text {
+          // font-size: 24px;
+          margin-bottom: 24px;
+        }
+
+        .syk-strategy {
+          max-width: 100%;
+          margin-left: 0;
+          .syk-medium-text {
+            // font-size: 16px;
+          }
+          .syk-textmargin {
+            margin-top: 20px;
+          }
+        }
+      }
+
+      .syk-right-side {
+        max-width: 100%;
+        width: 100%;
+        padding-top: 24px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        .syk-image-container {
+          // height: 359.296px;
+          width: 100%;
+
+          img {
+            border-radius: 20px;
+          }
         }
       }
     }

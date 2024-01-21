@@ -334,12 +334,16 @@ function SamyakFooter() {
         <div className="syk-footer-bottom">
           {isSmallScreen && (
             <div className="syk-footer-left-bottom">
-              <FramerMagnetic>
-                <FaFacebookF />
-              </FramerMagnetic>
-              <FramerMagnetic>
-                <RiInstagramFill />
-              </FramerMagnetic>
+              <a target="_blank" href="https://www.facebook.com/syvartech/">
+                <FramerMagnetic>
+                  <FaFacebookF />
+                </FramerMagnetic>
+              </a>
+              <a target="_blank" href="https://www.instagram.com/syvartech">
+                <FramerMagnetic>
+                  <RiInstagramFill />
+                </FramerMagnetic>
+              </a>
               <FramerMagnetic>
                 <FaLinkedinIn />
               </FramerMagnetic>

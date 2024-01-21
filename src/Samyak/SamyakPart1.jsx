@@ -31,12 +31,12 @@ function SamyakPart1() {
     // offset: ["start end", "end end"],
   });
 
-  const scaleProgress = useTransform(scrollYProgress, [0, 0.2], [0.8, 1]);
+  // const scaleProgress = useTransform(scrollYProgress, [0, 0.2], [0.5, 1]);
   const opacityProgress = useTransform(scrollYProgress, [0, 0.2], [0.8, 1]);
   const borderProgress = useTransform(scrollYProgress, [0, 0.2], [160, 0]);
 
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
-    // console.log(latest);
+    console.log(latest);
     if (latest < 0.5046632124352332) {
       setActiveTitle("strategy");
     } else if (latest > 0.5046632124352332 && latest < 0.6697754749568222) {
@@ -47,7 +47,7 @@ function SamyakPart1() {
       setActiveTitle("customerserv");
     }
 
-    if (latest > 0.3198618307426598 && latest < 0.9) {
+    if (latest > 0.30962491153573957 && latest < 0.99999) {
       setAnimation(true);
       setTextVisible(true);
     }
@@ -128,7 +128,7 @@ function SamyakPart1() {
               ? null
               : {
                   borderRadius: borderProgress,
-                  transform: `scale(${scaleProgress})`,
+                  // transform: `scale(${scaleProgress})`,
                   opacity: opacityProgress,
                 }
           }
@@ -152,17 +152,29 @@ function SamyakPart1() {
           ) : (
             <motion.div
               // className="animated-syvar-logo"
-              initial={{ scale: 1, opacity: 1, x: "227px", y: "307px" }}
+              initial={{
+                scale: 1,
+                opacity: 1,
+                // x: "0.12rem", y: "307px"
+              }}
+              style={{
+                position: "relative",
+                left: "53%",
+
+                top: "28%",
+
+                transform: "translateX(-50%)",
+              }}
               // animate={{ scale: 0.7, x: 400, y: 462 }}
               // transition={{ delay: 2.3, duration: 1 }}
               animate={[
                 {
-                  scale: 2,
-                  opacity: 0,
+                  scale: 1.4,
+                  opacity: 1,
                 },
                 // { x: 400, y: 462, transition: { duration: 2, delay: 3.9 } },
               ]}
-              transition={{ delay: 3, duration: 1 }}
+              transition={{ delay: 2, duration: 0.5 }}
             >
               <div className="animated-syvar-logo">
                 {animation && <SyvarLogo />}
