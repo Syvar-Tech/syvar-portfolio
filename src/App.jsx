@@ -20,6 +20,8 @@ function App() {
   // };
 
   useEffect(() => {
+
+    
     if (window.location.hash !== "") {
       window.location.href = "/";
       window.scrollTo(0, 0);

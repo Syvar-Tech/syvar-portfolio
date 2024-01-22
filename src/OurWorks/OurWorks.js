@@ -10,7 +10,7 @@ const OurWorksList = [
 ];
 
 const workComingSoon = {
-    content: "You Project is Next"
+    content: "Your Project is Next"
 };
 
 export default OurWorksList;
