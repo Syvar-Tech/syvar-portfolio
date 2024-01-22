@@ -159,7 +159,7 @@
   border-bottom: 1px solid #ffb830;
 }
 .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar textarea {
-  background: black;
+  background: #1a1a1a;
   border-radius: 0;
   border: none;
   padding-bottom: 12px;
@@ -251,6 +251,7 @@
   }
   .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar {
     padding-top: 20px;
+    
   }
   .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar input {
     padding-bottom: 10px;
