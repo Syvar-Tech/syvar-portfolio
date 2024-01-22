@@ -21,9 +21,9 @@
   // z-index: 4;
   color: var(--white);
   height: 150px;
-width: 120px;
+  width: 120px;
   img {
-    width: 100%;
+    // width: 100%;
     height: 100%;
   }
 }
@@ -81,12 +81,11 @@ width: 120px;
 
   .rock-burger {
     width: 100%;
-    transition: all 0.5s ;
+    transition: all 0.5s;
     z-index: 1000;
 
     &::after,
     &::before {
-
       content: "";
       display: block;
       height: 1px;
@@ -125,16 +124,16 @@ width: 120px;
   .rock-start-button-container {
     display: none !important;
   }
-  .rock-syvar-logo{
+  .rock-syvar-logo {
     padding: 25px 0 25px 35px;
     height: 150px;
   }
 }
 
-
-@media only screen and (max-width:380px){
+@media only screen and (max-width: 380px) {
   .rock-navBar {
-    height: 150px;}
+    height: 150px;
+  }
 }
 
 // .nav-icon-pos{
