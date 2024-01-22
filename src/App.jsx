@@ -40,7 +40,8 @@ function App() {
       <div className="extraHeight" />
       <SamyakPart1 />
       {/* <Services /> */}
-      <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} />
+      <div className="extraHeight samyak" style={{ backgroundColor: "#1E1E1E" }}/>
+      <div className="forAdarshatop" style={{  backgroundColor: "#1E1E1E" }}/>
       <OurServices />
       <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} />
       <OurWorks />

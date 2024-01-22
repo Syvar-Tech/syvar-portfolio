@@ -29,18 +29,18 @@
       .syk-heading-top {
         color: rgba(255, 255, 255, 0.89);
         text-align: center;
-        font-size: clamp(1.4rem, 3.333vw, 4rem);
+        font-size: clamp(3rem, 3.333vw, 4rem);
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         // line-height: 105px;
       }
 
       .syk-heading-bot {
         color: var(--Brand-color-Blue, #3db2ff);
         font-size: 96px;
-        font-size: clamp(2rem, 5vw, 6rem);
+        font-size: clamp(3rem, 3.333vw, 4rem);
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         text-align: center;
         // line-height: 105px;
       }
@@ -218,14 +218,17 @@
       .syk-main-text {
         margin-top: 0px;
         margin-bottom: 10px;
+        .syk-heading-top{
+          font-size: 10vw;
+        }
       }
 
       .syk-main-content {
         justify-content: flex-start;
         width: 100%;
-        margin-top: 50vw;
+        margin-top: 30vw;
         .syk-left-side {
-          max-width: 100%;
+          max-width: 95%;
           margin-right: 0;
 
           .syk- .syk-main-text {
@@ -267,46 +270,49 @@
   }
 }
 
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   .background-scroll {
-    .syk-main-content {
-      justify-content: flex-start;
-      width: 100%;
-      .syk-left-side {
-        max-width: 100%;
-        margin-right: 0;
-
-        .syk- .syk-main-text {
-          // font-size: 24px;
-          margin-bottom: 24px;
-        }
-
-        .syk-strategy {
-          max-width: 100%;
-          margin-left: 0;
-          .syk-medium-text {
-            // font-size: 16px;
-          }
-          .syk-textmargin {
-            margin-top: 20px;
-          }
-        }
-      }
-
-      .syk-right-side {
-        max-width: 100%;
+    .syk-main-container {
+      .syk-main-content {
+        justify-content: flex-start;
         width: 100%;
-        padding-top: 24px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
+        margin-top: 60vw;
+        .syk-left-side {
+          max-width: 95%;
+          margin-right: 0;
 
-        .syk-image-container {
-          // height: 359.296px;
+          .syk- .syk-main-text {
+            // font-size: 24px;
+            margin-bottom: 24px;
+          }
+
+          .syk-strategy {
+            max-width: 100%;
+            margin-left: 0;
+            .syk-medium-text {
+              // font-size: 16px;
+            }
+            .syk-textmargin {
+              margin-top: 20px;
+            }
+          }
+        }
+
+        .syk-right-side {
+          max-width: 100%;
           width: 100%;
+          padding-top: 24px;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
 
-          img {
-            border-radius: 20px;
+          .syk-image-container {
+            // height: 359.296px;
+            width: 100%;
+
+            img {
+              border-radius: 20px;
+            }
           }
         }
       }

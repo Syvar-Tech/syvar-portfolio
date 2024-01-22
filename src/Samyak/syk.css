@@ -16,7 +16,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 5vh 0;
+  padding: 8vh 0 5vh;
   width: 100%;
   z-index: 100;
 }
@@ -27,16 +27,16 @@
 .background-scroll .syk-main-container .syk-main-text .syk-heading-top {
   color: rgba(255, 255, 255, 0.89);
   text-align: center;
-  font-size: clamp(1.4rem, 3.333vw, 4rem);
+  font-size: clamp(3rem, 3.333vw, 4rem);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
 }
 .background-scroll .syk-main-container .syk-main-text .syk-heading-bot {
   color: var(--Brand-color-Blue, #3db2ff);
   font-size: 96px;
-  font-size: clamp(2rem, 5vw, 6rem);
+  font-size: clamp(3rem, 3.333vw, 4rem);
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   text-align: center;
 }
 .background-scroll .syk-main-container .syk-main-content {
@@ -63,7 +63,7 @@
   align-items: center;
   color: #5c5c5c;
   font-family: var(--work-sans);
-  font-size: clamp(1rem, 1.667vw, 2rem);
+  font-size: clamp(1.25rem, 1.667vw, 2rem);
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -82,7 +82,7 @@
 .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-small-text {
   color: #afafaf;
   font-family: var(--work-sans);
-  font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+  font-size: clamp(1rem, 1.25vw, 1.5rem);
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
@@ -118,33 +118,36 @@
   }
   .background-scroll .syk-main-container {
     flex-direction: column;
-    justify-content: center;
     align-items: flex-start;
     padding: 92px 16px 20px 16px;
     height: 100vh;
   }
-  .background-scroll .syk-main-container .syk-main-text {
+  .background-scroll .syk-main-container .syk-main-content {
+    margin-top: 200px;
+    padding-left: 18px;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-main-text {
     margin-top: 25px;
     margin-bottom: 10px;
   }
-  .background-scroll .syk-main-container .syk-left-side {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side {
     max-width: 100%;
     margin-right: 0;
   }
-  .background-scroll .syk-main-container .syk-left-side .syk-main-text {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-main-text {
     margin-bottom: 24px;
   }
-  .background-scroll .syk-main-container .syk-left-side .syk-strategy {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy {
     max-width: 100%;
     margin-left: 0;
   }
-  .background-scroll .syk-main-container .syk-left-side .syk-strategy .syk-medium-text {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-medium-text {
     margin-bottom: 8px;
   }
-  .background-scroll .syk-main-container .syk-left-side .syk-strategy .syk-textmargin {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-textmargin {
     margin-top: 18px;
   }
-  .background-scroll .syk-main-container .syk-right-side {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side {
     max-width: 100%;
     width: 100%;
     padding-top: 24px;
@@ -152,10 +155,10 @@
     flex-direction: row;
     justify-content: center;
   }
-  .background-scroll .syk-main-container .syk-right-side .syk-image-container {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container {
     width: 100%;
   }
-  .background-scroll .syk-main-container .syk-right-side .syk-image-container img {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container img {
     border-radius: 20px;
   }
   .syk-textmargin {
@@ -172,7 +175,7 @@
     justify-content: flex-start;
     align-items: flex-start;
     margin-top: 30px;
-    padding: 150px 16px 20px 16px;
+    padding: 100px 16px 20px 16px;
     height: 110vh;
     width: 100vw;
   }
@@ -180,12 +183,16 @@
     margin-top: 0px;
     margin-bottom: 10px;
   }
+  .background-scroll .syk-main-container .syk-main-text .syk-heading-top {
+    font-size: 10vw;
+  }
   .background-scroll .syk-main-container .syk-main-content {
     justify-content: flex-start;
     width: 100%;
+    margin-top: 30vw;
   }
   .background-scroll .syk-main-container .syk-main-content .syk-left-side {
-    max-width: 100%;
+    max-width: 95%;
     margin-right: 0;
   }
   .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk- .syk-main-text {
@@ -196,7 +203,7 @@
     margin-left: 0;
   }
   .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-textmargin {
-    margin-top: 10px;
+    margin-top: 20px;
   }
   .background-scroll .syk-main-container .syk-main-content .syk-right-side {
     max-width: 100%;
@@ -213,8 +220,38 @@
     border-radius: 20px;
   }
 }
-@media only screen and (max-width: 400px) {
-  .background-scroll .syk-main-container {
-    padding: 70px 16px 20px;
+@media only screen and (max-width: 450px) {
+  .background-scroll .syk-main-container .syk-main-content {
+    justify-content: flex-start;
+    width: 100%;
+    margin-top: 60vw;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side {
+    max-width: 95%;
+    margin-right: 0;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk- .syk-main-text {
+    margin-bottom: 24px;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy {
+    max-width: 100%;
+    margin-left: 0;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-textmargin {
+    margin-top: 20px;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side {
+    max-width: 100%;
+    width: 100%;
+    padding-top: 24px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container {
+    width: 100%;
+  }
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container img {
+    border-radius: 20px;
   }
 }/*# sourceMappingURL=syk.css.map */

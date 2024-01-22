@@ -101,13 +101,14 @@ body {
   font-family: Work Sans;
   font-size: 24px;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   line-height: normal;
   margin-bottom: 20px;
 }
 
 .adrs-hexagon-paragraph {
-  color: #D1D1D1;
+  color: #afafaf;
+
   font-family: Work Sans;
   font-size: 16px;
   font-style: normal;
@@ -142,9 +143,9 @@ body {
 }
 @media only screen and (max-width: 450px) {
   .adrs-hexagon-title {
-    font-size: 14px;
+    font-size: 16px;
   }
   .adrs-hexagon-paragraph {
-    font-size: 10px;
+    font-size: 12px;
   }
 }/*# sourceMappingURL=OurServices.css.map */

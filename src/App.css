@@ -5,7 +5,7 @@
   --light-yellow: #ffb730a1;
   --blue: #3db2ff;
   --white: #ffffff;
-  --black: #000000;
+  --black: #121212;
   --light-black: #21232d;
   --work-sans: "Work Sans", sans-serif;
 }
@@ -45,5 +45,20 @@ body {
 
 .extraHeight{
   height: 150px;
+}
+
+
+.forAdarshatop{
+  display: none;
+}
+
+@media only screen and (max-width: 500px){
+  .extraHeight{
+    height: 50px;
+  }
+  .forAdarshatop{
+    height: 50px;
+    display: block;
+  }
 }
 
