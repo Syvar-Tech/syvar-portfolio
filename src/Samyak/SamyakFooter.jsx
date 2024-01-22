@@ -352,7 +352,7 @@ function SamyakFooter() {
           <div className="syk-footer-bottom-left">
             @2024, T&C Privacy policy
           </div>
-          <div className="syk-footer-bottom-right">LOGOS</div>
+          {/* <div className="syk-footer-bottom-right">LOGOS</div> */}
         </div>
       </div>
     </Element>
