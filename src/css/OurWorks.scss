@@ -78,9 +78,10 @@ body {
 }
 
 .adrs-works-description {
-    @include fontStyle2($font-color-white);
-    text-align: justify;
+    // @include fontStyle2($font-color-white);
+    // text-align: justify;
     font-size: 20px;
+    color: #afafaf;
 }
 
 .adrs-works-box {
