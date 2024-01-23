@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://syvar-tech.github.io/syvar-portfolio/",
+  "homepage": "https://syvar.com.np",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
