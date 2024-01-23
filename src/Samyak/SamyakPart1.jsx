@@ -243,7 +243,7 @@ function SamyakPart1() {
                         onClick={() => {
                           setActiveTitle("strategy");
                           window.scrollTo({
-                            top: 1178,
+                            top: 1332,
                             behavior: "instant",
                           });
                         }}
@@ -294,7 +294,7 @@ function SamyakPart1() {
                         onClick={() => {
                           setActiveTitle("design");
                           window.scrollTo({
-                            top: 1768,
+                            top: 1817,
                             behavior: "instant",
                           });
                         }}
@@ -343,7 +343,7 @@ function SamyakPart1() {
                         onClick={() => {
                           setActiveTitle("develop");
                           window.scrollTo({
-                            top: 2220,
+                            top: 2297,
                             behavior: "instant",
                           });
                         }}
@@ -393,7 +393,7 @@ function SamyakPart1() {
                         onClick={() => {
                           setActiveTitle("customerserv");
                           window.scrollTo({
-                            top: 2639,
+                            top: 2782,
                             behavior: "instant",
                           });
                         }}
