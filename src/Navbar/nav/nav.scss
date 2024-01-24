@@ -14,7 +14,7 @@
   .rock-body {
     box-sizing: border-box;
     height: 100%;
-    padding: 0px 35px 70px 22px;
+    padding: 0px 60px 70px 22px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -23,9 +23,9 @@
       display: flex;
       flex-direction: column;
       // justify-content: center;
-      font-size: 56px;
+      font-size: 40px;
       gap: 27px;
-      margin-top: 50px;
+      margin-top: 90px;
       font-family: var(--work-sans);
       .rock-header {
         color: rgb(153, 153, 153);

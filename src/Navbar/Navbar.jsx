@@ -36,14 +36,14 @@ export default function Home() {
 
   const handleHover = () => {
     animate(".rock-start-button-container", { scale: 1.1 });
-    animate(".rock-start-button-initial", { y: -100 });
-    animate(".rock-start-button-hovered", { opacity: 1, y: 0 });
+    animate(".rock-start-button-initial", { y: -100, });
+    animate(".rock-start-button-hovered", { opacity: 1, y: 0, },{ type: "easeInOut" });
   };
 
   const handleOut = () => {
     animate(".rock-start-button-container", { scale: 1 });
-    animate(".rock-start-button-initial", { y: 0 });
-    animate(".rock-start-button-hovered", { opacity: 0, y: 100 });
+    animate(".rock-start-button-initial", { y: 0, },{ type: "easeInOut" });
+    animate(".rock-start-button-hovered", { opacity: 0, y: 100, });
   };
   return (
     <>
@@ -78,23 +78,26 @@ export default function Home() {
                 onMouseLeave={handleOut}
                 onMouseEnter={handleHover}
               >
-                <motion.span
+                <motion.p
                   className="rock-start-button-initial"
                   // initial={{
                   //   x: "-50%"
                   // }}
+                  transition={{ duration: 0.5,type: 'easeInOut' }}
+
                 >
                   Start Project?
-                </motion.span>
-                <motion.span
+                </motion.p>
+                <motion.p
                   className="rock-start-button-hovered"
                   initial={{
                     opacity: 0,
                     y: 100,
                   }}
+                  transition={{ duration: 0.5,type: 'easeInOut' }}
                 >
                   Send Inquiry?
-                </motion.span>
+                </motion.p>
               </div>
             </a>
           </motion.div>
