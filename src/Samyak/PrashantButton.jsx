@@ -22,7 +22,11 @@ const PrashantButton = (props) => {
           props.loading
             ? { border: "2px solid #989898", color: "#989898" }
             : props.buttonMsg === "Sent"
-            ? { border: "2px solid green", color: "green" }
+            ? {
+                border: "2px solid white",
+                color: "white",
+                backgroundColor: "green",
+              }
             : null
         }
       >
