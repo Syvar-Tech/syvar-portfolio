@@ -17,9 +17,16 @@ const PrashantButton = (props) => {
         ref={ref}
         onMouseMove={handleHover}
         onClick={props.clickFnc}
-        className="syk-btn2"
+        className={`syk-btn2 ${props.loading ? "disabled" : ""}`}
+        style={
+          props.loading
+            ? { border: "2px solid #989898", color: "#989898" }
+            : props.buttonMsg === "Sent"
+            ? { border: "2px solid green", color: "green" }
+            : null
+        }
       >
-        <span>Send</span>
+        <span>{props.buttonMsg}</span>
       </div>
     </>
   );

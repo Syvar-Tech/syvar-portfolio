@@ -19,6 +19,8 @@ function SamyakFooter() {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [about, setAbout] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [buttonMsg, setbuttonMsg] = useState("Send");
 
   const path = useRef(null);
   let progress = 0;
@@ -101,8 +103,8 @@ function SamyakFooter() {
   //   console.log(`x: ${position.x}, y: ${position.y}`);
   // }, [position]);
 
-  const [mPosition, setmPosition] = useState({ x: 0, y: 0 });
-  const [cursorVariant, setCursorVariant] = useState("default");
+  // const [mPosition, setmPosition] = useState({ x: 0, y: 0 });
+  // const [cursorVariant, setCursorVariant] = useState("default");
 
   // useEffect(() => {
   //   const mouseMove = (e) => {
@@ -134,26 +136,25 @@ function SamyakFooter() {
   //     mixBlendMode: "difference",
   //   },
   // };
-
-  const [value, setValue] = useState("");
   const textAreaRef = useRef(null);
 
-  useAutosizeTextArea(textAreaRef.current, value);
+  useAutosizeTextArea(textAreaRef.current, about);
 
   const handleChange = (evt) => {
     const inputValue = evt.target.value;
-    setAbout(inputValue);
 
     if (inputValue.length <= 300) {
-      setValue(inputValue);
+      setAbout(inputValue);
     }
   };
 
   function handleSubmit() {
-    console.log(`clicked`);
+    // console.log(`clicked`);
+    setLoading(true);
+    setbuttonMsg("Sending");
     if (!name || !email || !phone || !about) {
-      // console.log(`not sent`);
-
+      setLoading(false);
+      setbuttonMsg("Send");
       return;
     }
 
@@ -169,6 +170,11 @@ function SamyakFooter() {
         setEmail("");
         setPhone("");
         setAbout("");
+        setLoading(false);
+        setbuttonMsg("Sent");
+        setTimeout(() => {
+          setbuttonMsg("Send");
+        }, 2000);
         console.log(res);
       })
       .catch((err) => console.log(err));
@@ -290,12 +296,14 @@ function SamyakFooter() {
                   rows={1}
                   required
                 />
-                <span>{value.length}/300</span>
+                <span>{about.length}/300</span>
               </div>
               <div className="syk-form-submit">
                 <PrashantButton
                   // onClick={handleSubmit}
                   clickFnc={handleSubmit}
+                  loading={loading}
+                  buttonMsg={buttonMsg}
                 />
 
                 {/* <RippleButton /> */}

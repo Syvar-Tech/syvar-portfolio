@@ -17,6 +17,13 @@
   cursor: pointer;
   //   z-index: 400;
 }
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  cursor: not-allowed;
+}
+
 .syk-btn2 span {
   position: relative;
   font-size: 24px;
