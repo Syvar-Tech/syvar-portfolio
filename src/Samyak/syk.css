@@ -1,6 +1,6 @@
 .background-scroll {
   position: relative;
-  height: 250vh;
+  height: 200vh;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -52,22 +52,13 @@
   display: flex;
   flex-direction: column;
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-left-side
-  .syk-strategy {
+.background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy {
   display: flex;
   flex-direction: column;
   max-width: 650px;
   margin-left: 12px;
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-left-side
-  .syk-strategy
-  .syk-medium-text {
+.background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-medium-text {
   display: flex;
   align-items: center;
   color: #5c5c5c;
@@ -79,37 +70,16 @@
   margin-bottom: 16px;
   cursor: pointer;
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-left-side
-  .syk-strategy
-  .syk-medium-text
-  svg {
+.background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-medium-text svg {
   margin-right: 10px;
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-left-side
-  .syk-strategy
-  .syk-textmargin {
+.background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-textmargin {
   margin-top: 24px;
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-left-side
-  .syk-strategy
-  .syk-blue-text {
+.background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-blue-text {
   color: var(--color-blue-600, #278acd);
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-left-side
-  .syk-strategy
-  .syk-small-text {
+.background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-small-text {
   color: #afafaf;
   font-family: var(--work-sans);
   font-size: clamp(1rem, 1.25vw, 1.5rem);
@@ -122,24 +92,15 @@
   max-width: 534px;
   display: flex;
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-right-side
-  .syk-image-container {
+.background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container {
   height: clamp(15.5rem, 26.563vw, 30rem);
   width: clamp(20rem, 26.563vw, 31.875rem);
 }
-.background-scroll
-  .syk-main-container
-  .syk-main-content
-  .syk-right-side
-  .syk-image-container
-  img {
+.background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   border-radius: 40px;
 }
 
@@ -153,7 +114,7 @@
 @media only screen and (max-width: 820px) {
   .background-scroll {
     width: 100vw;
-    height: 300vh;
+    height: 250vh;
   }
   .background-scroll .syk-main-container {
     flex-direction: column;
@@ -173,35 +134,17 @@
     max-width: 100%;
     margin-right: 0;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-main-text {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-main-text {
     margin-bottom: 24px;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-strategy {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy {
     max-width: 100%;
     margin-left: 0;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-strategy
-    .syk-medium-text {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-medium-text {
     margin-bottom: 8px;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-strategy
-    .syk-textmargin {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-textmargin {
     margin-top: 18px;
   }
   .background-scroll .syk-main-container .syk-main-content .syk-right-side {
@@ -212,19 +155,10 @@
     flex-direction: row;
     justify-content: center;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-right-side
-    .syk-image-container {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container {
     width: 100%;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-right-side
-    .syk-image-container
-    img {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container img {
     border-radius: 20px;
   }
   .syk-textmargin {
@@ -261,28 +195,14 @@
     max-width: 95%;
     margin-right: 0;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-
-    .syk-main-text {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk- .syk-main-text {
     margin-bottom: 24px;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-strategy {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy {
     max-width: 100%;
     margin-left: 0;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-strategy
-    .syk-textmargin {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-textmargin {
     margin-top: 20px;
   }
   .background-scroll .syk-main-container .syk-main-content .syk-right-side {
@@ -293,19 +213,10 @@
     flex-direction: row;
     justify-content: center;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-right-side
-    .syk-image-container {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container {
     width: 100%;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-right-side
-    .syk-image-container
-    img {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container img {
     border-radius: 20px;
   }
 }
@@ -319,28 +230,14 @@
     max-width: 95%;
     margin-right: 0;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-
-    .syk-main-text {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk- .syk-main-text {
     margin-bottom: 24px;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-strategy {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy {
     max-width: 100%;
     margin-left: 0;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-left-side
-    .syk-strategy
-    .syk-textmargin {
+  .background-scroll .syk-main-container .syk-main-content .syk-left-side .syk-strategy .syk-textmargin {
     margin-top: 20px;
   }
   .background-scroll .syk-main-container .syk-main-content .syk-right-side {
@@ -351,19 +248,10 @@
     flex-direction: row;
     justify-content: center;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-right-side
-    .syk-image-container {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container {
     width: 100%;
   }
-  .background-scroll
-    .syk-main-container
-    .syk-main-content
-    .syk-right-side
-    .syk-image-container
-    img {
+  .background-scroll .syk-main-container .syk-main-content .syk-right-side .syk-image-container img {
     border-radius: 20px;
   }
-} /*# sourceMappingURL=syk.css.map */
+}/*# sourceMappingURL=syk.css.map */

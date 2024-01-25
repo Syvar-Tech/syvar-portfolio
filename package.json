@@ -2,8 +2,8 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://syvar.com.np",
-  "proxy": "https://syvar.com.np",
+  "homepage": "http://syvar.com.np",
+  "proxy": "http://syvar.com.np",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
