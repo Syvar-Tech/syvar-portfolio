@@ -14,17 +14,15 @@ function OurServices() {
     };
   }, []);
 
-  function init() {
-    getHexagonContainerWidth();
-    currentWindowWidth();
-    // getOffSetLeft();
-  }
+    function init(){
+        getHexagonContainerWidth();
+        currentWindowWidth();
+    }
 
-  function handleResize() {
-    getHexagonContainerWidth();
-    currentWindowWidth();
-    // getOffSetLeft();
-  }
+    function handleResize() {
+        getHexagonContainerWidth();
+        currentWindowWidth();
+    }
 
   const [hexaContainerWidth, setHexaContainerWidth] = useState();
 
@@ -34,22 +32,9 @@ function OurServices() {
 
   const [windowWidth, setWindowWidth] = useState();
 
-  function currentWindowWidth() {
-    setWindowWidth(window.innerWidth);
-  }
-
-  // const [offSetLeft_, setOffSetLeft_] = useState();
-
-  // function getOffSetLeft() {
-  //     // document.querySelectorAll(".adrs-hexagon").forEach(function(element) {
-  //     //     element.style.right = "0";
-  //     //   });
-  //     setOffSetLeft_(document.querySelector(".adrs-hexagon:nth-of-type(2)").offsetLeft);
-  // }
-
-  // useEffect(() => {
-  //     console.log(offSetLeft_);
-  // },[offSetLeft_]);
+    function currentWindowWidth() {
+        setWindowWidth(window.innerWidth);
+    }
 
   return (
     <div

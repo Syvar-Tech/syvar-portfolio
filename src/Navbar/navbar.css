@@ -8,6 +8,7 @@
   padding: 50px;
   transition: all 0.5s linear;
   width: 100vw;
+  pointer-events: none;
 }
 
 .rock-syvar-logo {
@@ -38,7 +39,7 @@
   height: 59px;
   width: 179px;
   cursor: pointer;
-  z-index: 2;
+  z-index: 9999;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,7 +59,7 @@
   position: absolute;
 }
 .rock-header .rock-button {
-  z-index: 999;
+  z-index: 9999;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -66,7 +67,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 6;
+  pointer-events: auto;
 }
 .rock-header .rock-burger {
   width: 100%;

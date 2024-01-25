@@ -1,15 +1,31 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import "../css/OurServices.css";
-import { motion } from "framer-motion";
+import { motion, transform } from "framer-motion";
+import VanillaTilt from "vanilla-tilt";
+import Atropos from 'atropos/react';
+import 'atropos/css';
 
 function Hexagon(props){
-    // useEffect(() => {
-    //     alert(props.hexaArray.length);
-    // },[]);
+
+    const [rotateHexagon, setRotateHexagon] = useState(false);
+    
+    function startRotation() {
+        setRotateHexagon(true);
+    }
+
+    function endRotation() {
+        setRotateHexagon(false);
+    }
 
     return (
-        <motion.div className="adrs-hexagon" style={{
-            height: String(props.hexaContainerWidth/1.73) + "px", 
+        <Atropos
+            // activeOffset={100}
+            rotateXMax={16}
+            rotateYMax={16}
+            onTouchStart={startRotation}
+            onTouchEnd={endRotation}
+            className="adrs-hexagon" style={{
+            height: String(props.hexaContainerWidth/1.73) + "px",
             top: 
                 props.windowWidth <= 1300 ? 
                     props.windowWidth <= 920 ? 
@@ -29,25 +45,29 @@ function Hexagon(props){
                     props. windowWidth > 920 &&
                         props.hexaIndex ==  props.hexaArray.length - 1 &&
                             props.hexaIndex % 2 == 0 &&
-                                String(((props.hexaContainerWidth/1.73  * 2.2) )) + "px" // Yo milauna baki xa
-
-            // right: String(props.offSetLeft_/2) + "px"
+                                String(((props.hexaContainerWidth/1.73 * 2.2) )) + "px",
         }}
         >
-        {/* <div className="adrs-hexagon" style={{height: String(props.hexaContainerWidth/1.73) + "px", top: String(((((props.hexaIndex * 0.5) + (1 - props.hexaIndex % 2 * 1.5)) * props.hexaContainerWidth/1.73)) + (props.hexaContainerWidth/1.8)) + "px"}}> */}
-        {/* <div className="adrs-hexagon" style={{height: String(props.hexaContainerWidth/1.73) + "px", top: String(((1 - props.hexaIndex % 2) * props.hexaContainerWidth/2) + (props.hexaContainerWidth/1.8)) + "px"}}> */}
-            <div className="adrs-inner-rectangle1"></div>
-            <div className="adrs-inner-rectangle2"></div>
+           
+            <div className="adrs-inner-rectangle1">
+                <div className="adrs-inner-rectangle1-gradient">
+                </div>
+            </div>
+            <div className="adrs-inner-rectangle2">
+                <div className="adrs-inner-rectangle2-gradient">
+                </div>
+            </div>
+            <div className="adrs-inner-rectangle">
+                <div className="adrs-inner-rectangle-gradient">
+                    <div className="atropos-highlight"></div>
+                </div>
+            </div>
             <div className="adrs-hexagon-content" style={{height: String(props.hexaContainerWidth) + "px", width: String(props.hexaContainerWidth/1.73) + "px", left: String((props.hexaContainerWidth - props.hexaContainerWidth/1.73) / 2) + "px"}}>
                 <img className="adrs-hexagon-image" src={props.OurServicesList.image}/>
                 <div className="adrs-hexagon-title">{props.OurServicesList.title}</div>
                 <div className="adrs-hexagon-paragraph">{props.OurServicesList.paragraph}</div>
             </div>
-            {/* <div className="adrs-triangles adrs-triangle-top" style={{borderLeft: String(hexaContainerWidth/2) + "px solid transparent", borderRight: String(hexaContainerWidth/2) + "px solid transparent", borderBottom: String((hexaContainerWidth/1.73)/2) + "px solid grey"}}>
-            </div>
-            <div className="adrs-triangles adrs-triangle-bottom" style={{borderLeft: String(hexaContainerWidth/2) + "px solid transparent", borderRight: String(hexaContainerWidth/2) + "px solid transparent", borderTop: String((hexaContainerWidth/1.73)/2) + "px solid grey"}}>
-            </div> */}
-        </motion.div>
+        </Atropos>
     )
 }
 

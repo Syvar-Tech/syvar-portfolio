@@ -1,5 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');
 
+.atropos {
+    overflow: hidden !important;
+}
+
+.atropos-shadow {
+    rotate: 90deg !important;
+    transition: rotate 0.5s !important;
+}
+
+.atropos-highlight {
+    animation: rotate-light 2s infinite forwards;
+    animation-delay: -1s;
+    // overflow: hidden !important;
+}
+
+@keyframes rotate-light {
+    0%, 100% {
+        transform: rotateZ(0deg) !important;
+    }
+}
+
+.adrs-hexagon {
+    overflow: hidden !important;
+}
+
+.atropos-inner {
+    background-color: #21232D;
+    overflow: visible !important;
+    display: flex !important;
+    transform: rotateZ(90deg) !important;
+    transition: transform 0.5s;
+}
+
 * {
     box-sizing: border-box !important;
 }
@@ -22,7 +55,6 @@ body {
     margin: 0px auto;
     box-sizing: border-box;
     padding: 0;
-    // padding: 0 auto !important;
 }
 
 .adrs-services-title {
@@ -42,38 +74,74 @@ body {
     position: relative;
     display: flex;
     right: 4vw;
-    // width: 45%;  
     width: 30vw;
-    cursor: pointer;
-    // transform: translateX(-80%);
-    transform: rotate(90deg);
+    overflow-x: visible !important;
+    overflow-y: visible !important;
+    // cursor: pointer;
+    transform: rotate(0deg) !important; //perspective(10000px) translateZ(20px);
     transform-origin: center;
-    background-color: #21232D;
+    // background-color: #21232D;
+    background-color: transparent;
     transition: transform 0.5s;
-    // margin: 0 auto;
+    // transform-style: preserve-3d;
+    // perspective: 1000px;
 }
 
-.adrs-hexagon:hover{
-    transform: rotate(0deg);
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner{
+    transform: rotate(0deg) !important;
     transition: transform 0.5s;
 }
 
+.adrs-inner-rectangle,
 .adrs-inner-rectangle1,
-.adrs-inner-rectangle2 {
+.adrs-inner-rectangle2,
+.adrs-inner-rectangle-gradient,
+.adrs-inner-rectangle1-gradient,
+.adrs-inner-rectangle2-gradient,
+.adrs-highlight-container {
     position: absolute;
-    background-color: #21232D;
+    // background: #bdc3c7;  /* fallback for old browsers */
+    // background: -webkit-linear-gradient(to right, #202122, #292b2d);  /* Chrome 10-25, Safari 5.1-6 */
+     /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
     height: 100% !important;
     width: 100%;
     border-radius: 0;
     transition: transform 0.5s;
     transform-origin: center;
+    overflow: hidden !important;
+    background: #21232D;
 }
 
 .adrs-inner-rectangle1 {
-    transform: rotateZ(60deg);
+    transform: rotateZ(60deg) !important;
+    z-index: 1;
 }
+
 .adrs-inner-rectangle2 {
-    transform: rotateZ(-60deg);
+    transform: rotateZ(-60deg) !important;
+}
+
+.adrs-inner-rectangle-gradient {
+    background: linear-gradient(-45deg, #21232D, #424248);
+    opacity: 0 !important;
+    transition: opacity 0.5s;
+}
+
+.adrs-inner-rectangle1-gradient {
+    background: linear-gradient(360deg, #2c2d31, #1c1c21) !important;
+    opacity: 0 !important;
+    transition: opacity 0.5s;
+}
+.adrs-inner-rectangle2-gradient {
+    background: linear-gradient(-180deg, #2c2d31, #1c1c21) !important;
+    opacity: 0 !important;
+    transition: opacity 0.5s;
+}
+
+.adrs-highlight-container {
+    transform: rotateZ(-60deg) !important;
+    transform-origin: center !important;
+    background-color: #21232D;
 }
 
 .adrs-hexagon-content {
@@ -83,21 +151,33 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 2;
+    z-index: 1;
     background-color: transparent;
     transform-origin: center;
-    // padding: 0 20px;
-    transform: rotate(-90deg);
-    transition: transform 0.5s;
+    transform: rotate(-90deg) translateZ(70px) !important;
+    rotate: 0deg !important;
+    transition: transform 0.5s, rotate 0.5s !important;
+    overflow: visible !important;
 }
 
-.adrs-hexagon:hover > .adrs-hexagon-content {
-    transform: rotate(0deg);
-    transition: transform 0.5s;
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-hexagon-content {
+    rotate: 90deg !important;
+    transition: rotate 0.5s !important;
+}
+
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-shadow {
+    rotate: 0deg !important;
+    transition: rotate 0.5s !important;
+}
+
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-inner-rectangle > .adrs-inner-rectangle-gradient,
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-inner-rectangle1 > .adrs-inner-rectangle1-gradient,
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-inner-rectangle2 > .adrs-inner-rectangle2-gradient {
+    opacity: 1 !important;
+    transform: opacity 0.5s;
 }
 
 .adrs-hexagon-image {
-    // position: absolute;
     width: 30%;
     margin-bottom: 20px;
 }
@@ -131,11 +211,14 @@ body {
     .adrs-hexagon {
         left: 10vw;
         width: 40vw;
-        // transform: translateX(-88%);
     }
 }
 
 @media only screen and (max-width:920px) {
+    .adrs-hexagon {
+        pointer-events: none !important;
+    }
+
     .adrs-services-title {
         left: 50%;
         transform: translateX(-50%);
@@ -162,34 +245,3 @@ body {
         font-size: 10px;
     }
 }
-
-
-// .adrs-hexagon:hover {
-//     border-radius: 50px;
-//     transition: 0.5s;
-// }
-
-// .adrs-hexagon:hover::before {
-//     border-radius: 50px;
-//     transition: 0.5s;
-// }
-// .adrs-hexagon:hover::after {
-//     border-radius: 50px;
-//     transition: 0.5s;
-// }
-
-// .adrs-triangles {
-//     position: absolute;
-//     height: 0;
-//     width: 0;
-// }
-
-// .adrs-triangle-top {
-//     border-bottom-color: grey !important;
-//     bottom: calc(100% - 0.8px);
-// }
-
-// .adrs-triangle-bottom {
-//     border-top-color: grey !important;
-//     top: calc(100% - 0.8px);
-// }

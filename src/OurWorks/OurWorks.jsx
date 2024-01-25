@@ -1,12 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../css/OurWorks.css";
 import OurWorksList, { WorksDesciption, workComingSoon } from "./OurWorks.js";
-import {
-  motion,
-  useScroll,
-  useTransform,
-  useMotionValueEvent,
-} from "framer-motion";
+import {motion, useScroll, useTransform, useMotionValueEvent} from "framer-motion";
 import { Element } from "react-scroll";
 import { FaArrowRight } from "react-icons/fa";
 
@@ -42,13 +37,8 @@ function OurWorks() {
 
   function setStickyContainersSize() {
     document.querySelectorAll(".adrs-our-works").forEach(function (container) {
-      const stickyContainerHeight = container.querySelector(
-        ".adrs-works-box-container"
-      ).scrollWidth;
-      container.setAttribute(
-        "style",
-        "height: " + stickyContainerHeight + "px"
-      );
+      const stickyContainerHeight = container.querySelector(".adrs-works-box-container").scrollWidth;
+      container.setAttribute("style","height: " + stickyContainerHeight + "px");
     });
     setScrollEnd();
   }
@@ -57,14 +47,9 @@ function OurWorks() {
   const [webContainerHeight, setWebContainerHeight] = useState([]);
 
   function setWebpageWidth() {
-    var widths = Array.from(
-      document.querySelectorAll(".adrs-works-foreground-image"),
-      (container) => container.offsetWidth
-    );
-    var heights = Array.from(
-      document.querySelectorAll(".adrs-works-foreground-image"),
-      (container) => container.offsetWidth / 1.6
-    );
+    var widths = Array.from(document.querySelectorAll(".adrs-works-foreground-image"),(container) => container.offsetWidth);
+
+    var heights = Array.from(document.querySelectorAll(".adrs-works-foreground-image"),(container) => container.offsetWidth / 1.6);
     setWebWidth(widths);
     setWebContainerHeight(heights);
   }
@@ -72,13 +57,7 @@ function OurWorks() {
   var temp;
   const [horizontalScrollEnd, setHorizontalScrollEnd] = useState("-100%");
   function setScrollEnd() {
-    temp =
-      "-" +
-      String(
-        document.querySelector(".adrs-our-works").clientHeight -
-          window.innerWidth
-      ) +
-      "px";
+    temp = "-" + String(document.querySelector(".adrs-our-works").clientHeight - window.innerWidth) + "px";
     setHorizontalScrollEnd(temp);
   }
 
@@ -124,37 +103,26 @@ function OurWorks() {
     endReverseScroll_BgImage.current = [];
 
     for (let i = 0; i < OurWorksList.length; i++) {
-      workBoxes.current.push(
-        document.querySelector(`.adrs-works-box:nth-of-type(${String(i + 2)})`)
-      );
+      workBoxes.current.push(document.querySelector(`.adrs-works-box:nth-of-type(${String(i + 2)})`));
       startReverseScroll_BgImage.current.push(0);
       endReverseScroll_BgImage.current.push(1);
     }
   }
 
   function transformBg(index, cssProperty) {
-    startReverseScroll_BgImage.current[index] = -(
-      (windowWidth - (titleDivWidth + boxDivWidth * index)) /
-      (workDivWidth - windowWidth)
-    );
-    endReverseScroll_BgImage.current[index] =
-      (titleDivWidth + boxDivWidth * (index + 1)) /
-      (workDivWidth - windowWidth);
+    startReverseScroll_BgImage.current[index] = -((windowWidth - (titleDivWidth + boxDivWidth * index)) / (workDivWidth - windowWidth));
+    endReverseScroll_BgImage.current[index] =(titleDivWidth + boxDivWidth * (index + 1)) / (workDivWidth - windowWidth);
 
     if (cssProperty === "x") {
       var transformBackground = useTransform(
         scrollYProgress,
-        [
-          startReverseScroll_BgImage.current[index],
-          endReverseScroll_BgImage.current[index],
-        ],
+        [startReverseScroll_BgImage.current[index], endReverseScroll_BgImage.current[index]],
         ["0", "50%"]
       );
-    } else {
-      var right_start =
-        String(titleDivWidth + boxDivWidth * (index + 1) - windowWidth) + "px";
-      var right_end =
-        String(titleDivWidth + boxDivWidth * (index + 1) - workDivWidth) + "px";
+    } 
+    else {
+      var right_start = String(titleDivWidth + boxDivWidth * (index + 1) - windowWidth) + "px";
+      var right_end = String(titleDivWidth + boxDivWidth * (index + 1) - workDivWidth) + "px";
 
       var transformBackground = useTransform(
         scrollYProgress,
@@ -179,18 +147,12 @@ function OurWorks() {
     <Element id="ourWorks" name="ourWorks">
       <div className="adrs-our-works" ref={targetRef}>
         <div className="adrs-our-works-sticky">
-          <motion.div
-            style={horizontalScrollEnd !== "-100%" && { x: transformValue }}
-            className="adrs-works-box-container"
-          >
+          <motion.div style={horizontalScrollEnd !== "-100%" && { x: transformValue }} className="adrs-works-box-container">
             <div className="adrs-works-title-box">
               <div>
-                <div
-                  className="adrs-works-title"
-                  style={{ marginBottom: "20px" }}
-                >
+                <div className="adrs-works-title" style={{ marginBottom: "20px" }}>
                   {WorksDesciption.title.title1}{" "}
-                  <span style={{ color: "#FFB830" }}>
+                  <span style={{ color: "rgb(61, 178, 255)" }}>
                     {WorksDesciption.title.title2}
                   </span>
                 </div>
@@ -202,46 +164,29 @@ function OurWorks() {
             {OurWorksList.map((value, index) => {
               return (
                 <motion.div className="adrs-works-box" key={value.number}>
-                  <motion.img
-                    className="adrs-works-background-image"
-                    src={value.bgImage}
-                    style={{
-                      x: transformBg(index, "x"),
-                      right: transformBg(index, "right"),
-                    }}
-                  />
+                  <motion.img className="adrs-works-background-image" src={value.bgImage} style={{x: transformBg(index, "x"), right: transformBg(index, "right")}}/>
                   <div className="adrs-works-box-overlay"></div>
                   <div className="adrs-works-number">
                     {value.number}&nbsp;&nbsp;&nbsp;{value.name}
                   </div>
                   <div className="adrs-works-underline"></div>
-                  <motion.div
-                    className="adrs-works-foreground-image-container"
+                  <motion.div className="adrs-works-foreground-image-container"
                     style={{
                       marginRight: windowWidth / 2 - webWidth[index] / 2,
-                      x:
-                        windowWidth - titleDivWidth - boxDivWidth * (index + 1),
+                      x: windowWidth - titleDivWidth - boxDivWidth * (index + 1),
                       y: "-50%",
                       right: transformValue,
                       height: webContainerHeight[index],
                     }}
                   >
-                    <img
-                      className="adrs-works-foreground-image"
-                      onLoad={setWebpageWidth}
-                      src={value.heroImage}
-                    />
+                    <img className="adrs-works-foreground-image" onLoad={setWebpageWidth} src={value.heroImage} />
                   </motion.div>
                 </motion.div>
               );
             })}
             <div className="adrs-works-coming-soon">
-              <a
-                style={{ color: "white", textDecoration: "none" }}
-                href="#contact"
-              >
+              <a style={{ color: "white", textDecoration: "none" }} href="#contact">
                 {workComingSoon.content}
-                
                 <i>
                   <FaArrowRight />
                 </i>

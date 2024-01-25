@@ -1,4 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap");
+.atropos {
+  overflow: hidden !important;
+}
+
+.atropos-shadow {
+  rotate: 90deg !important;
+  transition: rotate 0.5s !important;
+}
+
+.atropos-highlight {
+  animation: rotate-light 2s infinite forwards;
+  animation-delay: -1s;
+}
+
+@keyframes rotate-light {
+  0%, 100% {
+    transform: rotateZ(0deg) !important;
+  }
+}
+.adrs-hexagon {
+  overflow: hidden !important;
+}
+
+.atropos-inner {
+  background-color: #21232D;
+  overflow: visible !important;
+  display: flex !important;
+  transform: rotateZ(90deg) !important;
+  transition: transform 0.5s;
+}
+
 * {
   box-sizing: border-box !important;
 }
@@ -40,35 +71,68 @@ body {
   display: flex;
   right: 4vw;
   width: 30vw;
-  cursor: pointer;
-  transform: rotate(90deg);
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  transform: rotate(0deg) !important;
   transform-origin: center;
-  background-color: #21232D;
+  background-color: transparent;
   transition: transform 0.5s;
 }
 
-.adrs-hexagon:hover {
-  transform: rotate(0deg);
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner {
+  transform: rotate(0deg) !important;
   transition: transform 0.5s;
 }
 
+.adrs-inner-rectangle,
 .adrs-inner-rectangle1,
-.adrs-inner-rectangle2 {
+.adrs-inner-rectangle2,
+.adrs-inner-rectangle-gradient,
+.adrs-inner-rectangle1-gradient,
+.adrs-inner-rectangle2-gradient,
+.adrs-highlight-container {
   position: absolute;
-  background-color: #21232D;
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   height: 100% !important;
   width: 100%;
   border-radius: 0;
   transition: transform 0.5s;
   transform-origin: center;
+  overflow: hidden !important;
+  background: #21232D;
 }
 
 .adrs-inner-rectangle1 {
-  transform: rotateZ(60deg);
+  transform: rotateZ(60deg) !important;
+  z-index: 1;
 }
 
 .adrs-inner-rectangle2 {
-  transform: rotateZ(-60deg);
+  transform: rotateZ(-60deg) !important;
+}
+
+.adrs-inner-rectangle-gradient {
+  background: linear-gradient(-45deg, #21232D, #424248);
+  opacity: 0 !important;
+  transition: opacity 0.5s;
+}
+
+.adrs-inner-rectangle1-gradient {
+  background: linear-gradient(360deg, #2c2d31, #1c1c21) !important;
+  opacity: 0 !important;
+  transition: opacity 0.5s;
+}
+
+.adrs-inner-rectangle2-gradient {
+  background: linear-gradient(-180deg, #2c2d31, #1c1c21) !important;
+  opacity: 0 !important;
+  transition: opacity 0.5s;
+}
+
+.adrs-highlight-container {
+  transform: rotateZ(-60deg) !important;
+  transform-origin: center !important;
+  background-color: #21232D;
 }
 
 .adrs-hexagon-content {
@@ -78,16 +142,30 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 2;
+  z-index: 1;
   background-color: transparent;
   transform-origin: center;
-  transform: rotate(-90deg);
-  transition: transform 0.5s;
+  transform: rotate(-90deg) translateZ(70px) !important;
+  rotate: 0deg !important;
+  transition: transform 0.5s, rotate 0.5s !important;
+  overflow: visible !important;
 }
 
-.adrs-hexagon:hover > .adrs-hexagon-content {
-  transform: rotate(0deg);
-  transition: transform 0.5s;
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-hexagon-content {
+  rotate: 90deg !important;
+  transition: rotate 0.5s !important;
+}
+
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-shadow {
+  rotate: 0deg !important;
+  transition: rotate 0.5s !important;
+}
+
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-inner-rectangle > .adrs-inner-rectangle-gradient,
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-inner-rectangle1 > .adrs-inner-rectangle1-gradient,
+.adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-inner-rectangle2 > .adrs-inner-rectangle2-gradient {
+  opacity: 1 !important;
+  transform: opacity 0.5s;
 }
 
 .adrs-hexagon-image {
@@ -126,6 +204,9 @@ body {
   }
 }
 @media only screen and (max-width: 920px) {
+  .adrs-hexagon {
+    pointer-events: none !important;
+  }
   .adrs-services-title {
     left: 50%;
     transform: translateX(-50%);

@@ -10,6 +10,7 @@
   padding: 50px;
   transition: all 0.5s linear;
   width: 100vw;
+  pointer-events: none;
   //   filter: blur(20);
   // backdrop-filter: blur(2px);
   // pointer-events: none;
@@ -52,7 +53,7 @@
     width: 179px;
     cursor: pointer;
 
-    z-index: 2;
+    z-index: 9999;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -74,7 +75,7 @@
     }
   }
   .rock-button {
-    z-index: 999;
+    z-index: 9999;
     width: 80px;
     height: 80px;
     border-radius: 50%;
@@ -83,7 +84,8 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 6;
+    pointer-events: auto;
+    // z-index: 6;
   }
 
   .rock-burger {

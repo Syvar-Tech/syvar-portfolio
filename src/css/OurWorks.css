@@ -31,7 +31,7 @@ body {
   min-width: 500px;
   min-height: 100vh;
   padding: 50px;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: none;
 }
 
 .adrs-works-title {
@@ -51,7 +51,7 @@ body {
 .adrs-works-box {
   min-width: 600px;
   min-height: 100vh;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: none;
   position: relative;
   overflow: hidden;
 }
@@ -68,7 +68,7 @@ body {
   align-items: center;
   min-width: 500px;
   min-height: 100vh;
-  border: 2px solid rgba(255, 255, 255, 0.2);
+  border: none;
   position: relative;
   text-align: center;
   display: flex;
@@ -93,6 +93,8 @@ body {
   min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: transform 0.9s;
+  transition-timing-function: cubic-bezier(0.16, 0.73, 0.58, 0.97);
 }
 
 .adrs-works-box-overlay {

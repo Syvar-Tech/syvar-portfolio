@@ -70,7 +70,8 @@ body {
     min-width: 500px;
     min-height: 100vh;
     padding: 50px;
-    border: 2px solid $border-color;
+    // border: 2px solid $border-color;
+    border: none;
 }
 
 .adrs-works-title {
@@ -87,7 +88,8 @@ body {
 .adrs-works-box {
     min-width: 600px;
     min-height: 100vh;
-    border: 2px solid $border-color;
+    // border: 2px solid $border-color;
+    border: none;
     position: relative;
     overflow: hidden;
 }
@@ -97,7 +99,8 @@ body {
     @include flexCenter();
     min-width: 500px;
     min-height: 100vh;
-    border: 2px solid $border-color;
+    // border: 2px solid $border-color;
+    border: none;
     position: relative;
     text-align: center;
     display: flex;
@@ -117,6 +120,9 @@ color: $font-color-orange
     width: 200vw;
     min-height: 100%;
     object-fit: cover;
+    transition: transform 0.9s;
+    transition-timing-function: cubic-bezier(.16,.73,.58,.97);
+    // transition-timing-function: cubic-bezier(.12,.71,.23,.83);
 }
 
 .adrs-works-box-overlay {
