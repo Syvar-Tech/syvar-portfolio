@@ -21,6 +21,12 @@ function SamyakFooter() {
   const [about, setAbout] = useState("");
   const [loading, setLoading] = useState(false);
   const [buttonMsg, setbuttonMsg] = useState("Send");
+  const [redLine, setRedLine] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    about: "",
+  });
 
   const path = useRef(null);
   let progress = 0;
@@ -148,11 +154,44 @@ function SamyakFooter() {
     }
   };
 
+  const validateAndSetRedLine = (fieldName, value) => {
+    if (!value) {
+      setRedLine((prevRedLine) => ({ ...prevRedLine, [fieldName]: fieldName }));
+    } else {
+      setRedLine((prevRedLine) => ({ ...prevRedLine, [fieldName]: "" }));
+    }
+  };
+
   function handleSubmit() {
     // console.log(`clicked`);
     setLoading(true);
     setbuttonMsg("Sending");
     if (!name || !email || !phone || !about) {
+      validateAndSetRedLine("name", name);
+      validateAndSetRedLine("email", email);
+      validateAndSetRedLine("phone", phone);
+      validateAndSetRedLine("about", about);
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+        setRedLine((prevRedLine) => ({
+          ...prevRedLine,
+          email: "email",
+        }));
+      }
+      setTimeout(() => {
+        setRedLine({ name: "", email: "", phone: "", about: "" });
+      }, 4000);
+      setLoading(false);
+      setbuttonMsg("Send");
+      return;
+    }
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      setRedLine((prevRedLine) => ({
+        ...prevRedLine,
+        email: "email",
+      }));
+      setTimeout(() => {
+        setRedLine({ name: "", email: "", phone: "", about: "" });
+      }, 4000);
       setLoading(false);
       setbuttonMsg("Send");
       return;
@@ -260,6 +299,9 @@ function SamyakFooter() {
                   placeholder="name"
                   value={name}
                   onChange={(e) => setName(e.target.value)}
+                  style={
+                    redLine.name ? { borderBottom: "1px solid #ff4f4f" } : {}
+                  }
                   required
                 ></input>
               </div>
@@ -270,6 +312,9 @@ function SamyakFooter() {
                   placeholder="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
+                  style={
+                    redLine.email ? { borderBottom: "1px solid #ff4f4f" } : {}
+                  }
                   required
                 ></input>
               </div>
@@ -278,8 +323,16 @@ function SamyakFooter() {
                   type="tel"
                   placeholder="phone"
                   value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
+                  onChange={(e) => {
+                    if (/^[0-9+]*$/.test(e.target.value)) {
+                      setPhone(e.target.value);
+                    }
+                  }}
+                  style={
+                    redLine.phone ? { borderBottom: "1px solid #ff4f4f" } : {}
+                  }
                   required
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                 ></input>
               </div>
               <div className="syk-input-bar">
@@ -292,6 +345,9 @@ function SamyakFooter() {
                   value={about}
                   onChange={handleChange}
                   placeholder="tell us about your project"
+                  style={
+                    redLine.about ? { borderBottom: "1px solid #ff4f4f" } : {}
+                  }
                   ref={textAreaRef}
                   rows={1}
                   required
@@ -319,7 +375,7 @@ function SamyakFooter() {
               onMouseLeave={() => {
                 setTransformX("0");
               }}
-              whileHover={{ scale: 1.1 }}
+              // whileHover={{ scale: 1.1 }}
               onClick={handleRightButton}
             >
               <AnimatePresence>
