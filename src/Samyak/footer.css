@@ -12,7 +12,7 @@
 }
 .syk-footer-main-container .syk-footer-content .syk-footer-title {
   color: var(--gray-0, #fff);
-  font-size: 75px;
+  font-size: 80px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -63,7 +63,7 @@
 }
 .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text {
   font-family: Work Sans;
-  font-size: 24px;
+  font-size: 20px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -197,7 +197,7 @@
 }
 .syk-footer-main-container .syk-footer-content .syk-footer-bottom .syk-footer-bottom-left {
   color: #989898;
-  font-size: 24px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;

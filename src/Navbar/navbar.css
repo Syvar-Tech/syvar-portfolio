@@ -18,6 +18,8 @@
   color: var(--white);
   height: 150px;
   width: 120px;
+  pointer-events: auto;
+  cursor: pointer;
 }
 .rock-syvar-logo img {
   height: 100%;
@@ -45,6 +47,7 @@
   align-items: center;
   overflow-y: hidden;
   position: relative;
+  pointer-events: auto;
 }
 .rock-header .rock-start-button-container .rock-start-button-initial,
 .rock-header .rock-start-button-container .rock-start-button-hovered,

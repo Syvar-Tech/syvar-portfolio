@@ -106,7 +106,7 @@ export default function Nav() {
             </a>
           </motion.div>
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
       <Curve />
     </motion.div>
