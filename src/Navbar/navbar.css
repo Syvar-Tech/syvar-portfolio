@@ -18,8 +18,6 @@
   color: var(--white);
   height: 150px;
   width: 120px;
-  pointer-events: auto;
-  cursor: pointer;
 }
 .rock-syvar-logo img {
   height: 100%;
