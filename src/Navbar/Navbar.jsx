@@ -58,6 +58,7 @@ export default function Home() {
           }}
           animate={window.scrollY > 0 ? { y: -150 } : {}}
           transition={{ duration: 0.5 }}
+          onClick={()=>{window.scrollY(0)}}
         >
           <img src={logo} alt="" />
         </motion.div>

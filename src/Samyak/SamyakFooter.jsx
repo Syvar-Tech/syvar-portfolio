@@ -414,7 +414,7 @@ function SamyakFooter() {
             </div>
           )}
           <div className="syk-footer-bottom-left">
-            @2024, T&C Privacy policy
+            &copy; 2024, T&C Privacy policy 
           </div>
           {/* <div className="syk-footer-bottom-right">LOGOS</div> */}
         </div>
