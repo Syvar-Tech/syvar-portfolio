@@ -166,8 +166,8 @@ body {
 }
 
 .adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-shadow {
-    rotate: 0deg;
-    transition: rotate 0.5s;
+    rotate: 0deg !important;
+    transition: rotate 0.5s !important;
 }
 
 .adrs-hexagon:hover > .atropos-scale > .atropos-rotate > .atropos-inner > .adrs-inner-rectangle > .adrs-inner-rectangle-gradient,
