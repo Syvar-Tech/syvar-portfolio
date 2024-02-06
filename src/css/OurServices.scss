@@ -5,9 +5,8 @@
 }
 
 .atropos-shadow {
-    rotate: 90deg;
+    rotate: 90deg !important;
     transition: rotate 0.5s !important;
-    display: none !important;
 }
 
 .atropos-highlight {
