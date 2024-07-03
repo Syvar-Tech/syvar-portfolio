@@ -20,8 +20,6 @@ function App() {
   // };
 
   useEffect(() => {
-
-    
     if (window.location.hash !== "") {
       window.location.href = "/";
       window.scrollTo(0, 0);
@@ -42,8 +40,11 @@ function App() {
       <div className="extraHeight" />
       <SamyakPart1 />
       {/* <Services /> */}
-      <div className="extraHeight samyak" style={{ backgroundColor: "#1E1E1E" }}/>
-      <div className="forAdarshatop" style={{  backgroundColor: "#1E1E1E" }}/>
+      <div
+        className="extraHeight samyak"
+        style={{ backgroundColor: "#1E1E1E" }}
+      />
+      <div className="forAdarshatop" style={{ backgroundColor: "#1E1E1E" }} />
       <OurServices />
       <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} />
       <OurWorks />

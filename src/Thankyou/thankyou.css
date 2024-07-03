@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.syk-ty-container {
+  background-color: #1e1e1e;
+  width: 100vw;
+  height: 100vh;
+}
+
+.syk-ty-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 180px;
+}
+
+.syk-thankyou {
+  display: flex;
+  gap: 15px;
+}
+
+.syk-ty-text {
+  /* min-width: 700px; */
+  text-align: center;
+  color: #f3f3f3;
+  font-family: sans-serif;
+  /* font-size: 72px; */
+  font-size: clamp(32px, 4vw, 72px);
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2.16px;
+}
+
+.syk-ty-emoji-happy {
+  position: relative;
+  /* left: 70px; */
+  /* width: 70px;
+    height: 70px; */
+  left: 10%;
+  min-width: 35px;
+  width: 6vw;
+  height: auto;
+}
+
+.syk-ty-emoji-boom {
+  position: relative;
+  /* top: 100%; */
+  align-self: flex-end;
+  /* width: 92px;
+    height: 92px; */
+  min-width: 38px;
+  width: 7vw;
+  height: auto;
+}
+
+.syk-ty-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 32px;
+  margin-top: 82px;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  background-color: #fff;
+  color: black;
+  cursor: pointer;
+}
+
+.syk-ty-header:hover {
+  transition: transform 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 330px) {
+  .syk-ty-emoji-happy {
+    left: 25px;
+  }
+
+  .syk-ty-emoji-boom {
+    right: 25px;
+  }
+}
