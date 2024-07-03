@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 import "./App.css";
 import Services from "./Services/Services";
-
+import { Routes, Route, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import Hero from "./Hero/Hero";
 import Navbar from "./Navbar/Navbar";
@@ -10,6 +10,8 @@ import SamyakPart1 from "./Samyak/SamyakPart1";
 import SamyakFooter from "./Samyak/SamyakFooter";
 import OurWorks from "./OurWorks/OurWorks.jsx";
 import OurServices from "./OurServices/OurServices.jsx";
+import EuroCup from "./EuroCupPrediction/EuroCup.jsx";
+import EuroCupPrediction from "./EuroCupPrediction/EuroCupPrediction.jsx";
 
 function App() {
   // const MouseVariants = {
@@ -37,18 +39,34 @@ function App() {
           variants={MouseVariants}
           animate= 'default'
         /> */}
-      <Navbar />
-      <Hero />
-      <div className="extraHeight" />
-      <SamyakPart1 />
-      {/* <Services /> */}
-      <div className="extraHeight samyak" style={{ backgroundColor: "#1E1E1E" }}/>
-      <div className="forAdarshatop" style={{  backgroundColor: "#1E1E1E" }}/>
-      <OurServices />
-      <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} />
-      <OurWorks />
-      <div className="extraHeight" />
-      <SamyakFooter />
+      
+      <Routes>
+        <Route path="/" element={
+          <div>
+            <Navbar />
+            <Hero />
+            <div className="extraHeight" />
+            <SamyakPart1 />
+            {/* <Services /> */}
+            <div className="extraHeight samyak" style={{ backgroundColor: "#1E1E1E" }}/>
+            <div className="forAdarshatop" style={{  backgroundColor: "#1E1E1E" }}/>
+            <OurServices />
+            <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} />
+            <OurWorks />
+            <div className="extraHeight" />
+            <SamyakFooter />
+            <Link to={"/eurocup"}>
+              <button type="button">
+                Predict EuroCup
+              </button>
+            </Link>
+          </div>
+        } />
+        <Route path="/eurocup" element={<EuroCup />} />
+        <Route path="/eurocup-prediction" element={<EuroCupPrediction />} />
+      </Routes>
+      
+      
     </>
   );
 }
