@@ -57,11 +57,7 @@ function App() {
             <div className="extraHeight" />
             <Banner/>
             <SamyakFooter />
-            <Link to={"/eurocup"}>
-              <button type="button">
-                Predict EuroCup
-              </button>
-            </Link>
+            
           </div>
         } />
         <Route path="/eurocup" element={<EuroCup />} />
