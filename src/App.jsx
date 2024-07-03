@@ -10,6 +10,7 @@ import SamyakPart1 from "./Samyak/SamyakPart1";
 import SamyakFooter from "./Samyak/SamyakFooter";
 import OurWorks from "./OurWorks/OurWorks.jsx";
 import OurServices from "./OurServices/OurServices.jsx";
+import Banner from "./Banner/Banner";
 
 function App() {
   // const MouseVariants = {
@@ -37,7 +38,8 @@ function App() {
         /> */}
       <Navbar />
       <Hero />
-      <div className="extraHeight" />
+      <Banner/>
+      {/* <div className="extraHeight" /> */}
       <SamyakPart1 />
       {/* <Services /> */}
       <div
@@ -47,8 +49,10 @@ function App() {
       <div className="forAdarshatop" style={{ backgroundColor: "#1E1E1E" }} />
       <OurServices />
       <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} />
+      {/* <div  style={{ backgroundColor: "#1E1E1E", height: "60px" }} /> */}
       <OurWorks />
-      <div className="extraHeight" />
+      <Banner/>
+      {/* <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} /> */}
       <SamyakFooter />
     </>
   );

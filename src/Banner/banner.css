@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.bannerContainer {
+    height: 280px;
+    width: 100%;
+    max-width: 1920px;
+    /* background-image: url('https://i.postimg.cc/J0cf5kWf/Frame-14.png'); */
+    /* background-repeat: no-repeat;
+    background-size: cover; */
+    /* position: fixed;
+    z-index: -1;
+    bottom: 0; */
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(50% 100% at 50% 50%, #123CDC 0%, #0A2076 73.5%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannercontent {
+    display: flex;
+    /* gap: 200px; */
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 0 170px;
+    color: #fff;
+    height: 100%;
+}
+
+.leftContent,
+.rightContent,
+.midContent {
+    width: auto;
+}
+
+.leftContent .bannerleftheading,
+.rightContent .bannerrightheading {
+    width: auto;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%;
+    /* 57.6px */
+    letter-spacing: -0.96px;
+}
+
+.leftContent .bannerleftdsc,
+.rightContent .bannerrightdsc {
+    margin-top: 4px;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+}
+
+.leftContent .bannerleftbtn,
+.rightContent .bannerrightbtn {
+    margin-top: 24px;
+    display: flex;
+    width: 228px;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 40px;
+    color: #fff;
+    background: #2653FF;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    cursor: pointer;
+}
+
+.midContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bannerEuroLogo {
+    height: 230px;
+    width: 296px;
+}
+
+.bannerEuroLogo img {
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 1/1;
+}
+
+@media only screen and (max-width:1250px) {
+    .bannercontent {
+        margin: 0 50px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .bannercontent {
+        padding: 0 5px;
+        gap: 30px;
+    }
+
+    .leftContent .bannerleftheading,
+    .rightContent .bannerrightheading {
+        font-size: 4.5vw;
+    }
+
+    .bannerEuroLogo {
+        height: 140px;
+        width: 140px;
+
+    }
+
+    .bannerEuroLogo img {
+        object-fit: cover;
+    }
+
+    .leftContent .bannerleftbtn,
+    .rightContent .bannerrightbtn {
+        width: 200px;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    .bannerContainer {
+        height: 110vh;
+        width: 100%;
+    }
+
+    .bannercontent {
+        flex-direction: column;
+        /* margin: 30px 0; */
+        align-items: center;
+        justify-content: center;
+        gap: 65px;
+    }
+
+    .leftContent {
+        order: 2;
+        width: 100%;
+    }
+
+    .leftContent .bannerleftheading,
+    .rightContent .bannerrightheading {
+        font-size: 32px;
+    }
+
+    .leftContent .bannerleftdsc,
+    .rightContent .bannerrightdsc {
+        font-size: 16px;
+    }
+
+    .midContent {
+        width: 100%;
+        order: 1;
+    }
+
+    .bannerEuroLogo {
+        height: 260px;
+        width: 260px;
+
+    }
+
+    .rightContent {
+        width: 100%;
+        order: 3;
+    }
+
+    .leftContent .bannerleftbtn,
+    .rightContent .bannerrightbtn {
+        width: 228px;
+        padding: 10px 0;
+        font-size: 16px;
+    }
+
+}
