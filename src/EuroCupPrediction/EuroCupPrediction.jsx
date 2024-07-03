@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 export default function EuroCupPrediction() {
 
     useEffect(() => {
-        if(localStorage.getItem("SyvarEuroInstaId") == null || localStorage.getItem("SyvarEuroInstaId") == "") {
+        if(localStorage.getItem("SyvarEuroInstaId") == null || localStorage.getItem("SyvarEuroInstaId") == "" ||  localStorage.getItem("SyvarEuroInstaId") == undefined) {
             navigate("/eurocup");
         }
     },[])
@@ -200,7 +200,7 @@ export default function EuroCupPrediction() {
             <div className="eurocup-uefa">
                 <img className="uefa-image" src={uefa} alt="UEFA"/>
                 <div className="eurocup-2024">EURO 2024</div>
-                <div className="eurocup-2024-sub-title">Prediction before 5 July</div>
+                <div className="eurocup-2024-sub-title">Prediction before 5 July, 9:00 PM </div>
             </div>
             <div className="eurocup-prediction">
                 <div className="round-container">
