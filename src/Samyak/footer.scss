@@ -180,7 +180,7 @@ $title-white: var(--gray-0, #fff);
             box-sizing: border-box;
             border: none;
             border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            background-color: var(--gray-900, #121212);
+            background-color: var(--gray-900, #1e1e1e);
             color: rgba(255, 255, 255, 0.7);
             font-size: 32px;
             font-style: normal;
@@ -198,7 +198,7 @@ $title-white: var(--gray-0, #fff);
           }
 
           textarea {
-            background: #121212;
+            background: #1e1e1e;
             border-radius: 0;
             border: none;
             padding-bottom: 12px;

@@ -194,7 +194,7 @@ export default function EuroCupPrediction() {
     return (
         <div style={{marginBottom: "40px"}}>
             <div className="eurocup-heading">
-                <div className="eurocup-main-heading">Predict And Win</div>
+                <div className="eurocup-main-heading">Predict And Win - Round 1</div>
                 <div className="eurocup-sub-heading">Let's win exciting gift hampers & prizes</div>
             </div>
             <div className="eurocup-uefa">
