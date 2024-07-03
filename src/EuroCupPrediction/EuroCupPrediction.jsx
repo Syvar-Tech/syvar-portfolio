@@ -19,7 +19,7 @@ import { useNavigate } from "react-router-dom";
 export default function EuroCupPrediction() {
 
     useEffect(() => {
-        if(localStorage.getItem("SyvarEuroInstaId") == null || localStorage.getItem("SyvarEuroInstaId") == "" ||  localStorage.getItem("SyvarEuroInstaId") == undefined) {
+        if(localStorage.getItem("SyvarEuroInstaId") == null || localStorage.getItem("SyvarEuroInstaId") == "undefined" ||  localStorage.getItem("SyvarEuroInstaId") == undefined) {
             navigate("/eurocup");
         }
     },[])
