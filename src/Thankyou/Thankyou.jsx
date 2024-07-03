@@ -1,6 +1,8 @@
+import { useNavigate } from "react-router-dom";
 import "./thankyou.css";
 
 export default function Thankyou() {
+  const navigate = useNavigate();
   return (
     <div className="syk-ty-container">
       <div className="syk-ty-content">
@@ -126,7 +128,12 @@ export default function Thankyou() {
             </svg>
           </div>
         </div>
-        <div className="syk-ty-header" onClick={() => {}}>
+        <div
+          className="syk-ty-header"
+          onClick={() => {
+            navigate("/");
+          }}
+        >
           Go Back Home
         </div>
       </div>

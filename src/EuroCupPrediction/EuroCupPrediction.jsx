@@ -1,6 +1,6 @@
 import "../css/EuroCup.css";
 import "../Navbar/navbar.scss";
-import "../../public/images/eurocup-uefa-logo.png";
+import uefa from "../../public/images/eurocup-uefa-logo.png";
 import England from "./Flags/England.jsx";
 import Switzerland from "./Flags/Switzerland.jsx";
 import Netherlands from "./Flags/Netherlands.jsx";
@@ -198,7 +198,7 @@ export default function EuroCupPrediction() {
                 <div className="eurocup-sub-heading">Let's win exciting gift hampers & prizes</div>
             </div>
             <div className="eurocup-uefa">
-                <img className="uefa-image" src="../../public/images/eurocup-uefa-logo.png" alt="UEFA"/>
+                <img className="uefa-image" src={uefa} alt="UEFA"/>
                 <div className="eurocup-2024">EURO 2024</div>
                 <div className="eurocup-2024-sub-title">Prediction before 5 July</div>
             </div>
