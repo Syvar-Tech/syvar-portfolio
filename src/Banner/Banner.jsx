@@ -17,7 +17,7 @@ const Banner = () => {
             <h1 className="bannerleftheading">Quiz Time</h1>
             <p className="bannerleftdsc">Are you ready to win?</p>
             {/* <a href={link}> */}
-              <button className="bannerleftbtn">Coming Soon</button>
+              <button className="bannerleftbtn">Comming Soon</button>
             {/* </a> */}
           </div>
           <div className="midContent">

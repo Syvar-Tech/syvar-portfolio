@@ -120,9 +120,6 @@ color: $font-color-orange
     width: 200vw;
     min-height: 100%;
     object-fit: cover;
-    transition: transform 0.9s;
-    transition-timing-function: cubic-bezier(.16,.73,.58,.97);
-    // transition-timing-function: cubic-bezier(.12,.71,.23,.83);
 }
 
 .adrs-works-box-overlay {
@@ -171,6 +168,13 @@ color: $font-color-orange
     top: 90px;
     left: 77px;
     background-color: $font-color-orange;
+}
+
+@media only screen and (min-width:601px) {
+    .adrs-works-background-image {
+        transition: transform 0.9s;
+        transition-timing-function: cubic-bezier(.16,.73,.58,.97);
+    }
 }
 
 @media only screen and (max-width:600px) {

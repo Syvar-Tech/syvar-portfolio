@@ -1,6 +1,6 @@
 import "../css/EuroCup.css";
 import "../Navbar/navbar.scss";
-import uefa from "../../public/images/eurocup-uefa-logo.png";
+import uefa from "../assets/eurocup-uefa-logo.png";
 import England from "./Flags/England.jsx";
 import Switzerland from "./Flags/Switzerland.jsx";
 import Netherlands from "./Flags/Netherlands.jsx";
@@ -48,6 +48,7 @@ export default function EuroCupPrediction() {
     });
 
     function submitPrediction() {
+        // https://syvar.com.np/api/predict
         axios.post('https://syvar.com.np/api/predict',
             winnerTeam
         )

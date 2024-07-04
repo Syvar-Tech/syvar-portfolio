@@ -1,6 +1,6 @@
 import "../css/EuroCup.css";
 import { Link, useNavigate } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function EuroCup(){
 
@@ -12,6 +12,13 @@ export default function EuroCup(){
         navigate("/eurocup-prediction");
     }
 
+    useEffect(()=>{
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'instant' 
+          });
+    },[])
     return(
         <div>
             <div className="eurocup-heading">
@@ -42,6 +49,45 @@ export default function EuroCup(){
                     </ul>
                 </div>
             </div>
+            <div className="eurocup-prediction-rules">
+                <div className="prediction-rules-title">
+                    Prediction Rules
+                </div>
+                <div className="prediction-rules">
+                    The prediction will be divided into three rounds, with each round awarding points for right predictions. After each round, we will disclose the top 10 players with the highest scores.
+                    <br /><br />
+                    Winner will be declared after adding up the points of the all the rounds.
+                    <br /><br />
+                    <div className="prediction-rules-title1">
+                        First Round: The General Bracket Prediction
+                    </div>
+                    <div className="prediction-rules-title2">
+                        Event Duration: 4th July to 5th July 
+                    </div>
+                    In this round, you will predict the full EURO CUP 2024 playoff bracket. For each correct prediction, you will gain 1 point. In this round, you can gain a total of 10 points.
+                    <br /><br />
+                    <div className="prediction-rules-title1">
+                        Second Round: The Second Chance
+                    </div>
+                    <div className="prediction-rules-title2">
+                        Event Duration: 7th July to 9th July  
+                    </div>
+                    Even if you to fail to predict for the first round, you have a second chance to redeem yourself. Each participants can forecast the score, winner, and penalty probability of each semifinal game. One correct prediction wins you 2 points in this match. Participants can receive a total of 12 points from this round.
+                    <br /><br />
+                    <div className="prediction-rules-title1">
+                        Third Round: The Final Round 
+                    </div>
+                    <div className="prediction-rules-title2">
+                        Event Duration: 11th July to 14th July
+                    </div>
+                    This is the final barrier you must overcome. You will predict the winner, goals, player of the match, and penalty probability of the final match, with each successful prediction earning you 4 points. Participants can earn a total of 16 points by winning it all or risk losing it all.
+                    <br /><br />
+                    Remember, just because you lost the first round does not mean you are out of the Prediction: it is only the beginning.
+                </div>
+            </div>
+            {/* <div className="predict-rounds">
+
+            </div> */}
         </div>
     );
 }

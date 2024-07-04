@@ -135,6 +135,43 @@ input:focus {
     transition: background-color 0.2s, color 0.2s;
 }
 
+.eurocup-prediction-rules {
+    width: 70%;
+    margin: 80px auto;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prediction-rules-title {
+    @include fontStyle1(48px, 700, 120%, -1.44px, $font-color-orange);
+    margin-bottom: 70px;
+}
+
+.prediction-rules {
+    @include fontStyle1(22px, 400, 140%, 0.22px, $font-bright-white);
+}
+
+.prediction-rules-title1, .prediction-rules-title2 {
+    font-weight: 700;
+}
+
+.prediction-rules-title2 {
+    color: $font-color-orange;
+}
+
+.predict-rounds {
+    margin: 0 auto 80px auto;
+    width: 70%;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-radius: 20px;
+    border: 1px solid #BF6A02;
+}
+
 .eurocup-uefa {
     margin: 40px auto 80px auto;
     @include flexCenter();
