@@ -1,0 +1,410 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+* {
+  box-sizing: border-box !important;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #1E1E1E;
+}
+
+.eurocup-heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.eurocup-main-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -2.16px;
+  color: #FFB830;
+  margin-top: 40px;
+}
+
+.eurocup-sub-heading {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #B3B3B3;
+}
+
+.eurocup-prediction-participation {
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  margin-top: 120px;
+  width: 100%;
+}
+
+.eurocup-column {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 322px;
+}
+
+.eurocup-heading2 {
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+  color: #FFB830;
+}
+
+.eurocup-unordered-list, .eurocup-enter-username {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #B3B3B3;
+  margin-top: 20px;
+}
+
+.eurocup-enter-username {
+  margin-top: 40px;
+}
+
+.eurocup-input-username {
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 8px;
+  background: #FFF;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: black;
+}
+
+::-moz-placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #5A5A5A;
+  opacity: 1; /* Firefox */
+}
+
+::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #5A5A5A;
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: #5A5A5A;
+}
+
+input:active,
+input:focus {
+  outline: none !important;
+  border-color: #FFB830;
+}
+
+/* .ie is a class you would need to set at the html root level */
+.ie input:active,
+.ie input:focus {
+  outline: none !important;
+  border-color: #FFB830;
+}
+
+.eurocup-btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #F3F3F3;
+  background-color: transparent;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 1px solid #FFF;
+  padding: 16px 20px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.eurocup-btn:hover {
+  background-color: #F3F3F3;
+  color: #333333;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.eurocup-prediction-rules {
+  width: 70%;
+  margin: 80px auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
+}
+
+.prediction-rules-title {
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -1.44px;
+  color: #FFB830;
+  margin-bottom: 70px;
+}
+
+.prediction-rules {
+  font-family: "Inter", sans-serif;
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: 0.22px;
+  color: #F3F3F3;
+}
+
+.prediction-rules-title1, .prediction-rules-title2 {
+  font-weight: 700;
+}
+
+.prediction-rules-title2 {
+  color: #FFB830;
+}
+
+.predict-rounds {
+  margin: 0 auto 80px auto;
+  width: 70%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #BF6A02;
+}
+
+.eurocup-uefa {
+  margin: 40px auto 80px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.uefa-image {
+  width: 199px;
+  height: 78px;
+}
+
+.eurocup-2024 {
+  font-family: "Inter", sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  letter-spacing: -0.96px;
+  color: #F3F3F3;
+}
+
+.eurocup-2024-sub-title {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #F3F3F3;
+}
+
+.eurocup-prediction {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  scroll-snap-type: x mandatory;
+}
+
+.round-container {
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 621px;
+  scroll-snap-align: start;
+  position: relative;
+}
+
+.tbd-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.round-title {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: normal;
+  color: #F3F3F3;
+  position: absolute;
+  left: 0;
+  top: -150%;
+  pointer-events: none;
+}
+
+.team-div {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #F3F3F3;
+  position: relative;
+  min-width: 150px;
+  max-width: 210px;
+  width: 210px;
+  height: 34px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  background-color: #323232;
+}
+
+.team-separator {
+  height: 1px;
+  min-width: 150px;
+  max-width: 210px;
+  width: 210px;
+  background-color: #474747;
+}
+
+.golden-line, .golden-line-reverse {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  left: 50%;
+  background-color: #FFB830;
+  z-index: -1;
+}
+
+.golden-line-vertical {
+  position: absolute;
+  height: 2px;
+  width: 69px;
+  left: 99.98%;
+  background-color: #FFB830;
+  transform-origin: left;
+}
+
+.golden-line-reverse {
+  left: 0;
+}
+
+@media only screen and (max-width: 1100px) {
+  .round-container {
+    flex: 0 0 33.33%;
+  }
+  .eurocup-prediction {
+    overflow-x: scroll;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .eurocup-main-heading {
+    font-size: 48px;
+    font-weight: 500;
+  }
+  .eurocup-prediction-participation {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 70px;
+  }
+  .round-container {
+    flex: 0 0 50%;
+  }
+  .eurocup-participate-btn {
+    margin-bottom: 50px;
+  }
+  .uefa-image {
+    width: 173px;
+    height: 78px;
+  }
+  .eurocup-2024 {
+    font-family: "Inter", sans-serif;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: normal;
+    color: #F3F3F3;
+  }
+  .eurocup-2024-sub-title {
+    font-family: "Inter", sans-serif;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: normal;
+    color: #F3F3F3;
+  }
+}
+@media only screen and (max-width: 850px) {
+  .team-div, .team-separator {
+    width: 36vw;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .team-div, .team-separator {
+    width: 50vw;
+  }
+  .round-container {
+    flex: 0 0 100%;
+  }
+}
+@media only screen and (max-width: 360px) {
+  .eurocup-column {
+    width: 95%;
+  }
+}/*# sourceMappingURL=EuroCup.css.map */

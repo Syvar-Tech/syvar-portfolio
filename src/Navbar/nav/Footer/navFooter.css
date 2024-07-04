@@ -1,0 +1,12 @@
+.rock-footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 12px;
+  gap: 40px;
+  font-family: var(--work-sans);
+}
+.rock-footer a {
+  text-decoration: none;
+  color: var(--white);
+}/*# sourceMappingURL=navFooter.css.map */

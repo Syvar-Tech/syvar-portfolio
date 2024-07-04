@@ -1,0 +1,155 @@
+.rock-navBar {
+  height: 200px;
+  // background: linear-gradient(to bottom, rgba(0, 0, 0, 1), transparent);
+  //   opacity: 0.rock-5;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  padding: 50px;
+  transition: all 0.5s linear;
+  width: 100vw;
+  pointer-events: none;
+  //   filter: blur(20);
+  // backdrop-filter: blur(2px);
+  // pointer-events: none;
+}
+
+// .rock-start-button-container,
+// .rock-start-button-initial,
+// .rock-start-button-hovered{
+//   transition: all 0.5s ease-in-out;
+// }
+
+.rock-syvar-logo {
+  padding: 0px 30px 0px 90px;
+  position: fixed;
+  left: 0;
+  // z-index: 4;
+  color: var(--white);
+  height: 150px;
+  width: 120px;
+  pointer-events: auto;
+  cursor: pointer;
+  img {
+    // width: 100%;
+    height: 100%;
+  }
+}
+
+.rock-header {
+  padding: 30px;
+  position: fixed;
+  right: 0;
+  // z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .rock-start-button-container,
+  .rock-start-button-container-nav {
+    border-radius: 40px;
+    border: 1px solid var(--white);
+    background: var(--white);
+    height: 59px;
+    width: 179px;
+    cursor: pointer;
+
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow-y: hidden;
+    position: relative;
+    pointer-events: auto;
+
+    .rock-start-button-initial,
+    .rock-start-button-hovered {
+      color: #333;
+      font-family: var(--work-sans);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      position: absolute;
+      // display: flex;
+      // justify-content: center;
+      // align-items: center;
+    }
+  }
+  .rock-button {
+    z-index: 9999;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    // background-color: #455CE9;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: auto;
+    // z-index: 6;
+  }
+
+  .rock-burger {
+    width: 100%;
+    transition: all 0.5s;
+    z-index: 1000;
+
+    &::after,
+    &::before {
+      content: "";
+      display: block;
+      height: 1px;
+      width: 40%;
+      margin: auto;
+      background-color: white;
+      position: relative;
+      transition: transform 0.5s;
+      z-index: 1000;
+    }
+
+    &::after {
+      top: -5px;
+    }
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .rock-burgerActive {
+    // transition: all 0.5s ;
+    z-index: 1000;
+    &::after {
+      transform: rotate(45deg);
+      top: -1px;
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+      top: 0px;
+    }
+  }
+}
+@media only screen and (max-width: 550px) {
+  .rock-start-button-container {
+    display: none !important;
+  }
+  .rock-syvar-logo {
+    padding: 25px 0 25px 35px;
+    height: 150px;
+  }
+}
+
+@media only screen and (max-width: 380px) {
+  .rock-navBar {
+    height: 150px;
+  }
+}
+
+// .nav-icon-pos{
+//   transition: transform 0.5s linear;
+//   transform: translateY(-30px);
+// }

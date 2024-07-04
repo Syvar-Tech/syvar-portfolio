@@ -1,0 +1,298 @@
+.syk-footer-main-container {
+  height: 100%;
+  padding: 94px 0 50px;
+  overflow-x: hidden;
+  display: grid;
+  place-items: center;
+}
+.syk-footer-main-container .syk-footer-content {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-title {
+  color: var(--gray-0, #fff);
+  font-size: 80px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  padding-bottom: 62px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-string-line {
+  height: 2px;
+  width: 100%;
+  position: relative;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-string-line svg {
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top: -250px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-string-line svg path {
+  stroke: rgba(255, 255, 255, 0.6);
+  stroke-width: 2px;
+  fill: none;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-string-line .syk-box {
+  height: 40px;
+  width: 100%;
+  position: relative;
+  top: -20px;
+  z-index: 100;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-string-line .syk-box:hover {
+  height: 500px;
+  top: -250px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 20px;
+  width: 100%;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top {
+  display: flex;
+  flex-direction: row;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text {
+  font-family: Work Sans;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  z-index: 100;
+  padding-right: 88px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text .text-only-number:hover {
+  color: #ffb830;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text .text-only-mail,
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text .text-only-number {
+  color: #989898;
+  text-decoration: none;
+  padding: 10px;
+  cursor: pointer;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text .text-only-mail:hover {
+  color: #ffb830;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-bottom {
+  display: flex;
+  flex-direction: row;
+  padding-top: 107px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-bottom svg {
+  color: #989898;
+  height: 60px;
+  width: 60px;
+  margin-right: 40px;
+  transition: fill 0.2s;
+  cursor: pointer;
+  z-index: 100;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-bottom svg:hover {
+  color: #ffb830;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-section {
+  position: relative;
+  margin-left: -32px;
+  padding-top: 69px;
+  margin-bottom: 262px;
+  display: flex;
+  justify-content: flex-end;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-section .syk-footer-right-button {
+  color: #649fe4;
+  font-size: 100px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  cursor: pointer;
+  width: 648px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-section .syk-footer-right-button div {
+  display: inline;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-section .syk-footer-right-button div svg {
+  height: 120px;
+  width: 120px;
+  position: relative;
+  top: 35px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form {
+  width: 50%;
+  padding-top: 9px;
+  padding-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 100;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar {
+  padding-top: 40px;
+  width: 100%;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar input {
+  width: 100%;
+  padding-bottom: 20px;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  background-color: var(--gray-900, #1e1e1e);
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  outline: none;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar input:hover {
+  border-bottom: 1px solid white;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar input:focus {
+  border-bottom: 1px solid #ffb830;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar textarea {
+  background: #1e1e1e;
+  border-radius: 0;
+  border: none;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  font-size: 24px;
+  color: white;
+  resize: none;
+  transition: border-color 150ms ease;
+  width: 100%;
+  outline: none;
+  line-height: 163%;
+  overflow-y: hidden;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar textarea:hover {
+  border-color: #c6c6c6;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar textarea:focus {
+  border-bottom: 1px solid #ffb830;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar span {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  margin: 0px 0 0 3.6px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-form-submit {
+  margin-top: 122px;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.syk-footer-main-container .syk-footer-content .syk-footer-bottom .syk-footer-bottom-left {
+  color: #989898;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+@media only screen and (max-width: 500px) {
+  .syk-footer-main-container {
+    height: auto;
+    width: 100vw;
+    padding: 30px 0 20px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-title {
+    font-size: 40px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section {
+    flex-direction: column;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section {
+    width: 100%;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top {
+    flex-direction: column;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text {
+    font-size: 16px;
+    padding: 0;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text .text-only-mail {
+    padding: 0;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-left-section .syk-footer-left-top .syk-footer-text .text-only-number {
+    padding: 0;
+    margin-bottom: 20px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-section {
+    width: 100%;
+    margin-left: 0;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-section .syk-footer-right-button {
+    font-size: 52px;
+    width: auto;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-section .syk-footer-right-button div svg {
+    height: 60px;
+    width: 60px;
+    top: 17px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar {
+    padding-top: 20px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar input {
+    padding-bottom: 10px;
+    font-size: 16px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar textarea {
+    padding-bottom: 6px;
+    font-size: 16px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-input-bar span {
+    font-size: 17px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-mid-section .syk-footer-right-form .syk-form-submit {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-bottom .syk-footer-left-bottom {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin: auto;
+    align-items: flex-end;
+    padding-top: 20px;
+    width: 100%;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-bottom .syk-footer-left-bottom svg {
+    color: #989898;
+    transition: fill 0.2s;
+    cursor: pointer;
+    z-index: 100;
+    height: 30px;
+    width: 30px;
+  }
+  .syk-footer-main-container .syk-footer-content .syk-footer-bottom .syk-footer-bottom-left {
+    font-size: 12px;
+  }
+}/*# sourceMappingURL=footer.css.map */

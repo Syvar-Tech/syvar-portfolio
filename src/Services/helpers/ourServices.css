@@ -1,0 +1,166 @@
+.rock-imageContainer {
+  max-width: 876px;
+  width: 100%;
+  height: 512px;
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+  border: 2px solid black; /* Example border with 2px width and black color */
+  background-image: linear-gradient(to bottom, var(--light-yellow), transparent, transparent);
+}
+.rock-imageContainer::after {
+  content: "";
+  position: absolute;
+  background: #21232d;
+  inset: 2px;
+  border-radius: 5px;
+}
+.rock-imageContainer::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 300%;
+}
+.rock-imageContainer:hover {
+  border: none; /* Example border with 2px width and black color */
+  background-image: none;
+}
+.rock-imageContainer:hover::before {
+  background: linear-gradient(224deg, var(--yellow) 1.36%, rgba(255, 255, 255, 0) 43.72%, rgba(217, 217, 217, 0) 56.51%, var(--yellow) 100.99%);
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rock-imageContainer:hover .rock-topbox {
+  transform: translateY(-50px);
+}
+.rock-imageContainer .rock-topbox {
+  height: 5px;
+  width: 30px;
+  background-color: var(--yellow);
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 25px;
+  transform: translateY(0);
+  transition: transform 0.3s ease-in-out;
+}
+.rock-imageContainer .rock-content {
+  margin-top: 20px;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+  max-width: 1440px;
+}
+.rock-imageContainer .rock-content .rock-content-top {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  height: 70%;
+  padding: 0px 20px 30px 20px;
+  position: relative;
+}
+.rock-imageContainer .rock-content .rock-content-top .rock-number {
+  width: 45%;
+  color: var(--yellow);
+  /* Work Sans/26px: Medium */
+  font-family: Work Sans;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.rock-imageContainer .rock-content .rock-content-top .rock-title {
+  width: 50%;
+  color: var(--Brand-Color-Yellow, #ffb830);
+  /* Work Sans/26px: Medium */
+  font-family: Work Sans;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.rock-imageContainer .rock-content .rock-text-content {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  height: 70%;
+  padding: 30px 10px;
+}
+.rock-imageContainer .rock-content .rock-text-content .rock-left {
+  width: 45%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rock-imageContainer .rock-content .rock-text-content .rock-left img {
+  height: 90%;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rock-imageContainer .rock-content .rock-text-content .rock-right {
+  display: flex;
+  width: 50%;
+}
+.rock-imageContainer .rock-content .rock-text-content .rock-right p {
+  height: auto;
+  width: 90%;
+  color: #9d9d9d;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+  letter-spacing: 0.08px;
+}
+
+@media only screen and (max-width: 550px) {
+  .rock-imageContainer {
+    height: 550px;
+  }
+  .rock-imageContainer .rock-content .rock-content-top .rock-number {
+    width: 10%;
+  }
+  .rock-imageContainer .rock-content .rock-content-top .rock-title {
+    width: 100%;
+  }
+  .rock-imageContainer .rock-content .rock-text-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .rock-imageContainer .rock-content .rock-text-content .rock-left {
+    display: flex;
+    width: 80%;
+  }
+  .rock-imageContainer .rock-content .rock-text-content .rock-right {
+    width: 90%;
+  }
+  .rock-imageContainer .rock-content .rock-text-content .rock-right p {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .rock-imageContainer .rock-content .rock-content-top .rock-number {
+    font-size: 18px;
+  }
+  .rock-imageContainer .rock-content .rock-content-top .rock-title {
+    font-size: 18px;
+  }
+}/*# sourceMappingURL=ourServices.css.map */

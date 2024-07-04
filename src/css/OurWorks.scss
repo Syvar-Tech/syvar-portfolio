@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Work+Sans&display=swap');
+
+$ourworks-color: #21232D;
+$border-color: #ffffff33;
+$font-color-orange: #FFB830;
+$font-color-white: #FFFFFF;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin fontStyle1($fontColor) {
+    font-family: 'Inter', sans-serif;
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;           
+    color: $fontColor;
+}
+
+@mixin fontStyle2($fontColor) {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 180%; /* 28.8px */
+    letter-spacing: 0.08px;
+    color: $fontColor;
+}
+
+@mixin fontStyle3($fontColor) {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 26px;
+    font-weight: 500;
+    line-height: 30px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $fontColor;
+}
+
+* {
+    box-sizing: border-box !important;
+}
+  
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.adrs-our-works {
+    background-color: $ourworks-color;
+}
+
+.adrs-our-works-sticky {
+    overflow: hidden;
+    display: flex;
+    position: sticky;
+    top:0;
+}
+
+.adrs-works-box-container {
+    display: flex;
+}
+
+.adrs-works-title-box {
+    @include flexCenter();
+    min-width: 500px;
+    min-height: 100vh;
+    padding: 50px;
+    // border: 2px solid $border-color;
+    border: none;
+}
+
+.adrs-works-title {
+    @include fontStyle1($font-color-white);
+}
+
+.adrs-works-description {
+    // @include fontStyle2($font-color-white);
+    // text-align: justify;
+    font-size: 20px;
+    color: #afafaf;
+}
+
+.adrs-works-box {
+    min-width: 600px;
+    min-height: 100vh;
+    // border: 2px solid $border-color;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+.adrs-works-coming-soon {
+    @include fontStyle1($font-color-white);
+    @include flexCenter();
+    min-width: 500px;
+    min-height: 100vh;
+    // border: 2px solid $border-color;
+    border: none;
+    position: relative;
+    text-align: center;
+    display: flex;
+}
+
+.adrs-works-coming-soon a{
+    @include flexCenter();
+    gap: 40px;
+    flex-direction: column;
+}
+.adrs-works-coming-soon a i{
+color: $font-color-orange
+}
+.adrs-works-background-image {
+    position: absolute;
+    top: 0;
+    width: 200vw;
+    min-height: 100%;
+    object-fit: cover;
+}
+
+.adrs-works-box-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.adrs-works-foreground-image-container {
+    position: absolute;
+    top: 50%;
+    height: 250px;
+    padding: 0 !important;
+    margin: 0;
+    width: 70%;
+    border-radius: 12px;
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.adrs-works-foreground-image-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+     
+.adrs-works-foreground-image {
+    display: block !important;
+    width: 100%;
+    object-fit: cover;
+    margin: 0;
+}
+
+.adrs-works-number {
+    @include fontStyle3($font-color-white);
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+
+.adrs-works-underline {
+    width: 15px;
+    height: 5px;
+    position: absolute;
+    top: 90px;
+    left: 77px;
+    background-color: $font-color-orange;
+}
+
+@media only screen and (min-width:601px) {
+    .adrs-works-background-image {
+        transition: transform 0.9s;
+        transition-timing-function: cubic-bezier(.16,.73,.58,.97);
+    }
+}
+
+@media only screen and (max-width:600px) {
+    .adrs-works-title-box, .adrs-works-box, .adrs-works-coming-soon { 
+        min-width: 100vw;
+    }
+
+    .adrs-works-box-overlay {
+        display: none;
+    }
+
+    .adrs-works-background-image {
+        filter: brightness(0.8);  // This somehow glitches the background image in laptop but not in mobile devices. In fact it makes the animation smoother in mobile.
+    }
+}
+
+@media only screen and (min-width:1536px) {
+    .adrs-works-title-box, .adrs-works-coming-soon { 
+        min-width: 35vw;
+    }
+
+    .adrs-works-box {
+        min-width: 40vw;
+    }
+}

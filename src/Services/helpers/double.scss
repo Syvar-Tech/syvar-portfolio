@@ -1,0 +1,206 @@
+.rock-double {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  
+  // height: 40vw;
+  .rock-imageContainer {
+    width: 876px;
+    height: 512px;
+    // background-color: var(--light-black);
+    position: relative;
+    display: flex;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    gap: 10px;
+    // border: 2px;
+    // border: linear-gradient(to bottom var(--yellow));
+    border: 2px solid black; /* Example border with 2px width and black color */
+    background-image: linear-gradient(
+      to bottom,
+      var(--yellow),
+      transparent,
+      transparent
+    );
+    &::after {
+      content: "";
+      position: absolute;
+      background: #21232d;
+      inset: 2px;
+      border-radius: 5px;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 200%;
+      height: 300%;
+    }
+    &:hover {
+      border: none; /* Example border with 2px width and black color */
+      background-image: none;
+    }
+    &:hover::before {
+      background: linear-gradient(
+        224deg,
+        var(--yellow) 1.36%,
+        rgba(255, 255, 255, 0) 43.72%,
+        rgba(217, 217, 217, 0) 56.51%,
+        var(--yellow) 100.99%
+      );
+
+      animation: rotate 2s linear infinite;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    .rock-topbox{
+      height: 20px;
+      width: 60px;
+      background-color: var(--yellow);
+    }
+    .rock-content {
+      margin-top: 20px;
+      z-index: 2;
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 40px;
+      max-width: 1440px;
+      .rock-content-top {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        // align-items: center;
+        justify-content: center;
+        // align-items: center;
+        height: 70%;
+        // margin: 20% 0;
+        padding: 30px 20px;
+        position: relative;
+        .rock-number {
+          width: 45%;
+          color: var(--yellow);
+          /* Work Sans/26px: Medium */
+          font-family: Work Sans;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+        .rock-title {
+          width: 50%;
+          color: var(--Brand-Color-Yellow, #ffb830);
+          /* Work Sans/26px: Medium */
+          font-family: Work Sans;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+        }
+      }
+      .rock-text-content {
+        display: flex;
+        width: 100%;
+        gap: 10px;
+        // align-items: center;
+        justify-content: center;
+        height: 70%;
+        // margin: 20% 0;
+        padding: 30px 10px;
+        .rock-left {
+          width: 45%;
+          height: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          img {
+            height: 90%;
+            width: 90%;
+            object-fit: cover;
+          }
+        }
+        .rock-right {
+          display: flex;
+
+          width: 50%;
+          p {
+            height: auto;
+            width: 90%;
+            color: #9d9d9d;
+            font-family: Work Sans;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%; /* 32px */
+            letter-spacing: 0.08px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .rock-double {
+    flex-direction: column;
+    width: 100%;
+    // background-color: #f1f1f1;
+    .rock-imageContainer {
+      width: 100%;
+    }
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .rock-double {
+    .rock-imageContainer {
+      height: 650px;
+      .rock-content {
+        .rock-content-top {
+          // flex-direction: column;
+          .rock-number {
+            width: 10%;
+          }
+          .rock-title {
+            width: 100%;
+          }
+        }
+        .rock-text-content {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          .rock-left {
+            display: flex;
+            width: 80%;
+          }
+          .rock-right {
+            width: 90%;
+            p {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .rock-double{
+    .rock-imageContainer{
+      .rock-content{
+        .rock-content-top{
+          flex-direction: column;
+        }
+      }
+    }
+  }
+}

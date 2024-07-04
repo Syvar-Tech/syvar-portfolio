@@ -1,0 +1,167 @@
+.rock-double {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+.rock-double .rock-imageContainer {
+  width: 876px;
+  height: 512px;
+  position: relative;
+  display: flex;
+  border-radius: 5px;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  gap: 10px;
+  border: 2px solid black; /* Example border with 2px width and black color */
+  background-image: linear-gradient(to bottom, var(--yellow), transparent, transparent);
+}
+.rock-double .rock-imageContainer::after {
+  content: "";
+  position: absolute;
+  background: #21232d;
+  inset: 2px;
+  border-radius: 5px;
+}
+.rock-double .rock-imageContainer::before {
+  content: "";
+  position: absolute;
+  width: 200%;
+  height: 300%;
+}
+.rock-double .rock-imageContainer:hover {
+  border: none; /* Example border with 2px width and black color */
+  background-image: none;
+}
+.rock-double .rock-imageContainer:hover::before {
+  background: linear-gradient(224deg, var(--yellow) 1.36%, rgba(255, 255, 255, 0) 43.72%, rgba(217, 217, 217, 0) 56.51%, var(--yellow) 100.99%);
+  animation: rotate 2s linear infinite;
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.rock-double .rock-imageContainer .rock-topbox {
+  height: 20px;
+  width: 60px;
+  background-color: var(--yellow);
+}
+.rock-double .rock-imageContainer .rock-content {
+  margin-top: 20px;
+  z-index: 2;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 40px;
+  max-width: 1440px;
+}
+.rock-double .rock-imageContainer .rock-content .rock-content-top {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  height: 70%;
+  padding: 30px 20px;
+  position: relative;
+}
+.rock-double .rock-imageContainer .rock-content .rock-content-top .rock-number {
+  width: 45%;
+  color: var(--yellow);
+  /* Work Sans/26px: Medium */
+  font-family: Work Sans;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.rock-double .rock-imageContainer .rock-content .rock-content-top .rock-title {
+  width: 50%;
+  color: var(--Brand-Color-Yellow, #ffb830);
+  /* Work Sans/26px: Medium */
+  font-family: Work Sans;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.rock-double .rock-imageContainer .rock-content .rock-text-content {
+  display: flex;
+  width: 100%;
+  gap: 10px;
+  justify-content: center;
+  height: 70%;
+  padding: 30px 10px;
+}
+.rock-double .rock-imageContainer .rock-content .rock-text-content .rock-left {
+  width: 45%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.rock-double .rock-imageContainer .rock-content .rock-text-content .rock-left img {
+  height: 90%;
+  width: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.rock-double .rock-imageContainer .rock-content .rock-text-content .rock-right {
+  display: flex;
+  width: 50%;
+}
+.rock-double .rock-imageContainer .rock-content .rock-text-content .rock-right p {
+  height: auto;
+  width: 90%;
+  color: #9d9d9d;
+  font-family: Work Sans;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 200%; /* 32px */
+  letter-spacing: 0.08px;
+}
+
+@media only screen and (max-width: 800px) {
+  .rock-double {
+    flex-direction: column;
+    width: 100%;
+  }
+  .rock-double .rock-imageContainer {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .rock-double .rock-imageContainer {
+    height: 650px;
+  }
+  .rock-double .rock-imageContainer .rock-content .rock-content-top .rock-number {
+    width: 10%;
+  }
+  .rock-double .rock-imageContainer .rock-content .rock-content-top .rock-title {
+    width: 100%;
+  }
+  .rock-double .rock-imageContainer .rock-content .rock-text-content {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .rock-double .rock-imageContainer .rock-content .rock-text-content .rock-left {
+    display: flex;
+    width: 80%;
+  }
+  .rock-double .rock-imageContainer .rock-content .rock-text-content .rock-right {
+    width: 90%;
+  }
+  .rock-double .rock-imageContainer .rock-content .rock-text-content .rock-right p {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 400px) {
+  .rock-double .rock-imageContainer .rock-content .rock-content-top {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=double.css.map */
