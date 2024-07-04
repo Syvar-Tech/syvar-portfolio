@@ -1,9 +1,7 @@
 const Links = [
-    "https://localhost/1",
-    "https://localhost/2",
-    "https://localhost/3",
-    "https://localhost/4",
-    "https://localhost/5"
+    "https://presenter.jivrus.com/p/1DkIKPPqc0sZ_bpP8sZV7rH1FTwbYngY9GSpynPZSFtk",
+"https://presenter.jivrus.com/p/16mTMddfA51kliqMSleLQ3EbnePsuTC-TaJxPYhmb5kk",
+"https://presenter.jivrus.com/p/1Zt2TZVgCg2HleFQMwjEWAbrlNr8eZOXHupzxci6SCdc"
 ]
 
 export default Links

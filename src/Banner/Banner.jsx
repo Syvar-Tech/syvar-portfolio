@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 const Banner = () => {
   const [link, setLink] = useState("");
   useEffect(() => {
-    let number = Math.floor(Math.random() * 5);
+    let number = Math.floor(Math.random() * 3);
     setLink(Links[number]);
   }, []);
   return (
@@ -16,10 +16,9 @@ const Banner = () => {
           <div className="leftContent">
             <h1 className="bannerleftheading">Quiz Time</h1>
             <p className="bannerleftdsc">Are you ready to win?</p>
-            {/* <a href={link}> */}
-
-            <button className="bannerleftbtn">Comming Soon </button>
-            {/* </a> */}
+            <a href={link}>
+              <button className="bannerleftbtn">Take a Quiz</button>
+            </a>
           </div>
           <div className="midContent">
             <div className="bannerEuroLogo">
