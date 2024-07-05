@@ -52,17 +52,56 @@ body {
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  width: 322px;
+  width: 350px;
+}
+
+.eurocup-column:nth-child(1) {
+  gap: 30px;
+  align-items: center;
+}
+
+.eurocup-heading1 {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+  color: #B31D1E;
+  text-align: center;
 }
 
 .eurocup-heading2 {
   font-family: "Inter", sans-serif;
-  font-size: 24px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.48px;
   color: #FFB830;
+  text-align: center;
+}
+
+.eurocupDesc {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+  color: #FFB830;
+  text-align: center;
+}
+
+.quiztitle {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #F3F3F3;
 }
 
 .eurocup-unordered-list, .eurocup-enter-username {
@@ -144,7 +183,7 @@ input:focus {
 
 .eurocup-btn {
   font-family: "Inter", sans-serif;
-  font-size: 16px;
+  font-size: 24px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
@@ -156,7 +195,7 @@ input:focus {
   text-decoration: none;
   border-radius: 40px;
   border: 1px solid #FFF;
-  padding: 16px 20px;
+  padding: 10px 50px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
 }

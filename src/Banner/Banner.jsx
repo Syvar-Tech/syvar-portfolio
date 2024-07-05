@@ -16,9 +16,9 @@ const Banner = () => {
           <div className="leftContent">
             <h1 className="bannerleftheading">Quiz Time</h1>
             <p className="bannerleftdsc">Are you ready to win?</p>
-            {/* <a href={link}> */}
-              <button className="bannerleftbtn">Comming Soon</button>
-            {/* </a> */}
+            <a href={link} target="_blank">
+              <button className="bannerleftbtn">Take Quiz</button>
+            </a>
           </div>
           <div className="midContent">
             <div className="bannerEuroLogo">

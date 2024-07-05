@@ -61,11 +61,32 @@ body {
     justify-content: start;
     align-items: start;
     flex-direction: column;
-    width: 322px;
+    width: 350px;
+    
+}
+.eurocup-column:nth-child(1){
+    gap: 30px;
+    align-items: center
 }
 
+.eurocup-heading1 {
+    @include fontStyle1(28px, 600, 120%, -0.48px, #B31D1E);
+    text-align: center
+}
 .eurocup-heading2 {
-    @include fontStyle1(24px, 600, 120%, -0.48px, $font-color-orange);
+    @include fontStyle1(28px, 600, 120%, -0.48px, $font-color-orange);
+    text-align: center
+}
+.eurocupDesc{
+    @include fontStyle1(32px, 600, 120%, -0.48px, $font-color-orange);
+    text-align: center
+    
+}
+
+.quiztitle{
+    text-align: center;
+
+    @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
 }
 
 .eurocup-unordered-list, .eurocup-enter-username {
@@ -117,14 +138,14 @@ input:focus {
 }
 
 .eurocup-btn {
-    @include fontStyle1(16px, 400, 140%, normal, $font-bright-white);
+    @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
     background-color: transparent;
     text-align: center;
     display: inline-block;
     text-decoration: none;
     border-radius: 40px;
     border: 1px solid #FFF;
-    padding: 16px 20px;
+    padding: 10px 50px;
     cursor: pointer;
     transition: background-color 0.2s, color 0.2s;
 }
