@@ -15,76 +15,76 @@ import { useAnimate, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import './round2.css'
+import "./round2.css";
 
 export default function EuroCupPrediction() {
-    const names = [
-        {
-            id: 0,
-            name: "2005_dp_",
-            points: "4"
-        },
-        {
-            id: 1,
-            name: "Yodinkoirala.75",
-            points: "4"
-        },
-        {
-            id: 2,
-            name: "sahil_alam2020",
-            points: "4"
-        },
-        {
-            id: 3,
-            name: "nirmala_pokharel_44",
-            points: "4"
-        },
-        {
-            id: 4,
-            name: "Nepali.menu",
-            points: "4"
-        },
-        {
-            id: 5,
-            name: "awanielogy",
-            points: "4"
-        },
-        {
-            id: 6,
-            name: "iyushh__ksiii01",
-            points: "4"
-        },
-        {
-            id: 7,
-            name: "soya.stha",
-            points: "4"
-        },
-        {
-            id: 8,
-            name :"ritwiz14",
-            points: "4"
-        },
-        {
-            id: 9,
-            name: "karki_suzan17",
-            points: "4"
-        },
-    ]
-//   const [nameList, setNameList] = useState([]);
-//   function fetchName() {
-//     axios
-//       .get("https://syvar.com.np/api/getPredictions")
-//       .then((res) => {
-//         console.log(res.data.data);
-//         setNameList(res.data.data);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//       });
-//   }
-//   useEffect(() => {
-//     fetchName();
-//   }, []);
+  const names = [
+    {
+      id: 0,
+      name: "2005_dp_",
+      points: "4",
+    },
+    {
+      id: 1,
+      name: "Yodinkoirala.75",
+      points: "4",
+    },
+    {
+      id: 2,
+      name: "sahil_alam2020",
+      points: "4",
+    },
+    {
+      id: 3,
+      name: "nirmala_pokharel_44",
+      points: "4",
+    },
+    {
+      id: 4,
+      name: "Nepali.menu",
+      points: "4",
+    },
+    {
+      id: 5,
+      name: "awanielogy",
+      points: "4",
+    },
+    {
+      id: 6,
+      name: "iyushh__ksiii01",
+      points: "4",
+    },
+    {
+      id: 7,
+      name: "soya.stha",
+      points: "4",
+    },
+    {
+      id: 8,
+      name: "ritwiz14",
+      points: "4",
+    },
+    {
+      id: 9,
+      name: "karki_suzan17",
+      points: "4",
+    },
+  ];
+  //   const [nameList, setNameList] = useState([]);
+  //   function fetchName() {
+  //     axios
+  //       .get("https://syvar.com.np/api/getPredictions")
+  //       .then((res) => {
+  //         console.log(res.data.data);
+  //         setNameList(res.data.data);
+  //       })
+  //       .catch((err) => {
+  //         console.log(err);
+  //       });
+  //   }
+  //   useEffect(() => {
+  //     fetchName();
+  //   }, []);
 
   const m1t1 = useRef();
   const m1t2 = useRef();
@@ -109,14 +109,17 @@ export default function EuroCupPrediction() {
   const [semiFinal, setSemiFinal] = useState({
     m1t1: "0",
     m1t2: "0",
-    p1t1: "0",
-    p1t2: "0",
+
     m2t1: "0",
     m2t2: "0",
+  });
+  const [semiPenalty, setSemiPenalty] = useState({
+    p1t1: "0",
+    p1t2: "0",
+
     p2t1: "0",
     p2t2: "0",
   });
-
   const [semiWinner, setSemiWinner] = useState({
     m1Winner: "",
     m2Winner: "",
@@ -128,14 +131,28 @@ export default function EuroCupPrediction() {
     var name = event.target.name;
     var value = event.target.value;
 
-    console.log(name, value);
+    // console.log(name, value);
 
-    setSemiFinal((prevValue) => {
-      return {
-        ...prevValue,
-        [name]: value,
-      };
-    });
+    if (
+      name === "m1t1" ||
+      name == "m1t2" ||
+      name === "m2t1" ||
+      name == "m2t2"
+    ) {
+      setSemiFinal((prevValue) => {
+        return {
+          ...prevValue,
+          [name]: value,
+        };
+      });
+    } else {
+      setSemiPenalty((prevValue) => {
+        return {
+          ...prevValue,
+          [name]: value,
+        };
+      });
+    }
   }
 
   function handleTeamClick(team) {
@@ -167,10 +184,10 @@ export default function EuroCupPrediction() {
     const m2t1 = parseInt(semiFinal.m2t1);
     const m2t2 = parseInt(semiFinal.m2t2);
 
-    const p1t1 = parseInt(semiFinal.p1t1);
-    const p1t2 = parseInt(semiFinal.p1t2);
-    const p2t1 = parseInt(semiFinal.p2t1);
-    const p2t2 = parseInt(semiFinal.p2t2);
+    const p1t1 = parseInt(semiPenalty.p1t1);
+    const p1t2 = parseInt(semiPenalty.p1t2);
+    const p2t1 = parseInt(semiPenalty.p2t1);
+    const p2t2 = parseInt(semiPenalty.p2t2);
 
     if (m1t1 > m1t2) {
       setSemiWinner((prevValue) => {
@@ -180,13 +197,13 @@ export default function EuroCupPrediction() {
           m1WinnerFlag: m1Team1Flag,
         };
       });
-    //   setSemiFinal((prevValue) => {
-    //     return {
-    //       ...prevValue,
-    //       p1t1: "0",
-    //       p1t2: "0",
-    //     };
-    //   });
+      setSemiPenalty((prevValue) => {
+        return {
+          ...prevValue,
+          p1t1: "0",
+          p1t2: "0",
+        };
+      });
     } else if (m1t1 < m1t2) {
       setSemiWinner((prevValue) => {
         return {
@@ -195,13 +212,13 @@ export default function EuroCupPrediction() {
           m1WinnerFlag: m1Team2Flag,
         };
       });
-    //   setSemiFinal((prevValue) => {
-    //     return {
-    //       ...prevValue,
-    //       p1t1: "0",
-    //       p1t2: "0",
-    //     };
-    //   });
+      setSemiPenalty((prevValue) => {
+        return {
+          ...prevValue,
+          p1t1: "0",
+          p1t2: "0",
+        };
+      });
     } else {
       if (p1t1 > p1t2) {
         setSemiWinner((prevValue) => {
@@ -238,13 +255,13 @@ export default function EuroCupPrediction() {
           m2WinnerFlag: m2Team1Flag,
         };
       });
-    //   setSemiFinal((prevValue) => {
-    //     return {
-    //       ...prevValue,
-    //       p2t1: "0",
-    //       p2t2: "0",
-    //     };
-    //   });
+      setSemiPenalty((prevValue) => {
+        return {
+          ...prevValue,
+          p2t1: "0",
+          p2t2: "0",
+        };
+      });
     } else if (m2t1 < m2t2) {
       setSemiWinner((prevValue) => {
         return {
@@ -253,13 +270,13 @@ export default function EuroCupPrediction() {
           m2WinnerFlag: m2Team2Flag,
         };
       });
-    //   setSemiFinal((prevValue) => {
-    //     return {
-    //       ...prevValue,
-    //       p2t1: "0",
-    //       p2t2: "0",
-    //     };
-    //   });
+      setSemiPenalty((prevValue) => {
+        return {
+          ...prevValue,
+          p2t1: "0",
+          p2t2: "0",
+        };
+      });
     } else {
       if (p2t1 > p2t2) {
         setSemiWinner((prevValue) => {
@@ -336,18 +353,18 @@ export default function EuroCupPrediction() {
 
   function submitSemiFinalPrediction() {
     var submitSemiFinal;
-    
+
     if (semiWinner.m1Winner !== "" && semiWinner.m2Winner !== "") {
       submitSemiFinal = {
         instagram: localStorage.getItem("SyvarEuroInstaId"),
         SemifinalATeam1Goal: semiFinal.m1t1.toString(),
         SemifinalATeam2Goal: semiFinal.m1t2.toString(),
-        SemifinalATeam1Penalty: semiFinal.p1t1.toString(),
-        SemifinalATeam2Penalty: semiFinal.p1t2.toString(),
+        SemifinalATeam1Penalty: semiPenalty.p1t1.toString(),
+        SemifinalATeam2Penalty: semiPenalty.p1t2.toString(),
         SemifinalBTeam1Goal: semiFinal.m2t1.toString(),
         SemifinalBTeam2Goal: semiFinal.m2t2.toString(),
-        SemifinalBTeam1Penalty: semiFinal.p2t1.toString(),
-        SemifinalBTeam2Penalty: semiFinal.p2t2.toString(),
+        SemifinalBTeam1Penalty: semiPenalty.p2t1.toString(),
+        SemifinalBTeam2Penalty: semiPenalty.p2t2.toString(),
         stage2SemifinalAWinner: semiWinner.m1Winner,
         stage2SemifinalBWinner: semiWinner.m2Winner,
       };
@@ -355,17 +372,17 @@ export default function EuroCupPrediction() {
       alert("Winners are not selected.");
     }
 
-    console.log(submitSemiFinal);
+    // console.log(submitSemiFinal);
 
     //https://syvar.com.np/api/predict
     axios.post("https://syvar.com.np/api/predict", submitSemiFinal).then(
       (response) => {
-        console.log(response);
+        // console.log(response);
         localStorage.removeItem("SyvarEuroInstaId");
         navigate("/thank-you");
       },
       (error) => {
-        console.log(error);
+        // console.log(error);
       }
     );
   }
@@ -503,9 +520,9 @@ export default function EuroCupPrediction() {
     animate(".rock-start-button-hovered", { opacity: 0, y: 100 });
   };
 
-  useEffect(() => {
-    console.log(winnerTeam);
-  }, []);
+//   useEffect(() => {
+//     console.log(winnerTeam);
+//   }, []);
 
   return (
     <div style={{ marginBottom: "40px" }}>
@@ -595,6 +612,7 @@ export default function EuroCupPrediction() {
                   </div>
                   <div className="predict-numbers">
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={m1t1}
@@ -604,6 +622,7 @@ export default function EuroCupPrediction() {
                     />
                     <div className="input-separator"></div>
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={m1t2}
@@ -637,21 +656,23 @@ export default function EuroCupPrediction() {
                   </div>
                   <div className="predict-numbers">
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={p1t1}
                       name="p1t1"
-                      value={semiFinal.p1t1}
+                      value={semiPenalty.p1t1}
                       onChange={(event) => selectGoal(event)}
                       disabled={semiFinal.m1t1 == semiFinal.m1t2 ? false : true}
                     />
                     <div className="input-separator"></div>
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={p1t2}
                       name="p1t2"
-                      value={semiFinal.p1t2}
+                      value={semiPenalty.p1t2}
                       onChange={(event) => selectGoal(event)}
                       disabled={semiFinal.m1t1 == semiFinal.m1t2 ? false : true}
                     />
@@ -704,6 +725,7 @@ export default function EuroCupPrediction() {
                   </div>
                   <div className="predict-numbers">
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={m2t1}
@@ -713,6 +735,7 @@ export default function EuroCupPrediction() {
                     />
                     <div className="input-separator"></div>
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={m2t2}
@@ -746,21 +769,23 @@ export default function EuroCupPrediction() {
                   </div>
                   <div className="predict-numbers">
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={p2t1}
                       name="p2t1"
-                      value={semiFinal.p2t1}
+                      value={semiPenalty.p2t1}
                       onChange={(event) => selectGoal(event)}
                       disabled={semiFinal.m2t1 == semiFinal.m2t2 ? false : true}
                     />
                     <div className="input-separator"></div>
                     <input
+                      type="number"
                       className="input-goals"
                       inputMode="numeric"
                       ref={p2t2}
                       name="p2t2"
-                      value={semiFinal.p2t2}
+                      value={semiPenalty.p2t2}
                       onChange={(event) => selectGoal(event)}
                       disabled={semiFinal.m2t1 == semiFinal.m2t2 ? false : true}
                     />
@@ -1256,24 +1281,24 @@ const bronze = (
   </svg>
 );
 const star = (
-    <svg
-      width="25"
-      height="25"
-      viewBox="0 0 25 25"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M9.06772 5.90862L9.49522 8.78317L12.3612 9.26488L9.75943 10.5597L10.1869 13.4343L8.15145 11.36L5.54969 12.6549L6.89346 10.078L4.85798 8.00375L7.72395 8.48546L9.06772 5.90862Z"
-        fill="#FFCA28"
-      />
-      <path
-        d="M20.0912 0.663014L20.5187 3.53757L23.3846 4.01928L20.7829 5.31414L21.2104 8.1887L19.1749 6.11441L16.5731 7.40928L17.9169 4.83243L15.8814 2.75815L18.7474 3.23986L20.0912 0.663014Z"
-        fill="#FFCA28"
-      />
-      <path
-        d="M3.95264 18.2316L4.27327 20.3876L6.42275 20.7488L4.47143 21.72L4.79205 23.8759L3.26544 22.3202L1.31413 23.2913L2.32195 21.3587L0.795341 19.803L2.94482 20.1643L3.95264 18.2316Z"
-        fill="#FFCA28"
-      />
-    </svg>
-  );
+  <svg
+    width="25"
+    height="25"
+    viewBox="0 0 25 25"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M9.06772 5.90862L9.49522 8.78317L12.3612 9.26488L9.75943 10.5597L10.1869 13.4343L8.15145 11.36L5.54969 12.6549L6.89346 10.078L4.85798 8.00375L7.72395 8.48546L9.06772 5.90862Z"
+      fill="#FFCA28"
+    />
+    <path
+      d="M20.0912 0.663014L20.5187 3.53757L23.3846 4.01928L20.7829 5.31414L21.2104 8.1887L19.1749 6.11441L16.5731 7.40928L17.9169 4.83243L15.8814 2.75815L18.7474 3.23986L20.0912 0.663014Z"
+      fill="#FFCA28"
+    />
+    <path
+      d="M3.95264 18.2316L4.27327 20.3876L6.42275 20.7488L4.47143 21.72L4.79205 23.8759L3.26544 22.3202L1.31413 23.2913L2.32195 21.3587L0.795341 19.803L2.94482 20.1643L3.95264 18.2316Z"
+      fill="#FFCA28"
+    />
+  </svg>
+);

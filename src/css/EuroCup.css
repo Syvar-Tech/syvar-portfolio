@@ -10,6 +10,11 @@ body {
   background-color: #1E1E1E;
 }
 
+input[type=number]::-webkit-outer-spin-button,
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .eurocup-heading {
   display: flex;
   justify-content: center;
