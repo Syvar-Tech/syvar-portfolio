@@ -11,10 +11,10 @@ export default function EuroCup(){
       let number = Math.floor(Math.random() * 3);
       setLink(Links[number]);
     }, []);
-    // function addInstaUsername() {
-    //     localStorage.setItem("SyvarEuroInstaId", value);
-    //     navigate("/eurocup-prediction");
-    // }
+    function addInstaUsername() {
+        localStorage.setItem("SyvarEuroInstaId", value);
+        navigate("/eurocup-prediction");
+    }
 
     useEffect(()=>{
         window.scrollTo({
@@ -31,28 +31,23 @@ export default function EuroCup(){
             </div>
             <div className="eurocup-prediction-participation">
                 <div className="eurocup-column">
-                <div className="eurocup-heading1">
-                    Predict and Win - Round 1 has been closed 
-                </div>
-                <div className="eurocupDesc">
-                    Be ready for Round 2
-                </div>
-                <h2 className="quiztitle">Till then test your Euro Cup knowledge at our Quiz Section</h2>
-                    {/* <div className="eurocup-heading2">To Participate</div>
+                
+                    <div className="eurocup-heading2">To Participate</div>
                     <ul className="eurocup-unordered-list">
                         <li>Follow us on our instagram</li>
                         <li>Mention 3 friends in post related to the prediction</li>
                         <li>Share the prediction post on your story for 24 hours</li>
                     </ul>
                     <div className="eurocup-enter-username">Enter your instagram username</div>
-                    <input className="eurocup-input-username" placeholder="Enter your insta username" onChange={(event) => {setValue(event.target.value)}} value={value}/>
-                    */}
-                    <Link to={link} target="_blank">
-                    <div>
-                        <button className="eurocup-btn eurocup-participate-btn">Start Quiz</button>
+                    <input className="eurocup-input-username" placeholder="Enter your insta username" onChange={(event) => {
+                        setValue(event.target.value)}} value={value}/>
+                   
+                    {/* <Link to='/eurocup-prediction'> */}
+                    <div onClick={addInstaUsername}>
+                        <button className="eurocup-btn eurocup-participate-btn">Start Prediction</button>
                     </div> 
                     
-                    </Link>
+                    {/* </Link> */}
                 </div>
                 <div className="eurocup-column">
                     <div className="eurocup-heading2">Giveaway prizes</div>

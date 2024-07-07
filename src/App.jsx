@@ -14,6 +14,7 @@ import Banner from "./Banner/Banner";
 import EuroCup from "./EuroCupPrediction/EuroCup.jsx";
 import EuroCupPrediction from "./EuroCupPrediction/EuroCupPrediction.jsx";
 import Thankyou from "./Thankyou/Thankyou.jsx";
+import Round2 from "./EuroCupPrediction/Round2.jsx";
 
 function App() {
   // const MouseVariants = {
@@ -62,6 +63,7 @@ function App() {
         } />
         <Route path="/eurocup" element={<EuroCup />} />
         <Route path="/eurocup-prediction" element={<EuroCupPrediction />} />
+        {/* <Route path="/eurocup-prediction" element={<Round2 />} /> */}
         <Route path="/Thank-you" element={<Thankyou />} />
       </Routes>
       

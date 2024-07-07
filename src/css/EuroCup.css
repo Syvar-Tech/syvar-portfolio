@@ -55,11 +55,6 @@ body {
   width: 350px;
 }
 
-.eurocup-column:nth-child(1) {
-  gap: 30px;
-  align-items: center;
-}
-
 .eurocup-heading1 {
   font-family: "Inter", sans-serif;
   font-size: 28px;
@@ -389,6 +384,7 @@ input:focus {
   position: relative;
   width: 100%;
   padding: 0 5%;
+  margin-top: 50px;
 }
 
 .semifinals-title {
@@ -561,6 +557,10 @@ input:focus {
 @media only screen and (max-width: 845px) {
   .match-goals, .match-penalty, .match-winner {
     margin: 20px auto;
+  }
+  .semifinals-title {
+    width: 100%;
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 485px) {
