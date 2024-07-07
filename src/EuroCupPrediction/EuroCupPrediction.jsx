@@ -18,11 +18,217 @@ import { useNavigate } from "react-router-dom";
 
 export default function EuroCupPrediction() {
 
+    const m1t1 = useRef();
+    const m1t2 = useRef();
+    const p1t1 = useRef();
+    const p1t2 = useRef();
+
+    const m2t1 = useRef();
+    const m2t2 = useRef();
+    const p2t1 = useRef();
+    const p2t2 = useRef();
+
     useEffect(() => {
         if(localStorage.getItem("SyvarEuroInstaId") == null || localStorage.getItem("SyvarEuroInstaId") == "undefined" ||  localStorage.getItem("SyvarEuroInstaId") == undefined) {
             navigate("/eurocup");
         }
     },[])
+
+    const [semiFinal, setSemiFinal] = useState({
+        m1t1: "0",
+        m1t2: "0",
+        p1t1: "0",
+        p1t2: "0",
+        m2t1: "0",
+        m2t2: "0",
+        p2t1: "0",
+        p2t2: "0",
+    });
+
+    const [semiWinner, setSemiWinner] = useState({
+        m1Winner: "",
+        m2Winner: "",
+        m1WinnerFlag: "",
+        m2WinnerFlag: "",
+    })
+
+    function selectGoal(event) {
+        var name = event.target.name;
+        var value = event.target.value;
+
+        console.log(name,value);
+
+        setSemiFinal((prevValue) => {
+            return {
+                ...prevValue,
+                [name]: value
+            }
+        })
+    }
+
+    function handleTeamClick(team) {
+        // switch(team) {
+        //     case team == "m1t1":
+        //         document.getElementById("m1t1").click();
+        //     break;
+        //     case "m1t2":
+        //         document.getElementById("m1t2").click();
+        //     break;
+        //     default:
+        //         break;
+        // }
+    }
+
+    const m1Team1 = "Spain";
+    const m1Team2 = "France";
+    const m2Team1 = "Netherlands";
+    const m2Team2 = "England";
+
+    const m1Team1Flag = Spain;
+    const m1Team2Flag = France;
+    const m2Team1Flag = Netherlands;
+    const m2Team2Flag = England;
+
+    useEffect(() => {
+        
+        const m1t1 = parseInt(semiFinal.m1t1);
+        const m1t2 = parseInt(semiFinal.m1t2);
+        const m2t1 = parseInt(semiFinal.m2t1);
+        const m2t2 = parseInt(semiFinal.m2t2);
+        
+        const p1t1 = parseInt(semiFinal.p1t1);
+        const p1t2 = parseInt(semiFinal.p1t2);
+        const p2t1 = parseInt(semiFinal.p2t1);
+        const p2t2 = parseInt(semiFinal.p2t2);
+
+        if (m1t1 > m1t2) {
+            setSemiWinner((prevValue) => {
+                return {
+                    ...prevValue,
+                    m1Winner: m1Team1,
+                    m1WinnerFlag: m1Team1Flag,
+                }
+            })
+            setSemiFinal((prevValue) => {
+                return {
+                    ...prevValue,
+                    p1t1: "0",
+                    p1t2: "0",
+                }
+            })
+        } else if (m1t1 < m1t2) {
+            setSemiWinner((prevValue) => {
+                return {
+                    ...prevValue,
+                    m1Winner: m1Team2,
+                    m1WinnerFlag: m1Team2Flag,
+                }
+            })
+            setSemiFinal((prevValue) => {
+                return {
+                    ...prevValue,
+                    p1t1: "0",
+                    p1t2: "0",
+                }
+            })
+        } 
+        else {
+
+            if (p1t1 > p1t2) {
+                setSemiWinner((prevValue) => {
+                    return {
+                        ...prevValue,
+                        m1Winner: m1Team1,
+                        m1WinnerFlag: m1Team1Flag,
+                    }
+                })
+            }
+
+            else if (p1t1 < p1t2) {
+                setSemiWinner((prevValue) => {
+                    return {
+                        ...prevValue,
+                        m1Winner: m1Team2,
+                        m1WinnerFlag: m1Team2Flag,
+                    }
+                })
+            }
+
+            else {
+                setSemiWinner((prevValue) => {
+                    return {
+                        ...prevValue,
+                        m1Winner: "",
+                        m1WinnerFlag: "",
+                    }
+                })
+            }
+        }
+
+        if (m2t1 > m2t2) {
+            setSemiWinner((prevValue) => {
+                return {
+                    ...prevValue,
+                    m2Winner: m2Team1,
+                    m2WinnerFlag: m2Team1Flag,
+                }
+            })
+            setSemiFinal((prevValue) => {
+                return {
+                    ...prevValue,
+                    p2t1: "0",
+                    p2t2: "0",
+                }
+            })
+        } else if (m2t1 < m2t2) {
+            setSemiWinner((prevValue) => {
+                return {
+                    ...prevValue,
+                    m2Winner: m2Team2,
+                    m2WinnerFlag: m2Team2Flag,
+                }
+            })
+            setSemiFinal((prevValue) => {
+                return {
+                    ...prevValue,
+                    p2t1: "0",
+                    p2t2: "0",
+                }
+            })
+        } 
+        else {
+
+            if (p2t1 > p2t2) {
+                setSemiWinner((prevValue) => {
+                    return {
+                        ...prevValue,
+                        m2Winner: m2Team1,
+                        m2WinnerFlag: m2Team1Flag,
+                    }
+                })
+            }
+
+            else if (p2t1 < p2t2) {
+                setSemiWinner((prevValue) => {
+                    return {
+                        ...prevValue,
+                        m2Winner: m2Team2,
+                        m2WinnerFlag: m2Team2Flag,
+                    }
+                })
+            }
+
+            else {
+                setSemiWinner((prevValue) => {
+                    return {
+                        ...prevValue,
+                        m2Winner: "",
+                        m2WinnerFlag: "",
+                    }
+                })
+            }
+        }
+    },[semiFinal])
 
     const navigate = useNavigate();
 
@@ -35,6 +241,14 @@ export default function EuroCupPrediction() {
         SemifinalAWinner: "",
         SemifinalBWinner: "",
         finalWinner: "",
+        SemifinalATeam1Goal: "",
+        SemifinalATeam2Goal: "",
+        SemifinalATeam1Penalty: "",
+        SemifinalATeam2Penalty: "",
+        SemifinalBTeam1Goal: "",
+        SemifinalBTeam2Goal: "",
+        SemifinalBTeam1Penalty: "",
+        SemifinalBTeam2Penalty: "",
     });
 
     const [winnerTeamFlag, setWinnerTeamFlag] = useState({
@@ -47,15 +261,52 @@ export default function EuroCupPrediction() {
         finalWinner: "",
     });
 
-    function submitPrediction() {
-        // https://syvar.com.np/api/predict
-        axios.post('https://syvar.com.np/api/predict',
-            winnerTeam
+    // function submitPrediction() {
+    //     // https://syvar.com.np/api/predict
+    //     axios.post('http://192.168.101.11:4000/api/predict',
+    //         winnerTeam
+    //     )
+    //       .then((response) => {
+    //         console.log(response);
+    //         localStorage.removeItem("SyvarEuroInstaId");
+    //         navigate("/Thank-you")
+    //       }, (error) => {
+    //         console.log(error);
+    //       });
+    // }
+
+    function submitSemiFinalPrediction() {
+        var submitSemiFinal;
+        if (semiWinner.m1Winner !== "" && semiWinner.m2Winner !== "") {
+            submitSemiFinal = {
+                instagram: localStorage.getItem("SyvarEuroInstaId"),
+                SemifinalATeam1Goal: semiFinal.m1t1.toString(),
+                SemifinalATeam2Goal: semiFinal.m1t2.toString(),
+                SemifinalATeam1Penalty: semiFinal.p1t1.toString(),
+                SemifinalATeam2Penalty: semiFinal.p1t2.toString(),
+                SemifinalBTeam1Goal: semiFinal.m2t1.toString(),
+                SemifinalBTeam2Goal: semiFinal.m2t2.toString(),
+                SemifinalBTeam1Penalty: semiFinal.p2t1.toString(),
+                SemifinalBTeam2Penalty: semiFinal.p2t2.toString(),
+                stage2SemifinalAWinner: semiWinner.m1Winner,
+                stage2SemifinalBWinner: semiWinner.m2Winner
+            }
+        }
+
+        else {
+            alert("Winners are not selected.")
+        }
+
+        console.log(submitSemiFinal);
+
+        //https://syvar.com.np/api/predict
+        axios.post('http://localhost:4000/api/predict',
+            submitSemiFinal
         )
           .then((response) => {
             console.log(response);
             localStorage.removeItem("SyvarEuroInstaId");
-            navigate("/Thank-you")
+            navigate("/thank-you")
           }, (error) => {
             console.log(error);
           });
@@ -194,7 +445,7 @@ export default function EuroCupPrediction() {
 
     return (
         <div style={{marginBottom: "40px"}}>
-            <div className="eurocup-heading">
+            {/* <div className="eurocup-heading">
                 <div className="eurocup-main-heading">Predict And Win - Round 1</div>
                 <div className="eurocup-sub-heading">Let's win exciting gift hampers & prizes</div>
             </div>
@@ -341,49 +592,118 @@ export default function EuroCupPrediction() {
                     </div>
                     <div className="golden-line-reverse" style={{top: "50%", transform: "translateY(-50%)"}}></div>
                 </div>
-                
-                {/* <div className="rock-header">
-                <motion.div
-            ref={scope}
-            id="btn"
-            initial={{
-              y: 0,
-            }}
-            animate={window.scrollY > 0 ? { y: -100 } : {}}
-            transition={{ duration: 0.5 }}
-          >
-            <a href="#contact">
-              <div
-                className="rock-start-button-container"
-                onMouseLeave={handleOut}
-                onMouseEnter={handleHover}
-              >
-                <motion.span
-                  className="rock-start-button-initial"
-                  // initial={{
-                  //   x: "-50%"
-                  // }}
-                >
-                  Submit
-                </motion.span>
-                <motion.span
-                  className="rock-start-button-hovered"
-                  initial={{
-                    opacity: 0,
-                    y: 100,
-                  }}
-                >
-                  Submit
-                </motion.span>
-              </div>
-            </a>
-          </motion.div>
-
-          </div> */}
             </div>
             <div style={{width: "100%", height: "100px", position: "relative"}}>
                 <div to="/" onClick={() => submitPrediction()} style={{position: "absolute", top: "90%", left: "90%", transform: "translate(-100%, -100%)"}}>
                     <button className="eurocup-btn" >Submit</button>
+                </div>
+            </div> */}
+            <div className="semifinals-prediction">
+                    <div className="semifinals-title">
+                        Semifinals
+                    </div>
+                    <div className="semifinals-goals-container">
+                        <div className="semifinals-match">
+                            <div className="match-goals">
+                                <div className="match-title">
+                                    Match 1
+                                </div>
+                                <div className="match-prediction">
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => m1t1.current.focus()}><Spain />&nbsp;&nbsp;&nbsp;Spain</div>
+                                    <div className="predict-numbers">
+                                        <input className="input-goals" inputMode="numeric" ref={m1t1} name="m1t1" value={semiFinal.m1t1} onChange={(event) => selectGoal(event)}/>
+                                        <div className="input-separator"></div>
+                                        <input className="input-goals" inputMode="numeric" ref={m1t2} name="m1t2" value={semiFinal.m1t2} onChange={(event) => selectGoal(event)}/>
+                                    </div>
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => m1t2.current.focus()}><France />&nbsp;&nbsp;&nbsp;France</div>
+                                </div>
+                            </div>
+                            <div className="match-penalty">
+                                <div className="match-title" style={{color: "#EC221F"}}>
+                                    Match 1 - Penalty
+                                </div>
+                                <div className="match-prediction">
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => p1t1.current.focus()}><Spain />&nbsp;&nbsp;&nbsp;Spain</div>
+                                    <div className="predict-numbers">
+                                        <input className="input-goals" inputMode="numeric" ref={p1t1} name="p1t1" value={semiFinal.p1t1} onChange={(event) => selectGoal(event)} disabled={semiFinal.m1t1 == semiFinal.m1t2 ? false : true}/>
+                                        <div className="input-separator"></div>
+                                        <input className="input-goals" inputMode="numeric" ref={p1t2} name="p1t2" value={semiFinal.p1t2} onChange={(event) => selectGoal(event)} disabled={semiFinal.m1t1 == semiFinal.m1t2 ? false : true}/>
+                                    </div>
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => p1t2.current.focus()}><France />&nbsp;&nbsp;&nbsp;France</div>
+                                </div>
+                            </div>
+                            <div className="match-winner">
+                                <div className="match-title" style={{color: "#00FF77", textAlign: "center"}}>
+                                    Winner
+                                </div>
+                                <div className="match-prediction">
+                                        {
+                                            semiWinner.m1Winner === "" ? 
+                                                <div className="team-div semi-team-div">
+                                                    <TBD />&nbsp;&nbsp;&nbsp;TBD
+                                                </div>
+                                            :
+                                            <div className="team-div semi-team-div">
+                                                <semiWinner.m1WinnerFlag />&nbsp;&nbsp;&nbsp;{semiWinner.m1Winner}
+                                            </div>
+                                        }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="semifinals-goals-container">
+                        <div className="semifinals-match">
+                            <div className="match-goals">
+                                <div className="match-title">
+                                    Match 2
+                                </div>
+                                <div className="match-prediction">
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => m2t1.current.focus()}><Netherlands />&nbsp;&nbsp;&nbsp;Netherlands</div>
+                                    <div className="predict-numbers">
+                                        <input className="input-goals" inputMode="numeric" ref={m2t1} name="m2t1" value={semiFinal.m2t1} onChange={(event) => selectGoal(event)}/>
+                                        <div className="input-separator"></div>
+                                        <input className="input-goals" inputMode="numeric" ref={m2t2} name="m2t2" value={semiFinal.m2t2} onChange={(event) => selectGoal(event)}/>
+                                    </div>
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => m2t2.current.focus()}><England />&nbsp;&nbsp;&nbsp;England</div>
+                                </div>
+                            </div>
+                            <div className="match-penalty">
+                                <div className="match-title" style={{color: "#EC221F"}}>
+                                    Match 2 - Penalty
+                                </div>
+                                <div className="match-prediction">
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => p2t1.current.focus()}><Netherlands />&nbsp;&nbsp;&nbsp;Netherlands</div>
+                                    <div className="predict-numbers">
+                                        <input className="input-goals" inputMode="numeric" ref={p2t1} name="p2t1" value={semiFinal.p2t1} onChange={(event) => selectGoal(event)} disabled={semiFinal.m2t1 == semiFinal.m2t2 ? false : true}/>
+                                        <div className="input-separator"></div>
+                                        <input className="input-goals" inputMode="numeric" ref={p2t2} name="p2t2" value={semiFinal.p2t2} onChange={(event) => selectGoal(event)} disabled={semiFinal.m2t1 == semiFinal.m2t2 ? false : true}/>
+                                    </div>
+                                    <div className="team-div semi-team-div" style={{cursor: "default"}} onClick={() => p2t2.current.focus()}><England />&nbsp;&nbsp;&nbsp;England</div>
+                                </div>
+                            </div>
+                            <div className="match-winner">
+                                <div className="match-title" style={{color: "#00FF77", textAlign: "center"}}>
+                                    Winner
+                                </div>
+                                <div className="match-prediction">
+                                    {
+                                        semiWinner.m2Winner === "" ? 
+                                            <div className="team-div semi-team-div">
+                                                <TBD />&nbsp;&nbsp;&nbsp;TBD
+                                            </div>
+                                        :
+                                        <div className="team-div semi-team-div">
+                                            <semiWinner.m2WinnerFlag />&nbsp;&nbsp;&nbsp;{semiWinner.m2Winner}
+                                        </div>
+                                    }
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div style={{width: "100%", height: "100px", position: "relative"}}>
+                <div to="/" className="prediction-submit-position">
+                    <button className="eurocup-btn" onClick={submitSemiFinalPrediction}>Submit</button>
                 </div>
             </div>
         </div>
