@@ -21,17 +21,17 @@ export default function EuroCupPrediction() {
   const names = [
     {
       id: 0,
-      name: "2005_dp_",
-      points: "4",
-    },
-    {
-      id: 1,
       name: "Yodinkoirala.75",
       points: "4",
     },
     {
-      id: 2,
+      id: 1,
       name: "sahil_alam2020",
+      points: "4",
+    },
+    {
+      id: 2,
+      name: "samyak_mdhr",
       points: "4",
     },
     {
@@ -41,7 +41,7 @@ export default function EuroCupPrediction() {
     },
     {
       id: 4,
-      name: "Nepali.menu",
+      name: "somadonn",
       points: "4",
     },
     {
@@ -189,6 +189,11 @@ export default function EuroCupPrediction() {
     const p2t1 = parseInt(semiPenalty.p2t1);
     const p2t2 = parseInt(semiPenalty.p2t2);
 
+
+   
+
+
+
     if (m1t1 > m1t2) {
       setSemiWinner((prevValue) => {
         return {
@@ -304,7 +309,7 @@ export default function EuroCupPrediction() {
         });
       }
     }
-  }, [semiFinal]);
+  }, [semiFinal,semiPenalty]);
 
   const navigate = useNavigate();
 
