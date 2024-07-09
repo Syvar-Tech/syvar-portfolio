@@ -43,13 +43,63 @@ input[type=number]::-webkit-inner-spin-button {
   color: #B3B3B3;
 }
 
+.eurocup-column:nth-child(1) {
+  gap: 30px;
+  align-items: center;
+}
+
+.eurocup-heading1 {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+  color: #B31D1E;
+  text-align: center;
+}
+
+.eurocup-heading2 {
+  font-family: "Inter", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+  color: #FFB830;
+  text-align: center;
+}
+
+.eurocupDesc {
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  letter-spacing: -0.48px;
+  color: #FFB830;
+  text-align: center;
+}
+
+.quiztitle {
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  letter-spacing: normal;
+  color: #F3F3F3;
+}
+
 .eurocup-prediction-participation {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  align-items: start;
+  align-items: center;
   margin-top: 120px;
   width: 100%;
+  row-gap: 100px;
 }
 
 .eurocup-column {

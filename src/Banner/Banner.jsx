@@ -29,7 +29,7 @@ const Banner = () => {
             <h1 className="bannerrightheading">Predict & Win</h1>
             <p className="bannerrightdesc">Predict to Victory!</p>
             <Link to="eurocup">
-              <button className="bannerrightbtn">Test your Knowledge </button>
+              <button className="bannerrightbtn">Let's Predict </button>
             </Link>
           </div>
         </div>
