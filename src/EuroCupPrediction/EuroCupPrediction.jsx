@@ -387,7 +387,7 @@ console.log(submitSemiFinal);
     // console.log(submitSemiFinal);
 
     //https://syvar.com.np/api/predict
-    axios.post("https://syvar.com.np/api/predicts", submitSemiFinal).then(
+    axios.post("https://syvar.com.np/api/predict", submitSemiFinal).then(
       (response) => {
         // console.log(response);
         localStorage.removeItem("SyvarEuroInstaId");
