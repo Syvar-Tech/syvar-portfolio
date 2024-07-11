@@ -1,102 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
-$font-color-orange: #FFB830;
-$font-dim-white: #B3B3B3;
-$font-bright-white: #F3F3F3;
-$font-color-grey: #5A5A5A;
+$font-color-orange: #ffb830;
+$font-dim-white: #b3b3b3;
+$font-bright-white: #f3f3f3;
+$font-color-grey: #5a5a5a;
 $font-color-dark: #333333;
 
 * {
-    box-sizing: border-box !important;
+  box-sizing: border-box !important;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    background-color: #1E1E1E;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background-color: #1e1e1e;
 }
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
 }
 
-
 @mixin flexCenter {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@mixin fontStyle1($fontSize, $fontWeight, $lineHeight, $letterSpacing, $fontColor) {
-    font-family: 'Inter', sans-serif;
-    font-size: $fontSize;
-    font-style: normal;
-    font-weight: $fontWeight;
-    line-height: $lineHeight;
-    letter-spacing: $letterSpacing;
-    color: $fontColor;
+@mixin fontStyle1(
+  $fontSize,
+  $fontWeight,
+  $lineHeight,
+  $letterSpacing,
+  $fontColor
+) {
+  font-family: "Inter", sans-serif;
+  font-size: $fontSize;
+  font-style: normal;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  letter-spacing: $letterSpacing;
+  color: $fontColor;
 }
 
 .eurocup-heading {
-    @include flexCenter();
-    flex-direction: column;
+  @include flexCenter();
+  flex-direction: column;
 }
 
 .eurocup-main-heading {
-    @include fontStyle1(72px, 700, 120%, -2.16px, $font-color-orange);
-    margin-top: 40px;
+  @include fontStyle1(72px, 700, 120%, -2.16px, $font-color-orange);
+  margin-top: 40px;
 }
 
 .eurocup-sub-heading {
-    @include fontStyle1(16px, 400, 140%, normal, $font-dim-white);
+  @include fontStyle1(16px, 400, 140%, normal, $font-dim-white);
 }
 
-
-
-.eurocup-column:nth-child(1){
-    gap: 30px;
-    align-items: center
+.eurocup-column:nth-child(1) {
+  gap: 30px;
+  align-items: center;
 }
 
 .eurocup-heading1 {
-    @include fontStyle1(28px, 600, 120%, -0.48px, #B31D1E);
-    text-align: center
+  @include fontStyle1(28px, 600, 120%, -0.48px, #b31d1e);
+  text-align: center;
 }
 .eurocup-heading2 {
-    @include fontStyle1(28px, 600, 120%, -0.48px, $font-color-orange);
-    text-align: center
+  @include fontStyle1(28px, 600, 120%, -0.48px, $font-color-orange);
+  text-align: center;
 }
-.eurocupDesc{
-    @include fontStyle1(32px, 600, 120%, -0.48px, $font-color-orange);
-    text-align: center
-
+.eurocupDesc {
+  @include fontStyle1(32px, 600, 120%, -0.48px, $font-color-orange);
+  text-align: center;
 }
 
-.quiztitle{
-    text-align: center;
+.quiztitle {
+  text-align: center;
 
-    @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
+  @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
 }
 
 .eurocup-prediction-participation {
-    position: relative;
-    display: flex;
-    justify-content: space-evenly;
-    // align-items: start;
-    align-items: center;
-    margin-top: 120px;
-    width: 100%;
-    row-gap:100px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: start;
+  // align-items: center;
+  margin-top: 120px;
+  width: 100%;
+  row-gap: 100px;
 }
 
 .eurocup-column {
-    display: flex;
-    justify-content: start;
-    align-items: start;
-    flex-direction: column;
-    width: 350px;
-    
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  flex-direction: column;
+  width: 350px;
 }
 // .eurocup-column:nth-child(1){
 //     gap: 30px;
@@ -104,437 +105,531 @@ input[type="number"]::-webkit-inner-spin-button {
 // }
 
 .eurocup-heading1 {
-    @include fontStyle1(28px, 600, 120%, -0.48px, #B31D1E);
-    text-align: center
+  @include fontStyle1(28px, 600, 120%, -0.48px, #b31d1e);
+  text-align: center;
 }
 .eurocup-heading2 {
-    @include fontStyle1(28px, 600, 120%, -0.48px, $font-color-orange);
-    text-align: center
+  @include fontStyle1(28px, 600, 120%, -0.48px, $font-color-orange);
+  text-align: center;
 }
-.eurocupDesc{
-    @include fontStyle1(32px, 600, 120%, -0.48px, $font-color-orange);
-    text-align: center
-    
-}
-
-.quiztitle{
-    text-align: center;
-
-    @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
+.eurocupDesc {
+  @include fontStyle1(32px, 600, 120%, -0.48px, $font-color-orange);
+  text-align: center;
 }
 
-.eurocup-unordered-list, .eurocup-enter-username {
-    @include fontStyle1(16px, 400, 140%, normal, $font-dim-white);
-    margin-top: 20px;
+.quiztitle {
+  text-align: center;
+
+  @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
+}
+
+.eurocup-unordered-list,
+.eurocup-enter-username {
+  @include fontStyle1(16px, 400, 140%, normal, $font-dim-white);
+  margin-top: 20px;
 }
 
 .eurocup-enter-username {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 .eurocup-input-username {
-    position: relative;
-    margin-top: 10px;
-    margin-bottom: 40px;
-    max-width: 300px;
-    display: flex;
-    padding: 10px 20px;
-    align-items: center;
-    gap: 10px;
-    align-self: stretch;
-    border: 1px solid;
-    border-color: transparent;
-    border-radius: 8px;
-    background: #FFF;
-    @include fontStyle1(16px, 400, 140%, normal, black);
+  position: relative;
+  margin-top: 10px;
+  margin-bottom: 40px;
+  max-width: 300px;
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  align-self: stretch;
+  border: 1px solid;
+  border-color: transparent;
+  border-radius: 8px;
+  background: #fff;
+  @include fontStyle1(16px, 400, 140%, normal, black);
 }
 
 ::placeholder {
-    @include fontStyle1(16px, 400, 140%, normal, $font-color-grey);
-    opacity: 1; /* Firefox */
-  }
-  
-::-ms-input-placeholder { /* Edge 12 -18 */
-    color: $font-color-grey;
+  @include fontStyle1(16px, 400, 140%, normal, $font-color-grey);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: $font-color-grey;
 }
 
 input:active,
 input:focus {
-    outline: none !important;
-    border-color: $font-color-orange;
+  outline: none !important;
+  border-color: $font-color-orange;
 }
 
 /* .ie is a class you would need to set at the html root level */
 .ie input:active,
 .ie input:focus {
-    outline: none !important;
-    border-color: $font-color-orange;
+  outline: none !important;
+  border-color: $font-color-orange;
 }
 
 .eurocup-btn {
-    @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
-    background-color: transparent;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    border-radius: 40px;
-    border: 1px solid #FFF;
-    padding: 10px 50px;
-    cursor: pointer;
-    transition: background-color 0.2s, color 0.2s;
+  @include fontStyle1(24px, 400, 140%, normal, $font-bright-white);
+  background-color: transparent;
+  text-align: center;
+  display: inline-block;
+  text-decoration: none;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  padding: 10px 50px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .eurocup-btn:hover {
-    background-color: $font-bright-white;
-    color: $font-color-dark;
-    transition: background-color 0.2s, color 0.2s;
+  background-color: $font-bright-white;
+  color: $font-color-dark;
+  transition: background-color 0.2s, color 0.2s;
 }
 
 .eurocup-prediction-rules {
-    width: 70%;
-    margin: 80px auto;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    flex-direction: column;
+  width: 70%;
+  margin: 80px auto;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: column;
 }
 
 .prediction-rules-title {
-    @include fontStyle1(48px, 700, 120%, -1.44px, $font-color-orange);
-    margin-bottom: 70px;
+  @include fontStyle1(48px, 700, 120%, -1.44px, $font-color-orange);
+  margin-bottom: 70px;
 }
 
 .prediction-rules {
-    @include fontStyle1(22px, 400, 140%, 0.22px, $font-bright-white);
+  @include fontStyle1(22px, 400, 140%, 0.22px, $font-bright-white);
 }
 
-.prediction-rules-title1, .prediction-rules-title2 {
-    font-weight: 700;
+.prediction-rules-title1,
+.prediction-rules-title2 {
+  font-weight: 700;
 }
 
 .prediction-rules-title2 {
-    color: $font-color-orange;
+  color: $font-color-orange;
 }
 
 .predict-rounds {
-    margin: 0 auto 80px auto;
-    width: 70%;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    border-radius: 20px;
-    border: 1px solid #BF6A02;
+  margin: 0 auto 80px auto;
+  width: 70%;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border-radius: 20px;
+  border: 1px solid #bf6a02;
 }
 
 .eurocup-uefa {
-    margin: 40px auto 80px auto;
-    @include flexCenter();
-    flex-direction: column;
+  margin: 40px auto 80px auto;
+  @include flexCenter();
+  flex-direction: column;
 }
 
 .uefa-image {
-    width: 199px;
-    height: 78px;
+  width: 199px;
+  height: 78px;
 }
 
 .eurocup-2024 {
-    @include fontStyle1(48px, 700, 120%, -0.96px, $font-bright-white);
+  @include fontStyle1(48px, 700, 120%, -0.96px, $font-bright-white);
 }
 
 .eurocup-2024-sub-title {
-    @include fontStyle1(16px, 400, 140%, normal, $font-bright-white);
+  @include fontStyle1(16px, 400, 140%, normal, $font-bright-white);
 }
 
 .eurocup-prediction {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    position: relative;
-    width: 100%;
-    scroll-snap-type: x mandatory;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  scroll-snap-type: x mandatory;
 }
 
 .round-container {
-    width: 25%;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    height: 621px;
-    scroll-snap-align: start;
-    position: relative;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 621px;
+  scroll-snap-align: start;
+  position: relative;
 }
 
 .tbd-container {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
 }
 
 .round-title {
-    @include fontStyle1(20px, 400, 120%, normal, $font-bright-white);
-    position: absolute;
-    left: 0;
-    top: -150%;
-    pointer-events: none;
+  @include fontStyle1(20px, 400, 120%, normal, $font-bright-white);
+  position: absolute;
+  left: 0;
+  top: -150%;
+  pointer-events: none;
 }
 
 .team-div {
-    @include fontStyle1(16px, 400, normal, normal, $font-bright-white);
-    position: relative;
-    min-width: 150px;
-    max-width: 210px;
-    width: 210px;
-    height: 34px;
-    padding: 0 10px;
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    cursor: pointer;
-    background-color: #323232;
+  @include fontStyle1(16px, 400, normal, normal, $font-bright-white);
+  position: relative;
+  min-width: 150px;
+  max-width: 210px;
+  width: 210px;
+  height: 34px;
+  padding: 0 10px;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  cursor: pointer;
+  background-color: #323232;
 }
 
 .team-separator {
-    height: 1px;
-    min-width: 150px;
-    max-width: 210px;
-    width: 210px;
-    background-color: #474747;
+  height: 1px;
+  min-width: 150px;
+  max-width: 210px;
+  width: 210px;
+  background-color: #474747;
 }
 
-.golden-line, .golden-line-reverse {
-    position: absolute;
-    height: 2px;
-    width: 50%;
-    left: 50%;
-    background-color: $font-color-orange;
-    z-index: -1;
+.golden-line,
+.golden-line-reverse {
+  position: absolute;
+  height: 2px;
+  width: 50%;
+  left: 50%;
+  background-color: $font-color-orange;
+  z-index: -1;
 }
 
 .golden-line-vertical {
-    position: absolute;
-    height: 2px;
-    width: 69px;
-    left: 99.98%;
-    background-color: $font-color-orange;
-    transform-origin: left;
+  position: absolute;
+  height: 2px;
+  width: 69px;
+  left: 99.98%;
+  background-color: $font-color-orange;
+  transform-origin: left;
 }
 
 .golden-line-reverse {
-    left: 0;
+  left: 0;
 }
 
 .semifinals-prediction {
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    position: relative;
-    width: 100%;
-    padding: 0 5%;
-    margin-top: 50px
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  padding: 0 5%;
+  margin-top: 50px;
 }
 
 .semifinals-title {
-    @include fontStyle1(48px, 700, normal, normal, $font-bright-white);
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin-bottom: 20px;
+  @include fontStyle1(
+    clamp(18px, 5vw, 48px),
+    700,
+    normal,
+    normal,
+    $font-bright-white
+  );
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 825px;
+  gap: 20px;
+  background: linear-gradient(
+    90deg,
+    rgba(22, 62, 226, 0) -9.23%,
+    #163ee2 30.67%,
+    #143ad2 67.56%,
+    rgba(22, 62, 226, 0) 106.44%
+  );
 }
-
+.euroFinalCountry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
 .semifinals-goals-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    width: 100%;
-    margin: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  width: 100%;
+  margin: 20px 0;
 }
 
 .semifinals-match {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  row-gap: 50px;
 }
 
-.match-goals, .match-penalty, .match-winner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 20px 20px 20px 0;
-    flex-wrap: wrap;
-    // padding: 0 5px;
+.match-goals,
+.match-penalty {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 20px 0;
+  flex-wrap: wrap;
+
+  // padding: 0 5px;
+}
+.match-winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 20px 0;
+  // flex-wrap: wrap;
+  position: relative;
 }
 
 .match-goals {
-    max-width: 545px;
+  max-width: 545px;
 }
 
 .match-penalty {
-    max-width: 545px;
+  max-width: 545px;
 }
 
 .match-winner {
-    max-width: 200px;
+  max-width: 200px;
 }
 
 .match-prediction {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // flex-wrap: wrap;
-    // flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-wrap: wrap;
+  // flex-grow: 1;
+  position: relative;
 }
-
+.flags {
+  width: 35px;
+  height: 35px;
+}
+.cup {
+  position: absolute;
+  right: -80px;
+  top: -30px;
+}
 .match-title {
-    width: 100%;
-    @include fontStyle1(20px, 400, 120%, normal, $font-bright-white);
-    margin-bottom: 20px;
+  width: 100%;
+  @include fontStyle1(20px, 400, 120%, normal, $font-bright-white);
+  margin-bottom: 20px;
 }
 
 .predict-numbers {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    // flex-wrap: wrap;
-    margin: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // flex-wrap: wrap;
+  margin: 0 15px;
 }
 
 .input-goals {
-    height: 34px;
-    max-width: 34px;
-    // width: 34px;
-    display: flex;
-    padding: 9px 7px 8px 8px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    flex: 1 0 0;
-    // align-self: stretch;
-    text-align: center;
+  height: 34px;
+  max-width: 34px;
+  // width: 34px;
+  display: flex;
+  padding: 9px 7px 8px 8px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  // align-self: stretch;
+  text-align: center;
 }
 
 .input-separator {
-    width: 17px;
-    height: 2px;
-    background-color: $font-color-orange;
-    margin: 0 5px;
+  width: 17px;
+  height: 2px;
+  background-color: $font-color-orange;
+  margin: 0 5px;
 }
 
 .semi-team-div {
-    width: 123px;
+  width: 123px;
 }
 
 .prediction-submit-position {
-    position: absolute;
-    top: 90%;
-    left: 94%;
-    transform: translate(-100%, -100%);
+  position: absolute;
+  top: 90%;
+  left: 94%;
+  transform: translate(-100%, -100%);
 }
 
+.mvpcontainer {
+  width: 390px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 30px;
+}
+
+.mvcontainertitle {
+  color: #b3b3b3;
+  //styleName: Body Strong;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  text-align: left;
+}
+
+.mvpInput {
+  width: 390px;
+  height: 40px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  //styleName: Body Small;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: left;
+}
 @media only screen and (max-width: 1100px) {
-    .round-container {
-        flex: 0 0 33.33%;
-    }
+  .round-container {
+    flex: 0 0 33.33%;
+  }
 
-    .eurocup-prediction {
-        overflow-x: scroll;
-    }
+  .eurocup-prediction {
+    overflow-x: scroll;
+  }
 }
 
 @media only screen and (max-width: 850px) {
-    .eurocup-main-heading {
-        font-size: 48px;
-        font-weight: 500;
-    }
+  .eurocup-main-heading {
+    font-size: 48px;
+    font-weight: 500;
+  }
 
-    .eurocup-prediction-participation {
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        margin-top: 70px;
-    }
+  .eurocup-prediction-participation {
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    margin-top: 70px;
+  }
 
-    .round-container {
-        flex: 0 0 50%;
-    }
+  .round-container {
+    flex: 0 0 50%;
+  }
 
-    .eurocup-participate-btn {
-        margin-bottom: 50px;
-    }
+  .eurocup-participate-btn {
+    margin-bottom: 50px;
+  }
 
-    .uefa-image {
-        width: 173px;
-        height: 78px;
-    }
+  .uefa-image {
+    width: 173px;
+    height: 78px;
+  }
 
-    .eurocup-2024 {
-        @include fontStyle1(32px, 400, 120%, normal, $font-bright-white);
-    }
+  .eurocup-2024 {
+    @include fontStyle1(32px, 400, 120%, normal, $font-bright-white);
+  }
 
-    .eurocup-2024-sub-title {
-        @include fontStyle1(14px, 400, 140%, normal, $font-bright-white);
-    }
+  .eurocup-2024-sub-title {
+    @include fontStyle1(14px, 400, 140%, normal, $font-bright-white);
+  }
 }
 
 @media only screen and (max-width: 850px) {
-    .team-div, .team-separator {
-        width: 36vw;
-    }
+  .team-div,
+  .team-separator {
+    width: 36vw;
+  }
 
-    .semi-team-div {
-        width: 31vw;
-    }
+  .semi-team-div {
+    width: 31vw;
+  }
 
-    .prediction-submit-position {
-        left: 50%;
-        transform: translate(-50%, -100%);
-    }
+  .prediction-submit-position {
+    left: 50%;
+    transform: translate(-50%, -100%);
+  }
 }
 
 @media only screen and (max-width: 845px) {
-    .match-goals, .match-penalty, .match-winner {
-        margin: 20px auto;
-    }
-    .semifinals-title{
-        width: 100%;
-        justify-content: center;
-    }
+  .match-goals,
+  .match-penalty,
+  .match-winner {
+    margin: 20px auto;
+  }
+
+  .semifinals-title {
+    width: 80vw;
+    justify-content: center;
+    align-items: center;
+    // background: linear-gradient(90deg, rgba(22, 62, 226, 0) -9.23%, #163EE2 30.67%, #143AD2 67.56%, rgba(22, 62, 226, 0) 106.44%);
+  }
 }
 
 @media only screen and (max-width: 485px) {
-    .match-prediction {
-        flex-direction: column;
-    }
+  .match-prediction {
+    flex-direction: column;
+  }
 
-    .predict-numbers {
-        margin: 20px 0;
-    }
+  .predict-numbers {
+    margin: 20px 0;
+  }
+
+  .mvpcontainer{
+    width: 100%;
+    
+  }
+  .mvpInput{
+    width: 100%;
+  }
+
 }
 
 @media only screen and (max-width: 400px) {
-    .team-div, .team-separator {
-        width: 50vw;
-    }
+  .team-div,
+  .team-separator {
+    width: 50vw;
+  }
 
-    .semi-team-div {
-        width: 31vw;
-    }
+  .semi-team-div {
+    width: 31vw;
+  }
 
-    .round-container {
-        flex: 0 0 100%;
-    }
+  .round-container {
+    flex: 0 0 100%;
+  }
 }
 
 @media only screen and (max-width: 360px) {
-    .eurocup-column {
-        width: 95%;
-    }
+  .eurocup-column {
+    width: 95%;
+  }
 }

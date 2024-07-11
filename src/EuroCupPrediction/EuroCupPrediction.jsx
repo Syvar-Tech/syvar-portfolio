@@ -16,6 +16,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./round2.css";
+import CUP from "./Flags/CUP.jsx";
 
 export default function EuroCupPrediction() {
   const names = [
@@ -70,21 +71,21 @@ export default function EuroCupPrediction() {
       points: "4",
     },
   ];
-  //   const [nameList, setNameList] = useState([]);
-  //   function fetchName() {
-  //     axios
-  //       .get("https://syvar.com.np/api/getPredictions")
-  //       .then((res) => {
-  //         console.log(res.data.data);
-  //         setNameList(res.data.data);
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   }
-  //   useEffect(() => {
-  //     fetchName();
-  //   }, []);
+    const [nameList, setNameList] = useState([]);
+    function fetchName() {
+      axios
+        .get("https://syvar.com.np/api/getPredictions")
+        .then((res) => {
+          console.log(res.data.data);
+          setNameList(res.data.data);
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    }
+    useEffect(() => {
+      fetchName();
+    }, []);
 
   const m1t1 = useRef();
   const m1t2 = useRef();
@@ -95,6 +96,7 @@ export default function EuroCupPrediction() {
   const m2t2 = useRef();
   const p2t1 = useRef();
   const p2t2 = useRef();
+
 
   useEffect(() => {
     if (
@@ -110,21 +112,22 @@ export default function EuroCupPrediction() {
     m1t1: "0",
     m1t2: "0",
 
-    m2t1: "0",
-    m2t2: "0",
+    // m2t1: "0",
+    // m2t2: "0",
   });
+  const [mvp,setmvp] = useState("")
   const [semiPenalty, setSemiPenalty] = useState({
     p1t1: "0",
     p1t2: "0",
 
-    p2t1: "0",
-    p2t2: "0",
+    // p2t1: "0",
+    // p2t2: "0",
   });
   const [semiWinner, setSemiWinner] = useState({
     m1Winner: "",
-    m2Winner: "",
+    // m2Winner: "",
     m1WinnerFlag: "",
-    m2WinnerFlag: "",
+    // m2WinnerFlag: "",
   });
 
   function selectGoal(event) {
@@ -135,9 +138,9 @@ export default function EuroCupPrediction() {
 
     if (
       name === "m1t1" ||
-      name == "m1t2" ||
-      name === "m2t1" ||
-      name == "m2t2"
+      name == "m1t2"
+      // || name === "m2t1" ||
+      // name == "m2t2"
     ) {
       setSemiFinal((prevValue) => {
         return {
@@ -169,28 +172,31 @@ export default function EuroCupPrediction() {
   }
 
   const m1Team1 = "Spain";
-  const m1Team2 = "France";
-  const m2Team1 = "Netherlands";
-  const m2Team2 = "England";
+  const m1Team2 = "England";
+  // const m2Team1 = "Netherlands";
+  // const m2Team2 = "England";
+
+
+
 
   const m1Team1Flag = Spain;
-  const m1Team2Flag = France;
-  const m2Team1Flag = Netherlands;
-  const m2Team2Flag = England;
+  const m1Team2Flag = England;
+  // const m2Team1Flag = Netherlands;
+  // const m2Team2Flag = England;
 
   useEffect(() => {
     const m1t1 = parseInt(semiFinal.m1t1);
     const m1t2 = parseInt(semiFinal.m1t2);
-    const m2t1 = parseInt(semiFinal.m2t1);
-    const m2t2 = parseInt(semiFinal.m2t2);
+    // const m2t1 = parseInt(semiFinal.m2t1);
+    // const m2t2 = parseInt(semiFinal.m2t2);
 
     const p1t1 = parseInt(semiPenalty.p1t1);
     const p1t2 = parseInt(semiPenalty.p1t2);
-    const p2t1 = parseInt(semiPenalty.p2t1);
-    const p2t2 = parseInt(semiPenalty.p2t2);
+    // const p2t1 = parseInt(semiPenalty.p2t1);
+    // const p2t2 = parseInt(semiPenalty.p2t2);
 
 
-   
+
 
 
 
@@ -252,64 +258,64 @@ export default function EuroCupPrediction() {
       }
     }
 
-    if (m2t1 > m2t2) {
-      setSemiWinner((prevValue) => {
-        return {
-          ...prevValue,
-          m2Winner: m2Team1,
-          m2WinnerFlag: m2Team1Flag,
-        };
-      });
-      setSemiPenalty((prevValue) => {
-        return {
-          ...prevValue,
-          p2t1: "0",
-          p2t2: "0",
-        };
-      });
-    } else if (m2t1 < m2t2) {
-      setSemiWinner((prevValue) => {
-        return {
-          ...prevValue,
-          m2Winner: m2Team2,
-          m2WinnerFlag: m2Team2Flag,
-        };
-      });
-      setSemiPenalty((prevValue) => {
-        return {
-          ...prevValue,
-          p2t1: "0",
-          p2t2: "0",
-        };
-      });
-    } else {
-      if (p2t1 > p2t2) {
-        setSemiWinner((prevValue) => {
-          return {
-            ...prevValue,
-            m2Winner: m2Team1,
-            m2WinnerFlag: m2Team1Flag,
-          };
-        });
-      } else if (p2t1 < p2t2) {
-        setSemiWinner((prevValue) => {
-          return {
-            ...prevValue,
-            m2Winner: m2Team2,
-            m2WinnerFlag: m2Team2Flag,
-          };
-        });
-      } else {
-        setSemiWinner((prevValue) => {
-          return {
-            ...prevValue,
-            m2Winner: "",
-            m2WinnerFlag: "",
-          };
-        });
-      }
-    }
-  }, [semiFinal,semiPenalty]);
+    // // if (m2t1 > m2t2) {
+    // //   setSemiWinner((prevValue) => {
+    // //     return {
+    // //       ...prevValue,
+    // //       m2Winner: m2Team1,
+    // //       m2WinnerFlag: m2Team1Flag,
+    // //     };
+    // //   });
+    // //   setSemiPenalty((prevValue) => {
+    // //     return {
+    // //       ...prevValue,
+    // //       p2t1: "0",
+    // //       p2t2: "0",
+    // //     };
+    // //   });
+    // // } else if (m2t1 < m2t2) {
+    // //   setSemiWinner((prevValue) => {
+    // //     return {
+    // //       ...prevValue,
+    // //       m2Winner: m2Team2,
+    // //       m2WinnerFlag: m2Team2Flag,
+    // //     };
+    // //   });
+    // //   setSemiPenalty((prevValue) => {
+    // //     return {
+    // //       ...prevValue,
+    // //       p2t1: "0",
+    // //       p2t2: "0",
+    // //     };
+    // //   });
+    // // } else {
+    // //   if (p2t1 > p2t2) {
+    // //     setSemiWinner((prevValue) => {
+    // //       return {
+    // //         ...prevValue,
+    // //         m2Winner: m2Team1,
+    // //         m2WinnerFlag: m2Team1Flag,
+    // //       };
+    // //     });
+    // //   } else if (p2t1 < p2t2) {
+    // //     setSemiWinner((prevValue) => {
+    // //       return {
+    // //         ...prevValue,
+    // //         m2Winner: m2Team2,
+    // //         m2WinnerFlag: m2Team2Flag,
+    // //       };
+    // //     });
+    // //   } else {
+    // //     setSemiWinner((prevValue) => {
+    // //       return {
+    // //         ...prevValue,
+    // //         m2Winner: "",
+    // //         m2WinnerFlag: "",
+    // //       };
+    // //     });
+    // //   }
+    // }
+  }, [semiFinal, semiPenalty]);
 
   const navigate = useNavigate();
 
@@ -359,28 +365,29 @@ export default function EuroCupPrediction() {
   function submitSemiFinalPrediction() {
     var submitSemiFinal;
 
-    if (semiWinner.m1Winner !== "" && semiWinner.m2Winner !== "") {
+    if (semiWinner.m1Winner !== "") {
       submitSemiFinal = {
+        FinalMvp: mvp,
         instagram: localStorage.getItem("SyvarEuroInstaId"),
-        SemifinalATeam1Goal: semiFinal.m1t1.toString(),
-        SemifinalATeam2Goal: semiFinal.m1t2.toString(),
-        SemifinalATeam1Penalty: semiPenalty.p1t1.toString(),
-        SemifinalATeam2Penalty: semiPenalty.p1t2.toString(),
-        SemifinalBTeam1Goal: semiFinal.m2t1.toString(),
-        SemifinalBTeam2Goal: semiFinal.m2t2.toString(),
-        SemifinalBTeam1Penalty: semiPenalty.p2t1.toString(),
-        SemifinalBTeam2Penalty: semiPenalty.p2t2.toString(),
-        stage2SemifinalAWinner: semiWinner.m1Winner,
-        stage2SemifinalBWinner: semiWinner.m2Winner,
+        FinalSpainGoal: semiFinal.m1t1.toString(),
+        FinalEnglandGoal: semiFinal.m1t2.toString(),
+        FinalSpainPenaltyGoal: semiPenalty.p1t1.toString(),
+        FinalEnglandPnelatyGoal: semiPenalty.p1t2.toString(),
+        Stage3FinalWinner: semiWinner.m1Winner,
+        // SemifinalBTeam1Goal: semiFinal.m2t1.toString(),
+        // SemifinalBTeam2Goal: semiFinal.m2t2.toString(),
+        // SemifinalBTeam1Penalty: semiPenalty.p2t1.toString(),
+        // SemifinalBTeam2Penalty: semiPenalty.p2t2.toString(),
+        // stage2SemifinalBWinner: semiWinner.m2Winner,
       };
     } else {
       alert("Winners are not selected.");
     }
-
+console.log(submitSemiFinal);
     // console.log(submitSemiFinal);
 
     //https://syvar.com.np/api/predict
-    axios.post("https://syvar.com.np/api/predict", submitSemiFinal).then(
+    axios.post("https://syvar.com.np/api/predicts", submitSemiFinal).then(
       (response) => {
         // console.log(response);
         localStorage.removeItem("SyvarEuroInstaId");
@@ -525,9 +532,9 @@ export default function EuroCupPrediction() {
     animate(".rock-start-button-hovered", { opacity: 0, y: 100 });
   };
 
-//   useEffect(() => {
-//     console.log(winnerTeam);
-//   }, []);
+  //   useEffect(() => {
+  //     console.log(winnerTeam);
+  //   }, []);
 
   return (
     <div style={{ marginBottom: "40px" }}>
@@ -549,17 +556,22 @@ export default function EuroCupPrediction() {
               <ul className="eurocup-unordered-list">
                 <li>
                   Predict Goals - <span className="syk-pts-color">2 Pts </span>
-                  <span className="syk-pts-small">per match</span>
+                  <span className="syk-pts-small">per team</span>
                 </li>
                 <li>
                   Predict Goals in penalty -{" "}
                   <span className="syk-pts-color">2 Pts </span>
-                  <span className="syk-pts-small">per match</span>
+                  <span className="syk-pts-small">per game</span>
                 </li>
                 <li>
-                  Guess match winner -{" "}
+                  Predict match winner -{" "}
                   <span className="syk-pts-color">2 Pts </span>
-                  <span className="syk-pts-small">per match</span>
+                  {/* <span className="syk-pts-small">per match</span> */}
+                </li>
+                <li>
+                  Predict Man of the Match -{" "}
+                  <span className="syk-pts-color">2 Pts </span>
+                  {/* <span className="syk-pts-small">per match</span> */}
                 </li>
               </ul>
             </div>
@@ -578,20 +590,20 @@ export default function EuroCupPrediction() {
                 </tr>
               </thead>
               <tbody className="tableBody">
-                {names.map((data, index) => {
+                {nameList.slice(0,10).map((data, index) => {
                   return (
                     <tr className="tableBodyRow">
                       <td className="tableBodypoints">{index + 1}</td>
-                      <td className="tableBodypoints">{data.name}</td>
+                      <td className="tableBodypoints">{data.instagram}</td>
                       <td className="tableBodypoints">{data.points}</td>
                       <td className="crown">
                         {index === 0
                           ? gold
                           : index === 1
-                          ? silver
-                          : index <= 4
-                          ? bronze
-                          : ""}
+                            ? silver
+                            : index <= 4
+                              ? bronze
+                              : ""}
                       </td>
                     </tr>
                   );
@@ -601,18 +613,28 @@ export default function EuroCupPrediction() {
           </div>
         </div>
         <div className="semifinals-prediction">
-          <div className="semifinals-title">Semifinals</div>
+          <div className="semifinals-title">
+            <p className="euroFinalCountry">
+              <Spain className='flags' /> Spain
+            </p>
+            <p className="vs">
+              VS
+            </p>
+            <p className="euroFinalCountry">
+              <England className='flags' />England
+            </p>
+          </div>
           <div className="semifinals-goals-container">
             <div className="semifinals-match">
               <div className="match-goals">
-                <div className="match-title">Match 1</div>
+                <div className="match-title">Final</div>
                 <div className="match-prediction">
                   <div
                     className="team-div semi-team-div"
                     style={{ cursor: "default" }}
                     onClick={() => m1t1.current.focus()}
                   >
-                    <Spain />
+                    <Spain className='flags' />
                     &nbsp;&nbsp;&nbsp;Spain
                   </div>
                   <div className="predict-numbers">
@@ -641,14 +663,14 @@ export default function EuroCupPrediction() {
                     style={{ cursor: "default" }}
                     onClick={() => m1t2.current.focus()}
                   >
-                    <France />
-                    &nbsp;&nbsp;&nbsp;France
+                    <England className='flags' />
+                    &nbsp;&nbsp;&nbsp;England
                   </div>
                 </div>
               </div>
               <div className="match-penalty">
                 <div className="match-title" style={{ color: "#EC221F" }}>
-                  Match 1 - Penalty
+                  Final - Penalty
                 </div>
                 <div className="match-prediction">
                   <div
@@ -656,7 +678,7 @@ export default function EuroCupPrediction() {
                     style={{ cursor: "default" }}
                     onClick={() => p1t1.current.focus()}
                   >
-                    <Spain />
+                    <Spain className='flags' />
                     &nbsp;&nbsp;&nbsp;Spain
                   </div>
                   <div className="predict-numbers">
@@ -687,8 +709,8 @@ export default function EuroCupPrediction() {
                     style={{ cursor: "default" }}
                     onClick={() => p1t2.current.focus()}
                   >
-                    <France />
-                    &nbsp;&nbsp;&nbsp;France
+                    <England className='flags' />
+                    &nbsp;&nbsp;&nbsp; England
                   </div>
                 </div>
               </div>
@@ -697,7 +719,7 @@ export default function EuroCupPrediction() {
                   className="match-title"
                   style={{ color: "#00FF77", textAlign: "center" }}
                 >
-                  Winner
+                  Champions
                 </div>
                 <div className="match-prediction">
                   {semiWinner.m1Winner === "" ? (
@@ -707,15 +729,21 @@ export default function EuroCupPrediction() {
                     </div>
                   ) : (
                     <div className="team-div semi-team-div">
-                      <semiWinner.m1WinnerFlag />
+                      <semiWinner.m1WinnerFlag className='flags' />
                       &nbsp;&nbsp;&nbsp;{semiWinner.m1Winner}
                     </div>
                   )}
                 </div>
+                <CUP className='cup' />
               </div>
             </div>
+            
           </div>
-          <div className="semifinals-goals-container">
+          <div className="mvpcontainer">
+                  <p className="mvcontainertitle">Guess The Man Of The Match</p>
+                  <input type="text" name="mvp" id="mvp" placeholder="Enter the player name" value={mvp} className="mvpInput" onChange={(e)=>setmvp(e.target.value)} />
+          </div>
+          {/* <div className="semifinals-goals-container">
             <div className="semifinals-match">
               <div className="match-goals">
                 <div className="match-title">Match 2</div>
@@ -827,7 +855,7 @@ export default function EuroCupPrediction() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
         <div style={{ width: "100%", height: "100px", position: "relative" }}>
           <div to="/" className="prediction-submit-position">

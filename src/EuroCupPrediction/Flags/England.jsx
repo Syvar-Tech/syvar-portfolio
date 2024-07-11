@@ -1,7 +1,7 @@
-export default function England() {
+export default function England({className}) {
     return (
         <>
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <svg xmlns="http://www.w3.org/2000/svg" className={className} viewBox="0 0 24 24" fill="none">
                 <g clip-path="url(#clip0_13_5178)">
                     <rect width="24" height="24" fill="white"/>
                     <path d="M14.2496 0.975006H9.74961C5.36211 1.87501 1.87461 5.32501 0.974609 9.75001V14.25C1.87461 18.675 5.36211 22.125 9.74961 23.025H14.2496C18.6746 22.125 22.1246 18.6375 23.0246 14.25V9.75001C22.1246 5.32501 18.6371 1.87501 14.2496 0.975006Z" fill="white"/>

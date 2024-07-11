@@ -7,7 +7,7 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background-color: #1E1E1E;
+  background-color: #1e1e1e;
 }
 
 input[type=number]::-webkit-outer-spin-button,
@@ -29,7 +29,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -2.16px;
-  color: #FFB830;
+  color: #ffb830;
   margin-top: 40px;
 }
 
@@ -40,7 +40,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #B3B3B3;
+  color: #b3b3b3;
 }
 
 .eurocup-column:nth-child(1) {
@@ -55,7 +55,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.48px;
-  color: #B31D1E;
+  color: #b31d1e;
   text-align: center;
 }
 
@@ -66,7 +66,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.48px;
-  color: #FFB830;
+  color: #ffb830;
   text-align: center;
 }
 
@@ -77,7 +77,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.48px;
-  color: #FFB830;
+  color: #ffb830;
   text-align: center;
 }
 
@@ -89,14 +89,14 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 
 .eurocup-prediction-participation {
   position: relative;
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
+  align-items: start;
   margin-top: 120px;
   width: 100%;
   row-gap: 100px;
@@ -117,7 +117,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.48px;
-  color: #B31D1E;
+  color: #b31d1e;
   text-align: center;
 }
 
@@ -128,7 +128,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.48px;
-  color: #FFB830;
+  color: #ffb830;
   text-align: center;
 }
 
@@ -139,7 +139,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 600;
   line-height: 120%;
   letter-spacing: -0.48px;
-  color: #FFB830;
+  color: #ffb830;
   text-align: center;
 }
 
@@ -151,17 +151,18 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 
-.eurocup-unordered-list, .eurocup-enter-username {
+.eurocup-unordered-list,
+.eurocup-enter-username {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #B3B3B3;
+  color: #b3b3b3;
   margin-top: 20px;
 }
 
@@ -182,7 +183,7 @@ input[type=number]::-webkit-inner-spin-button {
   border: 1px solid;
   border-color: transparent;
   border-radius: 8px;
-  background: #FFF;
+  background: #fff;
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -199,7 +200,7 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #5A5A5A;
+  color: #5a5a5a;
   opacity: 1; /* Firefox */
 }
 
@@ -210,25 +211,26 @@ input[type=number]::-webkit-inner-spin-button {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #5A5A5A;
+  color: #5a5a5a;
   opacity: 1; /* Firefox */
 }
 
-::-ms-input-placeholder { /* Edge 12 -18 */
-  color: #5A5A5A;
+::-ms-input-placeholder {
+  /* Edge 12 -18 */
+  color: #5a5a5a;
 }
 
 input:active,
 input:focus {
   outline: none !important;
-  border-color: #FFB830;
+  border-color: #ffb830;
 }
 
 /* .ie is a class you would need to set at the html root level */
 .ie input:active,
 .ie input:focus {
   outline: none !important;
-  border-color: #FFB830;
+  border-color: #ffb830;
 }
 
 .eurocup-btn {
@@ -238,20 +240,20 @@ input:focus {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
   background-color: transparent;
   text-align: center;
   display: inline-block;
   text-decoration: none;
   border-radius: 40px;
-  border: 1px solid #FFF;
+  border: 1px solid #fff;
   padding: 10px 50px;
   cursor: pointer;
   transition: background-color 0.2s, color 0.2s;
 }
 
 .eurocup-btn:hover {
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   color: #333333;
   transition: background-color 0.2s, color 0.2s;
 }
@@ -272,7 +274,7 @@ input:focus {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -1.44px;
-  color: #FFB830;
+  color: #ffb830;
   margin-bottom: 70px;
 }
 
@@ -283,15 +285,16 @@ input:focus {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: 0.22px;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 
-.prediction-rules-title1, .prediction-rules-title2 {
+.prediction-rules-title1,
+.prediction-rules-title2 {
   font-weight: 700;
 }
 
 .prediction-rules-title2 {
-  color: #FFB830;
+  color: #ffb830;
 }
 
 .predict-rounds {
@@ -302,7 +305,7 @@ input:focus {
   justify-content: space-evenly;
   align-items: center;
   border-radius: 20px;
-  border: 1px solid #BF6A02;
+  border: 1px solid #bf6a02;
 }
 
 .eurocup-uefa {
@@ -325,7 +328,7 @@ input:focus {
   font-weight: 700;
   line-height: 120%;
   letter-spacing: -0.96px;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 
 .eurocup-2024-sub-title {
@@ -335,7 +338,7 @@ input:focus {
   font-weight: 400;
   line-height: 140%;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
 }
 
 .eurocup-prediction {
@@ -373,7 +376,7 @@ input:focus {
   font-weight: 400;
   line-height: 120%;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
   position: absolute;
   left: 0;
   top: -150%;
@@ -387,7 +390,7 @@ input:focus {
   font-weight: 400;
   line-height: normal;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
   position: relative;
   min-width: 150px;
   max-width: 210px;
@@ -409,12 +412,13 @@ input:focus {
   background-color: #474747;
 }
 
-.golden-line, .golden-line-reverse {
+.golden-line,
+.golden-line-reverse {
   position: absolute;
   height: 2px;
   width: 50%;
   left: 50%;
-  background-color: #FFB830;
+  background-color: #ffb830;
   z-index: -1;
 }
 
@@ -423,7 +427,7 @@ input:focus {
   height: 2px;
   width: 69px;
   left: 99.98%;
-  background-color: #FFB830;
+  background-color: #ffb830;
   transform-origin: left;
 }
 
@@ -434,7 +438,7 @@ input:focus {
 .semifinals-prediction {
   display: flex;
   justify-content: center;
-  align-items: start;
+  align-items: center;
   flex-direction: column;
   position: relative;
   width: 100%;
@@ -444,16 +448,26 @@ input:focus {
 
 .semifinals-title {
   font-family: "Inter", sans-serif;
-  font-size: 48px;
+  font-size: clamp(18px, 5vw, 48px);
   font-style: normal;
   font-weight: 700;
   line-height: normal;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
   margin-bottom: 20px;
+  width: 825px;
+  gap: 20px;
+  background: linear-gradient(90deg, rgba(22, 62, 226, 0) -9.23%, #163ee2 30.67%, #143ad2 67.56%, rgba(22, 62, 226, 0) 106.44%);
+}
+
+.euroFinalCountry {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
 }
 
 .semifinals-goals-container {
@@ -471,15 +485,26 @@ input:focus {
   align-items: center;
   flex-wrap: wrap;
   width: 100%;
+  row-gap: 50px;
 }
 
-.match-goals, .match-penalty, .match-winner {
+.match-goals,
+.match-penalty {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 20px 20px 20px 0;
   flex-wrap: wrap;
+}
+
+.match-winner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 20px 20px 0;
+  position: relative;
 }
 
 .match-goals {
@@ -498,6 +523,18 @@ input:focus {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
+}
+
+.flags {
+  width: 35px;
+  height: 35px;
+}
+
+.cup {
+  position: absolute;
+  right: -80px;
+  top: -30px;
 }
 
 .match-title {
@@ -508,7 +545,7 @@ input:focus {
   font-weight: 400;
   line-height: 120%;
   letter-spacing: normal;
-  color: #F3F3F3;
+  color: #f3f3f3;
   margin-bottom: 20px;
 }
 
@@ -534,7 +571,7 @@ input:focus {
 .input-separator {
   width: 17px;
   height: 2px;
-  background-color: #FFB830;
+  background-color: #ffb830;
   margin: 0 5px;
 }
 
@@ -547,6 +584,39 @@ input:focus {
   top: 90%;
   left: 94%;
   transform: translate(-100%, -100%);
+}
+
+.mvpcontainer {
+  width: 390px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-self: flex-start;
+  margin-top: 30px;
+}
+
+.mvcontainertitle {
+  color: #b3b3b3;
+  font-family: Inter;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22.4px;
+  text-align: left;
+}
+
+.mvpInput {
+  width: 390px;
+  height: 40px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  font-family: Inter;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19.6px;
+  text-align: left;
 }
 
 @media only screen and (max-width: 1100px) {
@@ -585,7 +655,7 @@ input:focus {
     font-weight: 400;
     line-height: 120%;
     letter-spacing: normal;
-    color: #F3F3F3;
+    color: #f3f3f3;
   }
   .eurocup-2024-sub-title {
     font-family: "Inter", sans-serif;
@@ -594,11 +664,12 @@ input:focus {
     font-weight: 400;
     line-height: 140%;
     letter-spacing: normal;
-    color: #F3F3F3;
+    color: #f3f3f3;
   }
 }
 @media only screen and (max-width: 850px) {
-  .team-div, .team-separator {
+  .team-div,
+  .team-separator {
     width: 36vw;
   }
   .semi-team-div {
@@ -610,12 +681,15 @@ input:focus {
   }
 }
 @media only screen and (max-width: 845px) {
-  .match-goals, .match-penalty, .match-winner {
+  .match-goals,
+  .match-penalty,
+  .match-winner {
     margin: 20px auto;
   }
   .semifinals-title {
-    width: 100%;
+    width: 80vw;
     justify-content: center;
+    align-items: center;
   }
 }
 @media only screen and (max-width: 485px) {
@@ -625,9 +699,16 @@ input:focus {
   .predict-numbers {
     margin: 20px 0;
   }
+  .mvpcontainer {
+    width: 100%;
+  }
+  .mvpInput {
+    width: 100%;
+  }
 }
 @media only screen and (max-width: 400px) {
-  .team-div, .team-separator {
+  .team-div,
+  .team-separator {
     width: 50vw;
   }
   .semi-team-div {
