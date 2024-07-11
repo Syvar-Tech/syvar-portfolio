@@ -621,7 +621,7 @@ console.log(submitSemiFinal);
               VS
             </p>
             <p className="euroFinalCountry">
-              <England className='flags' />England
+             England  <England className='flags' />
             </p>
           </div>
           <div className="semifinals-goals-container">
