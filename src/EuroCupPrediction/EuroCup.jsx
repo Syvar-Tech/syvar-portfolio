@@ -32,15 +32,16 @@ export default function EuroCup(){
             <div className="eurocup-prediction-participation">
                 <div className="eurocup-column">
                 
-                {/* <div className="eurocup-heading1">
-                    Predict and Win - Round 2 has been closed 
+                <div className="eurocup-heading1">
+                    Predict and Win has been closed.
                 </div>
                 <div className="eurocupDesc">
-                    Be ready for Round 3
+                    Stay calm and wait for the result.
                 </div>
-                 */}
+                <div className="eurocup-unordered-list">Follow us and stay tuned for the result announcement through our Instagram handle</div>
+                <Link to="https://www.instagram.com/syvartech/" className="follow-us">Follow Us Here</Link>
 
-                    <div className="eurocup-heading2">To Participate</div>
+                    {/* <div className="eurocup-heading2">To Participate</div>
                     <ul className="eurocup-unordered-list">
                         <li>Follow us on our instagram</li>
                         <li>Mention 3 friends in post related to the prediction</li>
@@ -48,12 +49,12 @@ export default function EuroCup(){
                     </ul>
                     <div className="eurocup-enter-username">Enter your instagram username</div>
                     <input className="eurocup-input-username" placeholder="Enter your insta username" onChange={(event) => {
-                        setValue(event.target.value)}} value={value}/> 
+                        setValue(event.target.value)}} value={value}/>  */}
                    
                   
-                    <div onClick={addInstaUsername}>
+                    {/* <div onClick={addInstaUsername}>
                         <button className="eurocup-btn eurocup-participate-btn">Start Prediction</button>
-                    </div> 
+                    </div>  */}
                     
                     
                 </div>

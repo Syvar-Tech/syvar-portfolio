@@ -605,6 +605,17 @@ input:focus {
   text-align: left;
 }
 
+.follow-us {
+  font-family: "Inter", sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 120%;
+  letter-spacing: normal;
+  color: #35b9ea;
+  text-decoration: underline;
+}
+
 .mvpInput {
   width: 390px;
   height: 40px;

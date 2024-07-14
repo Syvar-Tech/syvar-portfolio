@@ -503,7 +503,12 @@ input:focus {
   line-height: 22.4px;
   text-align: left;
 }
+.follow-us{
+  @include fontStyle1(20px, 400, 120%, normal, #35b9ea);
+  text-decoration: underline;
 
+  
+}
 .mvpInput {
   width: 390px;
   height: 40px;
