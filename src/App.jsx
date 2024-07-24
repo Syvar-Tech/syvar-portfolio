@@ -61,10 +61,10 @@ function App() {
             
           </div>
         } />
-        <Route path="/eurocup" element={<EuroCup />} />
+        {/* <Route path="/eurocup" element={<EuroCup />} />
         <Route path="/eurocup-prediction" element={<EuroCupPrediction />} />
         {/* <Route path="/eurocup-prediction" element={<Round2 />} /> */}
-        <Route path="/Thank-you" element={<Thankyou />} />
+        {/* <Route path="/Thank-you" element={<Thankyou />} /> */}
       </Routes>
       
       
