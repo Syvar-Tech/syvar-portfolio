@@ -46,7 +46,7 @@ function App() {
           <div>
             <Navbar />
             <Hero />
-            <Banner/>
+            {/* <Banner/> */}
             {/* <div className="extraHeight" /> */}
             <SamyakPart1 />
             {/* <Services /> */}
@@ -56,7 +56,7 @@ function App() {
             <div className="extraHeight" style={{ backgroundColor: "#1E1E1E" }} />
             <OurWorks />
             <div className="extraHeight" />
-            <Banner/>
+            {/* <Banner/> */}
             <SamyakFooter />
             
           </div>
