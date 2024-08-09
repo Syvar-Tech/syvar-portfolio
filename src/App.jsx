@@ -41,8 +41,8 @@ function App() {
           animate= 'default'
         /> */}
       
-      <Routes>
-        <Route path="/" element={
+      {/* <Routes> */}
+        {/* <Route path="/" element={ */}
           <div>
             <Navbar />
             <Hero />
@@ -60,12 +60,12 @@ function App() {
             <SamyakFooter />
             
           </div>
-        } />
+        {/* } /> */}
         {/* <Route path="/eurocup" element={<EuroCup />} />
         <Route path="/eurocup-prediction" element={<EuroCupPrediction />} />
         {/* <Route path="/eurocup-prediction" element={<Round2 />} /> */}
         {/* <Route path="/Thank-you" element={<Thankyou />} /> */}
-      </Routes>
+      {/* </Routes> */}
       
       
     </>
