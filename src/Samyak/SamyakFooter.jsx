@@ -252,11 +252,11 @@ function SamyakFooter() {
             <div className="syk-footer-left-top">
               <div className="syk-footer-text">
                 <motion.a
-                  href="tel:9843636520"
+                  href="tel:9840575736"
                   className="text-only-number"
                   whileHover={{ scale: 1.2, originX: 0 }}
                 >
-                  +977 9843636520
+                  +977 9840575736
                 </motion.a>
               </div>
               <div className="syk-footer-text">
