@@ -55,12 +55,17 @@ const Hero = () => {
           </p>
           <p className="rock-tagLine">We sculpt dreams into digital marvels.</p>
         </motion.div> */}
-
+        <div className="hero-orange" />
+        <div className="hero-blue" />
         <div className="rock-body">
-          <p className="rock-body-heading" style={{color: 'rgba(255, 255, 255, 0.9)'}}>
-          Innovate. Elevate. Captivate. Where Your Ideas Take Flight!
-          </p>
-          <p className="rock-tagLine">Shaping Aspirations, Building Trust: Your Vision, Our Commitment.</p>
+          <p className="rock-tagline">We sculpt dreams into digital marvels.</p>
+          <h2 className="rock-mainTagline">
+            Your Essence, our excellence, elevating the product experience
+            together.
+          </h2>
+          <button type="button" className="rock-hero-btn">
+            Start a project
+          </button>
         </div>
       </div>
     </Element>

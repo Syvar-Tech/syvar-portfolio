@@ -63,37 +63,231 @@
   // offset: -80px;
   height: 100vh;
   max-width: 1920px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  .hero-orange {
+    position: absolute;
+    top: -100px;
+    right: -150px;
+    width: 711px;
+    height: 711px;
+    transform: rotate(-29.143deg);
+    flex-shrink: 0;
+    border-radius: 711px;
+    background: #ffb830;
+    // background: linear-gradient(
+    //   180deg,
+    //   #ffb830 53.85%,
+    //   rgba(153, 153, 153, 0) 89.24%
+    // );
+    filter: blur(340px);
+  }
+  .hero-blue {
+    position: absolute;
+    left: -200px;
+    top: 345px;
+    width: 711px;
+    height: 711px;
+    transform: rotate(-29.143deg);
+    flex-shrink: 0;
+    border-radius: 711px;
+    background: #3077ff;
+    background: radial-gradient(
+      76.97% 76.97% at 50% 50%,
+      #3077ff 52.5%,
+      rgba(153, 153, 153, 0) 75.5%
+    );
+    filter: blur(340px);
+  }
 
-  .rock-mask,
   .rock-body {
-    width: 100vw;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     justify-content: center;
-    padding-left: 50px;
-    color: var(--white);
-    font-size: 80px;
-    font-family: var(--work-sans);
-    line-height: 100px;
-    cursor: default;
-    gap: 0;
-
-    .rock-tagLine {
+    align-items: center;
+    margin: auto;
+    gap: 30;
+    .rock-tagline {
       // color: var(--yellow);
-      font-size: 24px;
-      margin-top: 20px;
-      padding: 0 0 0 40px;
+      font-size: 20px;
+      // margin-top: 20px;
+      // padding: 0 0 0 40px;
       line-height: 0;
-      font-weight: 500;
-      color: rgba(255,255,255,0.5);
+      font-weight: 400;
+      color: #ffb830;
+      margin-block-end: 30px;
     }
 
-    .rock-body-heading {
-      width: clamp(20rem, 100vw, 86.625rem);
-      padding: 0 40px;
-      font-weight: 900;
+    .rock-mainTagline {
+      max-width: 1125px;
+      text-align: center;
+      font-family: "Work Sans";
+      font-size: 52px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: #fff;
+    }
+    //   .rock-hero-btn {
+    //     margin-block-start: 74px;
+    //     display: inline-flex;
+    //     padding: 20px 32px;
+    //     justify-content: center;
+    //     align-items: center;
+    //     border-radius: 40px;
+    //     // border: 2px solid #ffb830;
+    //     background-color: transparent;
+    //     color: #fff;
+    //     font-family: "Work Sans";
+    //     font-size: 16px;
+    //     font-style: normal;
+    //     font-weight: 500;
+    //     line-height: normal;
+    //     cursor: pointer;
+    //     position: relative;
+    //     border: none;
+    //     outline: none;
+    //     overflow: hidden;
+
+    //     -webkit-mask:
+    //    linear-gradient(#fff 0 0) content-box, /* this will cover only the content area (no padding) */
+    //    linear-gradient(#fff 0 0); /* this will cover all the area */
+    // -webkit-mask-composite: xor; /* needed for old browsers until the below is more supported */
+    // mask-composite: exclude;
+    //   }
+    //   .rock-hero-btn::before {
+    //     content: "";
+    //     border-radius: 40px;
+    //     height: 100%;
+    //     width: 100%;
+    //     left: 50%;
+    //     top: 50%;
+    //     position: absolute;
+    //     z-index: -2;
+    //     background-repeat: no-repeat;
+    //     background-size: 50% 50%, 50% 50%;
+    //     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+    //     background-image: linear-gradient(#ffb830, #ffb830),
+    //       linear-gradient(#ffb830, #ffb830), linear-gradient(#3077ff, #3077ff),
+    //       linear-gradient(#3077ff, #3077ff);
+    //     transform: translate(-50%, -50%) rotate(11deg);
+    //     transition: transform 0.7s cubic-bezier(1, 0, 0, 1);
+    //   }
+    //   .rock-hero-btn:hover:before {
+    //     transform: translate(-50%, -50%) rotate(191deg);
+    //   }
+    //   .rock-hero-btn:after {
+    //     z-index: -1;
+    //     content: "";
+    //     position: absolute;
+    //     border-radius: 40px;
+    //     width: calc(100% - 6px);
+    //     height: calc(100% - 6px);
+    //     background: #fff;
+    //     // top: 50%;
+    //     // left: 50%;
+    //     // transform: translate(-50%,-50%);
+    //     // margin: auto;
+    //   }
+    // .rock-hero-btn {
+    //   background: #2e3537;
+    //   padding: 0.75em 1.5em;
+    //   border: none;
+    //   // border: 3px solid #E77670;
+    //   color: white;
+    //   text-transform: uppercase;
+    //   letter-spacing: 3px;
+    //   font-weight: 600;
+    //   border-radius: 5px;
+    //   cursor: pointer;
+    //   position: relative;
+    //   transition: 0.5s;
+    //   border-radius: 30px;
+    // }
+
+    // .rock-hero-btn::after {
+    //   content: "";
+    //   border-radius: 30px;
+    //   position: absolute;
+    //   background: linear-gradient(#ffb830, #3077ff);
+    //   height: 100%;
+    //   width: 100%;
+    //   top: 50%;
+    //   left: 50%;
+    //   transform: translate(-50%, -50%);
+    //   z-index: -1;
+    //   // border-radius: 5px;
+    //   // background-size: 200%;
+    //   animation: animate 1s linear infinite;
+    // }
+
+    // @keyframes animate {
+    //   from {
+    //     transform: rotate(0deg);
+    //   }
+    //   to {
+    //     transform: rotate(360deg);
+    //     // background-position: 100% 50%;
+    //   }
+    // }
+    .rock-hero-btn {
+      width: 178px; /* Adjust width as needed */
+    height: 59px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px; /* Adjust the radius for rounded edges */
+    overflow: hidden;
+    background: transparent; /* Inner background color */
+    border: 5px solid transparent; /* Ensures the border is shown */
+    background-clip: padding-box; /* Ensures the background stops at the border */
+    box-shadow: 0 0 0 5px linear-gradient(to right, #ffb830, #3077ff); /* Creates a gradient border */
+    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
+    mask-image: radial-gradient(circle, white, black);
+      &:hover{
+        animation: rotate 2s linear infinite;
+      }
+
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   background: green;
+      //   inset: 0px;
+      //   border-radius: 25px;
+      // }
+      // &::before {
+      //   content: "";
+      //   position: absolute;
+      //   width: 300%;
+      //   height: 370%;
+       
+      // }
+      // &:hover {
+      //   // border: none; /* Example border with 2px width and black color */
+      //   // background-image: none;
+      // }
+      // &:hover::before {
+      //   border: linear-gradient(
+      
+      //     #3077ff,
+      //     #ffb830
+      //   );
+
+      //   animation: rotate 2s linear infinite;
+      // }
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg);
+        }
+      }
     }
   }
 
