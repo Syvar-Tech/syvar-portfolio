@@ -16,6 +16,7 @@ import EuroCupPrediction from "./EuroCupPrediction/EuroCupPrediction.jsx";
 import Thankyou from "./Thankyou/Thankyou.jsx";
 import Round2 from "./EuroCupPrediction/Round2.jsx";
 import OurProcess from "./newOurProcess/OurProcess.jsx";
+import Snowfall from "react-snowfall";
 
 function App() {
   // const MouseVariants = {
@@ -44,6 +45,7 @@ function App() {
       
       {/* <Routes> */}
         {/* <Route path="/" element={ */}
+           
           <div>
             <Navbar />
             <Hero />
