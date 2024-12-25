@@ -64,7 +64,7 @@ export default function Home() {
         </motion.div>
 
         <div className="rock-header">
-          <motion.div
+          {/* <motion.div
             ref={scope}
             id="btn"
             initial={{
@@ -101,7 +101,7 @@ export default function Home() {
                 </motion.p>
               </div>
             </a>
-          </motion.div>
+          </motion.div> */}
           {/* <motion.button
             initial={{
               y: 0,

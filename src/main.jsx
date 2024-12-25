@@ -11,6 +11,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     position: 'fixed',
     width: '100vw',
     height: '100vh',
+    zIndex: 9999
   }}/>
     <BrowserRouter>
       <App />
