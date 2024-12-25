@@ -63,9 +63,10 @@ const Hero = () => {
             Your Essence, our excellence, elevating the product experience
             together.
           </h2>
+          <a href="#contact">
           <button type="button" className="rock-hero-btn">
             Start a project
-          </button>
+          </button></a>
         </div>
       </div>
     </Element>
