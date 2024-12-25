@@ -15,6 +15,7 @@ import EuroCup from "./EuroCupPrediction/EuroCup.jsx";
 import EuroCupPrediction from "./EuroCupPrediction/EuroCupPrediction.jsx";
 import Thankyou from "./Thankyou/Thankyou.jsx";
 import Round2 from "./EuroCupPrediction/Round2.jsx";
+import OurProcess from "./newOurProcess/OurProcess.jsx";
 
 function App() {
   // const MouseVariants = {
@@ -48,7 +49,8 @@ function App() {
             <Hero />
             {/* <Banner/> */}
             {/* <div className="extraHeight" /> */}
-            <SamyakPart1 />
+            {/* <SamyakPart1 /> */}
+            <OurProcess/>
             {/* <Services /> */}
             <div className="extraHeight samyak" style={{ backgroundColor: "#1E1E1E" }}/>
             <div className="forAdarshatop" style={{  backgroundColor: "#1E1E1E" }}/>

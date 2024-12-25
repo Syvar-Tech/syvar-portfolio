@@ -52,6 +52,7 @@
 // }
 .rock-hero-main-container {
   max-width: 100%;
+  height: 100dvh;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -67,6 +68,7 @@
   justify-content: center;
   align-items: center;
   margin: auto;
+  // overflow-x: hidden;
   .hero-orange {
     position: absolute;
     top: -100px;
@@ -116,10 +118,11 @@
       font-size: 20px;
       // margin-top: 20px;
       // padding: 0 0 0 40px;
-      line-height: 0;
+      line-height: 120%;
       font-weight: 400;
       color: #ffb830;
       margin-block-end: 30px;
+      text-align: center;
     }
 
     .rock-mainTagline {
@@ -132,161 +135,65 @@
       line-height: normal;
       color: #fff;
     }
-    //   .rock-hero-btn {
-    //     margin-block-start: 74px;
-    //     display: inline-flex;
-    //     padding: 20px 32px;
-    //     justify-content: center;
-    //     align-items: center;
-    //     border-radius: 40px;
-    //     // border: 2px solid #ffb830;
-    //     background-color: transparent;
-    //     color: #fff;
-    //     font-family: "Work Sans";
-    //     font-size: 16px;
-    //     font-style: normal;
-    //     font-weight: 500;
-    //     line-height: normal;
-    //     cursor: pointer;
-    //     position: relative;
-    //     border: none;
-    //     outline: none;
-    //     overflow: hidden;
-
-    //     -webkit-mask:
-    //    linear-gradient(#fff 0 0) content-box, /* this will cover only the content area (no padding) */
-    //    linear-gradient(#fff 0 0); /* this will cover all the area */
-    // -webkit-mask-composite: xor; /* needed for old browsers until the below is more supported */
-    // mask-composite: exclude;
-    //   }
-    //   .rock-hero-btn::before {
-    //     content: "";
-    //     border-radius: 40px;
-    //     height: 100%;
-    //     width: 100%;
-    //     left: 50%;
-    //     top: 50%;
-    //     position: absolute;
-    //     z-index: -2;
-    //     background-repeat: no-repeat;
-    //     background-size: 50% 50%, 50% 50%;
-    //     background-position: 0 0, 100% 0, 100% 100%, 0 100%;
-    //     background-image: linear-gradient(#ffb830, #ffb830),
-    //       linear-gradient(#ffb830, #ffb830), linear-gradient(#3077ff, #3077ff),
-    //       linear-gradient(#3077ff, #3077ff);
-    //     transform: translate(-50%, -50%) rotate(11deg);
-    //     transition: transform 0.7s cubic-bezier(1, 0, 0, 1);
-    //   }
-    //   .rock-hero-btn:hover:before {
-    //     transform: translate(-50%, -50%) rotate(191deg);
-    //   }
-    //   .rock-hero-btn:after {
-    //     z-index: -1;
-    //     content: "";
-    //     position: absolute;
-    //     border-radius: 40px;
-    //     width: calc(100% - 6px);
-    //     height: calc(100% - 6px);
-    //     background: #fff;
-    //     // top: 50%;
-    //     // left: 50%;
-    //     // transform: translate(-50%,-50%);
-    //     // margin: auto;
-    //   }
-    // .rock-hero-btn {
-    //   background: #2e3537;
-    //   padding: 0.75em 1.5em;
-    //   border: none;
-    //   // border: 3px solid #E77670;
-    //   color: white;
-    //   text-transform: uppercase;
-    //   letter-spacing: 3px;
-    //   font-weight: 600;
-    //   border-radius: 5px;
-    //   cursor: pointer;
-    //   position: relative;
-    //   transition: 0.5s;
-    //   border-radius: 30px;
-    // }
-
-    // .rock-hero-btn::after {
-    //   content: "";
-    //   border-radius: 30px;
-    //   position: absolute;
-    //   background: linear-gradient(#ffb830, #3077ff);
-    //   height: 100%;
-    //   width: 100%;
-    //   top: 50%;
-    //   left: 50%;
-    //   transform: translate(-50%, -50%);
-    //   z-index: -1;
-    //   // border-radius: 5px;
-    //   // background-size: 200%;
-    //   animation: animate 1s linear infinite;
-    // }
-
-    // @keyframes animate {
-    //   from {
-    //     transform: rotate(0deg);
-    //   }
-    //   to {
-    //     transform: rotate(360deg);
-    //     // background-position: 100% 50%;
-    //   }
-    // }
     .rock-hero-btn {
-      width: 178px; /* Adjust width as needed */
-    height: 59px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50px; /* Adjust the radius for rounded edges */
-    overflow: hidden;
-    background: transparent; /* Inner background color */
-    border: 5px solid transparent; /* Ensures the border is shown */
-    background-clip: padding-box; /* Ensures the background stops at the border */
-    box-shadow: 0 0 0 5px linear-gradient(to right, #ffb830, #3077ff); /* Creates a gradient border */
-    -webkit-mask-image: -webkit-radial-gradient(circle, white, black);
-    mask-image: radial-gradient(circle, white, black);
-      &:hover{
-        animation: rotate 2s linear infinite;
+      margin-block-start: 74px;
+      display: flex;
+      padding: 20px 32px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 40px;
+      // border: 2px solid #ffb830;
+      background-color: transparent;
+      color: #fff;
+      font-family: "Work Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      cursor: pointer;
+      position: relative;
+      border: none;
+
+      outline: none;
+      overflow: hidden;
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        // left: 1px;
+        // top: 1px;
+        width: calc(100% - 5px);
+        height: calc(100% - 5px);
+        background: var(--light-black);
+        border-radius: 40px;
       }
+      &:before {
+        content: "";
+        position: absolute;
+        z-index: -2;
+        // left: -50%;
+        // top: -50%;
+        width: 300%;
+        height: 300%;
+        background-color: #000;
+        background-repeat: no-repeat;
+        background-size: 100%100%, 50%50%;
+        background-position: 0 0, 100% 0, 100% 100%, 0 100%;
+        background-image: linear-gradient(
+          to bottom right,
+          #ffb380 50%,
+          #3077ff 40%
+        );
+        // animation: rotate 4s linear infinite;
+      }
+      &:hover:before {
+        animation: rotate 3s linear infinite;
+      }
+    }
 
-      // &::after {
-      //   content: "";
-      //   position: absolute;
-      //   background: green;
-      //   inset: 0px;
-      //   border-radius: 25px;
-      // }
-      // &::before {
-      //   content: "";
-      //   position: absolute;
-      //   width: 300%;
-      //   height: 370%;
-       
-      // }
-      // &:hover {
-      //   // border: none; /* Example border with 2px width and black color */
-      //   // background-image: none;
-      // }
-      // &:hover::before {
-      //   border: linear-gradient(
-      
-      //     #3077ff,
-      //     #ffb830
-      //   );
-
-      //   animation: rotate 2s linear infinite;
-      // }
-      @keyframes rotate {
-        from {
-          transform: rotate(0deg);
-        }
-        to {
-          transform: rotate(360deg);
-        }
+    @keyframes rotate {
+      100% {
+        transform: rotate(1turn);
       }
     }
   }
@@ -342,13 +249,12 @@
       // height: 50vh;
       // justify-content: flex-start;
       margin-top: 100px;
-      .rock-body-heading {
-        // width: 715px;
+      .rock-tagline {
         font-size: 40px;
       }
-      .rock-tagLine {
+      .rock-mainTagline {
         // color: var(--yellow);
-        font-size: 16px;
+        font-size: 44px;
       }
     }
   }
@@ -356,12 +262,15 @@
 @media only screen and (max-width: 650px) {
   .rock-main {
     height: 45vh;
-    .rock-mask,
+    .hero-orange,
+    .hero-blue {
+      display: none;
+    }
     .rock-body {
       // padding-bottom: 20px;
       margin-top: 100px;
-
-      .rock-body-heading {
+      text-align: center;
+      .rock-tagline {
         margin-top: 0px;
         // width: 100vw;
         text-wrap: balance;
@@ -369,9 +278,9 @@
         line-height: 1.2;
         // font-weight: 900;
       }
-      .rock-tagLine {
+      .rock-mainTagline {
         width: 300px;
-        font-size: 14px;
+        font-size: 28px;
         line-height: 1.3;
       }
     }
