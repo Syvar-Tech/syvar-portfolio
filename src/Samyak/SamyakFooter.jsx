@@ -198,7 +198,7 @@ function SamyakFooter() {
     }
 
     axios
-      .post(`https://syyvar.com.np/api/contactUs`, {
+      .post(`https://sycontact.netlify.app/.netlify/functions/app/contactUs`, {
         customerName: name,
         customerEmail: email,
         customerPhone: phone,
