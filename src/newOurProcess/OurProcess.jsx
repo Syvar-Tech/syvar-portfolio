@@ -8,10 +8,10 @@ const OurProcess = () => {
         <div className="rock-process-section">
           <div className="rock-process-header">
             <h1 className="rock-process-title">Our Process</h1>
-            <p className="rock-process-desc">
+            {/* <p className="rock-process-desc">
               Your Essence, our excellence, elevating the product experience
               together.
-            </p>
+            </p> */}
           </div>
           <div className="rock-process-tabs">
             {
