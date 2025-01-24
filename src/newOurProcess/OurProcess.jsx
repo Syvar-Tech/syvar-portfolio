@@ -10,8 +10,7 @@ const OurProcess = () => {
             <h1 className="rock-process-title">Our Process</h1>
             <p className="rock-process-desc">
               Your Essence, our excellence, elevating the product experience
-              together.Your Essence, our excellence, elevating the product
-              experience together.
+              together.
             </p>
           </div>
           <div className="rock-process-tabs">
